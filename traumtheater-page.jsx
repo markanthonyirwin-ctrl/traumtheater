@@ -352,18 +352,32 @@ function TraumtheaterPage({ variant = 'balanced' }) {
       {/* ══════════ ABOUT (with portrait) ══════════ */}
       <section className="tt-panel-dark" id="about">
         <div className="tt-about-inner">
-          <img className="tt-about-portrait" src="assets/mark-portrait.png" alt="Mark" />
-          <p className="tt-sec-label">Über die Deutungen</p>
-          <h2 className="tt-sec-heading">Ein System, keine Esoterik</h2>
+          <img className="tt-about-portrait" src="assets/mark-portrait.png" alt="Mark Irwin" />
+          <p className="tt-sec-label">Über mich</p>
+          <h2 className="tt-sec-heading">Mark Irwin</h2>
           <p className="tt-about-body">
-            Ich arbeite nach dem Aisling-System — einem der wenigen Traumdeutungsrahmen,
-            der in klinischer Praxis über Jahrzehnte hinweg angewandt und verfeinert wurde.
-            Keine generischen Symbollisten. Keine spirituellen Projektionen. Sondern eine
-            Methode, die ernst nimmt, was deine Seele sagt.
+            Geboren in Cork, Irland. 46 Jahre. Seit 2015 lebe ich in Kempen
+            am Niederrhein. 2011 fiel mir Michael Sheridans Buch in die
+            Hände — seitdem deute ich meine eigenen Träume. 2023 habe ich
+            begonnen, die Aisling-Methode der Traumdeutung und des
+            Channelings formell bei Michael Sheridan zu studieren.
           </p>
+
+          <p className="tt-sec-label" style={{ marginTop: '2.5rem' }}>Zertifikate</p>
+          <div className="tt-cert-row">
+            <a className="tt-cert" href="assets/Scan%20Channeling%20cert.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Scan%20Channeling%20cert.jpg" alt="Aisling School Channel — Zertifikat, Dezember 2024" />
+              <span className="tt-cert-caption">Aisling School Channel · 2024</span>
+            </a>
+            <a className="tt-cert" href="assets/Scan%20Dream%20Interpretation%20cert.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Scan%20Dream%20Interpretation%20cert.jpg" alt="Aisling Dream Interpreter — Zertifikat, April 2026" />
+              <span className="tt-cert-caption">Aisling Dream Interpreter · 2026</span>
+            </a>
+          </div>
+
           <div className="tt-badge-row">
             <span className="tt-badge">Aisling-System</span>
-            <span className="tt-badge">40+ Jahre Praxis</span>
+            <span className="tt-badge">Studium bei Michael Sheridan</span>
             <span className="tt-badge">Schriftliche Deutung</span>
             <span className="tt-badge">3.000+ Symbole</span>
             <span className="tt-badge">Vertraulich</span>

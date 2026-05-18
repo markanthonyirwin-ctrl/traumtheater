@@ -696,6 +696,32 @@
   color: rgba(245,236,218,0.82);
   max-width: 680px; margin: 0 auto 2rem;
 }
+.tt-cert-row {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 1.4rem;
+  margin: 1rem auto 2.4rem;
+  max-width: 760px;
+}
+.tt-cert {
+  flex: 1 1 280px; max-width: 340px;
+  display: flex; flex-direction: column; align-items: center;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+.tt-cert:hover { transform: translateY(-3px); }
+.tt-cert img {
+  width: 100%; height: auto;
+  border: 1px solid rgba(184,137,42,0.45);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  background: var(--cream);
+}
+.tt-cert-caption {
+  margin-top: 0.7rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem; letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+}
 .tt-badge-row {
   display: flex; flex-wrap: wrap; justify-content: center;
   gap: 0.7rem; margin-bottom: 2.2rem;
@@ -863,6 +889,8 @@
   .tt-about-portrait { width: 130px; height: 130px; }
   .tt-about-body { font-size: 0.98rem; }
   .tt-badge { font-size: 0.62rem; padding: 0.35rem 0.7rem; }
+  .tt-cert { flex-basis: 100%; max-width: 320px; }
+  .tt-cert-caption { font-size: 0.62rem; }
 
   /* Rune divider */
   .tt-rune-divider { padding: 0.8rem 1.2rem; }
