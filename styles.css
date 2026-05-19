@@ -319,12 +319,14 @@
   font-size: 0.7rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold-bright);
+  color: var(--sienna);
   text-align: center;
   margin-bottom: 0.6rem;
   display: flex; align-items: center; justify-content: center; gap: 0.7rem;
 }
 .tt-sec-label::before, .tt-sec-label::after { content: '◆'; font-size: 0.5rem; }
+.tt-panel-dark .tt-sec-label,
+.tt-testimonials .tt-sec-label { color: var(--gold-bright); }
 
 .tt-sec-heading {
   font-size: var(--h2-size);
@@ -344,6 +346,7 @@
   margin-bottom: 2.5rem;
 }
 .tt-panel-dark .tt-sec-sub { color: rgba(245,236,218,0.68); }
+.tt-testimonials .tt-sec-sub { color: #ffffff; }
 
 /* ══════════ Grids ══════════ */
 .tt-grid-3 {

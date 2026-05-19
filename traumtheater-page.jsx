@@ -218,7 +218,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
       <div className="tt-trust">
         <div className="tt-trust-inner">
           <span>✦ Zertifizierter Aisling-Praktiker</span>
-          <span>✦ 15 Jahre Erfahrung</span>
+          <span>✦ 12 Jahre Erfahrung</span>
           <span>✦ Persönlich geschrieben</span>
           <span>✦ Vertraulich</span>
         </div>
