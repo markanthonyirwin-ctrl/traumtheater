@@ -404,25 +404,40 @@ function TraumtheaterPage({ variant = 'balanced' }) {
       <section className="tt-panel-dark" id="about">
         <div className="tt-about-inner">
           <img className="tt-about-portrait" src="assets/mark-portrait.png" alt="Mark Irwin" />
-          <p className="tt-sec-label">Über mich</p>
-          <h2 className="tt-sec-heading">Mark Irwin</h2>
+          <p className="tt-sec-label">Persönlich</p>
+          <h2 className="tt-sec-heading">Über mich und die Deutungen</h2>
           <p className="tt-about-body">
-            Geboren in Cork, Irland. 46 Jahre. Seit 2015 lebe ich in Kempen
-            am Niederrhein. 2011 fiel mir Michael Sheridans Buch in die
-            Hände — seitdem deute ich meine eigenen Träume. 2023 habe ich
-            begonnen, die Aisling-Methode der Traumdeutung und des
-            Channelings formell bei Michael Sheridan zu studieren.
+            Mein Name ist Mark Irwin. Ich bin 46 Jahre alt, gebürtig aus
+            Cork in Irland, und lebe seit 2015 in Kempen. Mit der Traumarbeit
+            begann ich 2014, als mir Michael Sheridans Buch in die Hände fiel
+            und ich anfing, meinen eigenen Träumen nachzugehen. Was zunächst
+            persönliche Neugier war, wurde über die Jahre zu einer tieferen
+            Praxis — und 2023 begann ich, die Aisling-Methode und das
+            Channeln formal bei Michael selbst zu lernen.
+          </p>
+          <p className="tt-about-body">
+            <strong className="tt-about-lead">Ein System, keine Esoterik.</strong>
+            {' '}Ich arbeite nach dem Aisling-System — einem der wenigen
+            Traumdeutungsrahmen, der in klinischer Praxis über Jahrzehnte
+            hinweg angewandt und verfeinert wurde. Keine generischen
+            Symbollisten. Keine spirituellen Projektionen. Sondern eine
+            Methode, die ernst nimmt, was deine Seele sagt.
+          </p>
+          <p className="tt-about-body">
+            Deshalb mache ich diese Arbeit: Weil Träume, wenn man ihnen
+            wirklich zuhört, uns die Wahrheit über uns selbst erzählen — und
+            diese Wahrheit ist fast immer großzügiger, als wir erwarten.
           </p>
 
           <p className="tt-sec-label" style={{ marginTop: '2.5rem' }}>Zertifikate</p>
           <div className="tt-cert-row">
             <a className="tt-cert" href="assets/Scan%20Channeling%20cert.jpg" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Scan%20Channeling%20cert.jpg" alt="Aisling School Channel — Zertifikat, Dezember 2024" />
               <span className="tt-cert-caption">Aisling School Channel · 2024</span>
+              <img src="assets/Scan%20Channeling%20cert.jpg" alt="Aisling School Channel — Zertifikat, Dezember 2024" />
             </a>
             <a className="tt-cert" href="assets/Scan%20Dream%20Interpretation%20cert.jpg" target="_blank" rel="noopener noreferrer">
-              <img src="assets/Scan%20Dream%20Interpretation%20cert.jpg" alt="Aisling Dream Interpreter — Zertifikat, April 2026" />
               <span className="tt-cert-caption">Aisling Dream Interpreter · 2026</span>
+              <img src="assets/Scan%20Dream%20Interpretation%20cert.jpg" alt="Aisling Dream Interpreter — Zertifikat, April 2026" />
             </a>
           </div>
 

@@ -739,19 +739,30 @@
   filter: sepia(0.12);
 }
 .tt-about-body {
-  font-style: italic; font-size: 1.04rem;
-  line-height: 1.9;
+  font-size: 1.02rem;
+  line-height: 1.85;
   color: rgba(245,236,218,0.82);
-  max-width: 680px; margin: 0 auto 2rem;
+  max-width: 680px; margin: 0 auto 1.2rem;
+  text-align: left;
+}
+.tt-about-body:last-of-type { margin-bottom: 2rem; }
+.tt-about-lead {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+  margin-right: 0.3rem;
 }
 .tt-cert-row {
   display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 1.4rem;
+  gap: 1.6rem;
   margin: 1rem auto 2.4rem;
-  max-width: 760px;
+  max-width: 520px;
 }
 .tt-cert {
-  flex: 1 1 280px; max-width: 340px;
+  flex: 0 1 200px;
   display: flex; flex-direction: column; align-items: center;
   text-decoration: none;
   transition: transform 0.25s ease;
@@ -764,11 +775,12 @@
   background: var(--cream);
 }
 .tt-cert-caption {
-  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
   font-family: 'Cinzel', serif;
-  font-size: 0.7rem; letter-spacing: 0.14em;
+  font-size: 0.65rem; letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-pale);
+  text-align: center;
 }
 .tt-badge-row {
   display: flex; flex-wrap: wrap; justify-content: center;
@@ -937,8 +949,8 @@
   .tt-about-portrait { width: 130px; height: 130px; }
   .tt-about-body { font-size: 0.98rem; }
   .tt-badge { font-size: 0.62rem; padding: 0.35rem 0.7rem; }
-  .tt-cert { flex-basis: 100%; max-width: 320px; }
-  .tt-cert-caption { font-size: 0.62rem; }
+  .tt-cert { flex: 0 1 160px; }
+  .tt-cert-caption { font-size: 0.58rem; }
 
   .tt-tl-media-row { gap: 1.2rem; margin-top: 2rem; }
   .tt-tl-media { flex-basis: 45%; max-width: 220px; }
