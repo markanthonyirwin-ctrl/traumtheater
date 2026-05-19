@@ -55,7 +55,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
             Traum — ich deute ihn schriftlich, nach 40 Jahren erprobter Methodik.
           </p>
           <div className="tt-dual-cta">
-            <a href="https://wa.me/4915788426547" className="tt-btn-wa">💬 Via WhatsApp</a>
+            <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
             <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Via E-Mail</a>
           </div>
           <p className="tt-cta-subline">Kostenlos · Vertraulich · Persönlich</p>
@@ -218,7 +218,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
       <div className="tt-trust">
         <div className="tt-trust-inner">
           <span>✦ Zertifizierter Aisling-Praktiker</span>
-          <span>✦ 15 Jahre Erfahrung</span>
+          <span>✦ 12 Jahre Erfahrung</span>
           <span>✦ Persönlich geschrieben</span>
           <span>✦ Vertraulich</span>
         </div>
@@ -250,7 +250,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
               <li>Vertraulich behandelt — dein Traum bleibt dein Traum</li>
             </ul>
             <div className="tt-dual-cta" style={{ justifyContent: 'center' }}>
-              <a href="https://wa.me/4915788426547" className="tt-btn-wa">💬 Via WhatsApp</a>
+              <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
               <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Via E-Mail</a>
             </div>
             <p className="tt-cta-subline" style={{ textAlign: 'center', marginTop: '1rem' }}>
@@ -277,18 +277,46 @@ function TraumtheaterPage({ variant = 'balanced' }) {
               <span className="tt-testi-name">Monika Dziatkiewicz</span>
             </div>
           </div>
-          <div className="tt-testi">
-            <p className="tt-testi-body">
+          <div className=”tt-testi”>
+            <p className=”tt-testi-body”>
               „Mark hat die Träume entschlüsselt, die in einer sehr stressigen Zeit
               zu mir kamen. Seine einfühlsamen und gekonnten Interpretationen gaben
               mir die Klarheit, Orientierung, das Verständnis und die Erleichterung,
               auf die mich meine Träume hinweisen wollten. Ich würde jedem, der die
               Botschaften in seinen eigenen Träumen verstehen möchte, Marks sehr
-              hilfreiche Dienste wärmstens empfehlen.“
+              hilfreiche Dienste wärmstens empfehlen.”
             </p>
-            <div className="tt-testi-attr">
-              <span className="tt-testi-mark"></span>
-              <span className="tt-testi-name">Ciara Clarke</span>
+            <div className=”tt-testi-attr”>
+              <span className=”tt-testi-mark”></span>
+              <span className=”tt-testi-name”>Ciara Clarke</span>
+            </div>
+          </div>
+          <div className=”tt-testi”>
+            <p className=”tt-testi-body”>
+              „Marks Deutungen für mich und meinen 10-jährigen Sohn waren einfühlsam,
+              präzise und stimmten vollkommen mit realen Lebenserfahrungen überein.
+              Ich bin dankbar für sein Wissen, seine ausführlichen Antworten und die
+              Sorgfalt, mit der er mit Menschen über ihre Träume spricht. Diese
+              Einsicht und Unterstützung zu haben, ist außerordentlich hilfreich.”
+            </p>
+            <div className=”tt-testi-attr”>
+              <span className=”tt-testi-mark”></span>
+              <span className=”tt-testi-name”>Nicky E.</span>
+            </div>
+          </div>
+          <div className=”tt-testi”>
+            <p className=”tt-testi-body”>
+              „Mark hat mir bereits mehrere meiner Träume interpretiert. Meist fand
+              ich sie beim Aufwachen selbst nur verwirrend, zum Teil beängstigend.
+              Durch Marks Übersetzungen wurden dann aber die Botschaften klar. Sie
+              waren wunderschön. Deutlich. Liebevoll.
+              <br/><br/>
+              Jetzt bin ich neugieriger auf meine Träume. Möchte ihre Sprache
+              verstehen und verinnerlichen, was sie mir sagen wollen.”
+            </p>
+            <div className=”tt-testi-attr”>
+              <span className=”tt-testi-mark”></span>
+              <span className=”tt-testi-name”>Lisa M.</span>
             </div>
           </div>
         </div>
@@ -318,7 +346,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
             </div>
           </div>
           <div className="tt-dual-cta" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
-            <a href="https://wa.me/4915788426547" className="tt-btn-wa">💬 Traum per WhatsApp senden</a>
+            <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Traum per WhatsApp senden</a>
             <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Traum per E-Mail senden</a>
           </div>
           <p className="tt-privacy-note">
@@ -338,7 +366,9 @@ function TraumtheaterPage({ variant = 'balanced' }) {
               ['1990er','George Rhatigan entwickelt das Grundgerüst des Aisling-Systems in Irland. Die erste systematische Sammlung von Traumsymbolen entsteht aus gelebter Beratungspraxis.'],
               ['1997','Michael Sheridan veröffentlicht How to Interpret Your Dreams and Discover Your Life Purpose — das erste dokumentierte Werk des Systems.'],
               ['2000er','Sheridan wird regelmäßiger Gast bei Ireland AM, BBC, und Seattle Radio KKNW. Das System verbreitet sich international in mehrere Sprachen.'],
-              ['Heute','Hunderte zertifizierter Praktiker weltweit. Ein Symbolbuch mit über 3.000 verifizierten Einträgen. Klienten, die sich selbst erkennen.'],
+              ['2015','Michael kündigt seine Stelle als Softwareentwickler und widmet sich fortan ganz der Aisling School of Dream Interpretation, die er ins Internet bringt. Die Radiosendung startet, und Sandy hilft im Hintergrund beim Wachstum der Schule.'],
+              ['2016','Der Dream Interpretation Podcast mit Michael Sheridan ist eine wöchentliche halbstündige Sendung darüber, wie deine nächtlichen Träume dich für die wichtigen Themen in deinem Leben wachrütteln. Träume geben fundierte Hinweise zu allen Lebensbereichen — Beziehungen, Beruf, Lebensaufgabe, Gesundheit, besondere Fähigkeiten und mehr. Michael sagt dir genau, was deine Träume bedeuten. Bis heute wurden 365 Folgen aufgenommen.'],
+              ['Heute','Hunderte zertifizierter Praktiker weltweit. Ein Symbolbuch mit über 3.000 verifizierten Einträgen. Klienten, die sich selbst erkennen. Die Aisling School bietet auch weiterhin die genaueste, fundierteste und lebensverändernde Traumdeutungsausbildung der Welt.'],
             ].map(([y, t]) => (
               <div key={y} className="tt-tl-entry">
                 <span className="tt-tl-year">{y}</span>
@@ -346,31 +376,81 @@ function TraumtheaterPage({ variant = 'balanced' }) {
               </div>
             ))}
           </div>
+
+          <div className="tt-tl-media-row">
+            <a className="tt-tl-media" href="https://healingthroughdreams.com/about-aisling-dream-interpretation/" target="_blank" rel="noopener noreferrer">
+              <div className="tt-tl-media-frame">
+                <img src="assets/Aisling-Dream-Interpretation-Logo-White-r35kx2zul84synncf5sakhwinm2y7ifo8j6lahyx6s.png" alt="Aisling Dream Interpretation" />
+              </div>
+              <span className="tt-tl-media-caption">Aisling Dream Interpretation</span>
+            </a>
+            <a className="tt-tl-media" href="https://podcasts.apple.com/gb/podcast/the-dream-interpretation-podcast/id1145722433" target="_blank" rel="noopener noreferrer">
+              <div className="tt-tl-media-frame">
+                <img src="assets/DI%20Podcast%20image.png" alt="The Dream Interpretation Podcast" />
+              </div>
+              <span className="tt-tl-media-caption">Dream Interpretation Podcast</span>
+            </a>
+            <a className="tt-tl-media" href="https://www.amazon.de/-/en/How-Interpret-Your-Dreams-discover/dp/0955729505/" target="_blank" rel="noopener noreferrer">
+              <div className="tt-tl-media-frame">
+                <img src="assets/HTID%20Book%20cover.png" alt="How to Interpret Your Dreams and Discover Your Life Purpose" />
+              </div>
+              <span className="tt-tl-media-caption">How to Interpret Your Dreams</span>
+            </a>
+          </div>
         </div>
       </section>
 
       {/* ══════════ ABOUT (with portrait) ══════════ */}
       <section className="tt-panel-dark" id="about">
         <div className="tt-about-inner">
-          <img className="tt-about-portrait" src="assets/mark-portrait.png" alt="Mark" />
-          <p className="tt-sec-label">Über die Deutungen</p>
-          <h2 className="tt-sec-heading">Ein System, keine Esoterik</h2>
+          <img className="tt-about-portrait" src="assets/mark-portrait.png" alt="Mark Irwin" />
+          <p className="tt-sec-label">Persönlich</p>
+          <h2 className="tt-sec-heading">Über mich und die Deutungen</h2>
           <p className="tt-about-body">
-            Ich arbeite nach dem Aisling-System — einem der wenigen Traumdeutungsrahmen,
-            der in klinischer Praxis über Jahrzehnte hinweg angewandt und verfeinert wurde.
-            Keine generischen Symbollisten. Keine spirituellen Projektionen. Sondern eine
+            Mein Name ist Mark Irwin. Ich bin 46 Jahre alt, gebürtig aus
+            Cork in Irland, und lebe seit 2015 in Kempen. Mit der Traumarbeit
+            begann ich 2014, als mir Michael Sheridans Buch in die Hände fiel
+            und ich anfing, meinen eigenen Träumen nachzugehen. Was zunächst
+            persönliche Neugier war, wurde über die Jahre zu einer tieferen
+            Praxis — und 2023 begann ich, die Aisling-Methode und das
+            Channeln formal bei Michael selbst zu lernen.
+          </p>
+          <p className="tt-about-body">
+            <strong className="tt-about-lead">Ein System, keine Esoterik.</strong>
+            {' '}Ich arbeite nach dem Aisling-System — einem der wenigen
+            Traumdeutungsrahmen, der in klinischer Praxis über Jahrzehnte
+            hinweg angewandt und verfeinert wurde. Keine generischen
+            Symbollisten. Keine spirituellen Projektionen. Sondern eine
             Methode, die ernst nimmt, was deine Seele sagt.
           </p>
+          <p className="tt-about-body">
+            Deshalb mache ich diese Arbeit: Weil Träume, wenn man ihnen
+            wirklich zuhört, uns die Wahrheit über uns selbst erzählen — und
+            diese Wahrheit ist fast immer großzügiger, als wir erwarten.
+          </p>
+
+          <p className="tt-sec-label" style={{ marginTop: '2.5rem' }}>Zertifikate</p>
+          <div className="tt-cert-row">
+            <a className="tt-cert" href="assets/Scan%20Channeling%20cert.jpg" target="_blank" rel="noopener noreferrer">
+              <span className="tt-cert-caption">Aisling School Channel · 2024</span>
+              <img src="assets/Scan%20Channeling%20cert.jpg" alt="Aisling School Channel — Zertifikat, Dezember 2024" />
+            </a>
+            <a className="tt-cert" href="assets/Scan%20Dream%20Interpretation%20cert.jpg" target="_blank" rel="noopener noreferrer">
+              <span className="tt-cert-caption">Aisling Dream Interpreter · 2026</span>
+              <img src="assets/Scan%20Dream%20Interpretation%20cert.jpg" alt="Aisling Dream Interpreter — Zertifikat, April 2026" />
+            </a>
+          </div>
+
           <div className="tt-badge-row">
             <span className="tt-badge">Aisling-System</span>
-            <span className="tt-badge">40+ Jahre Praxis</span>
+            <span className="tt-badge">Studium bei Michael Sheridan</span>
             <span className="tt-badge">Schriftliche Deutung</span>
             <span className="tt-badge">3.000+ Symbole</span>
             <span className="tt-badge">Vertraulich</span>
             <span className="tt-badge">Deutsch · Niederländisch · Englisch</span>
           </div>
           <div className="tt-dual-cta" style={{ justifyContent: 'center' }}>
-            <a href="https://wa.me/4915788426547" className="tt-btn-wa">💬 Via WhatsApp</a>
+            <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
             <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Via E-Mail</a>
           </div>
         </div>

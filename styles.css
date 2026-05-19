@@ -319,12 +319,14 @@
   font-size: 0.7rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold-bright);
+  color: var(--sienna);
   text-align: center;
   margin-bottom: 0.6rem;
   display: flex; align-items: center; justify-content: center; gap: 0.7rem;
 }
 .tt-sec-label::before, .tt-sec-label::after { content: '◆'; font-size: 0.5rem; }
+.tt-panel-dark .tt-sec-label,
+.tt-testimonials .tt-sec-label { color: var(--gold-bright); }
 
 .tt-sec-heading {
   font-size: var(--h2-size);
@@ -334,6 +336,7 @@
   line-height: 1.2;
 }
 .tt-panel-dark .tt-sec-heading { color: var(--parchment-light); }
+.tt-testimonials .tt-sec-heading { color: #ffffff; }
 
 .tt-sec-sub {
   font-family: 'IM Fell English', serif;
@@ -344,6 +347,7 @@
   margin-bottom: 2.5rem;
 }
 .tt-panel-dark .tt-sec-sub { color: rgba(245,236,218,0.68); }
+.tt-testimonials .tt-sec-sub { color: #ffffff; }
 
 /* ══════════ Grids ══════════ */
 .tt-grid-3 {
@@ -679,6 +683,50 @@
 }
 .tt-tl-text { font-size: 0.95rem; color: var(--ink-mid); line-height: 1.75; }
 
+/* Timeline media row (three clickable image tiles) */
+.tt-tl-media-row {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 1.8rem;
+  margin: 3rem auto 0;
+  max-width: 920px;
+  align-items: flex-start;
+}
+.tt-tl-media {
+  flex: 1 1 220px;
+  max-width: 260px;
+  display: flex; flex-direction: column; align-items: center;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+.tt-tl-media:hover { transform: translateY(-3px); }
+.tt-tl-media-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--ink);
+  border: 1px solid rgba(184,137,42,0.45);
+  padding: 1.3rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.tt-tl-media-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.tt-tl-media-caption {
+  margin-top: 0.85rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sienna);
+  text-align: center;
+  line-height: 1.4;
+}
+
 /* About */
 .tt-about-inner { max-width: 860px; margin: 0 auto; text-align: center; }
 .tt-about-portrait {
@@ -691,10 +739,48 @@
   filter: sepia(0.12);
 }
 .tt-about-body {
-  font-style: italic; font-size: 1.04rem;
-  line-height: 1.9;
+  font-size: 1.02rem;
+  line-height: 1.85;
   color: rgba(245,236,218,0.82);
-  max-width: 680px; margin: 0 auto 2rem;
+  max-width: 680px; margin: 0 auto 1.2rem;
+  text-align: left;
+}
+.tt-about-body:last-of-type { margin-bottom: 2rem; }
+.tt-about-lead {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+  margin-right: 0.3rem;
+}
+.tt-cert-row {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 1.6rem;
+  margin: 1rem auto 2.4rem;
+  max-width: 520px;
+}
+.tt-cert {
+  flex: 0 1 200px;
+  display: flex; flex-direction: column; align-items: center;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+.tt-cert:hover { transform: translateY(-3px); }
+.tt-cert img {
+  width: 100%; height: auto;
+  border: 1px solid rgba(184,137,42,0.45);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  background: var(--cream);
+}
+.tt-cert-caption {
+  margin-bottom: 0.7rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem; letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-pale);
+  text-align: center;
 }
 .tt-badge-row {
   display: flex; flex-wrap: wrap; justify-content: center;
@@ -863,6 +949,13 @@
   .tt-about-portrait { width: 130px; height: 130px; }
   .tt-about-body { font-size: 0.98rem; }
   .tt-badge { font-size: 0.62rem; padding: 0.35rem 0.7rem; }
+  .tt-cert { flex: 0 1 160px; }
+  .tt-cert-caption { font-size: 0.58rem; }
+
+  .tt-tl-media-row { gap: 1.2rem; margin-top: 2rem; }
+  .tt-tl-media { flex-basis: 45%; max-width: 220px; }
+  .tt-tl-media-frame { padding: 0.9rem; }
+  .tt-tl-media-caption { font-size: 0.58rem; letter-spacing: 0.12em; }
 
   /* Rune divider */
   .tt-rune-divider { padding: 0.8rem 1.2rem; }
