@@ -336,6 +336,7 @@
   line-height: 1.2;
 }
 .tt-panel-dark .tt-sec-heading { color: var(--parchment-light); }
+.tt-testimonials .tt-sec-heading { color: #ffffff; }
 
 .tt-sec-sub {
   font-family: 'IM Fell English', serif;
