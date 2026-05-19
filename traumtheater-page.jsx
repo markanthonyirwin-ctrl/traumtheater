@@ -277,18 +277,46 @@ function TraumtheaterPage({ variant = 'balanced' }) {
               <span className="tt-testi-name">Monika Dziatkiewicz</span>
             </div>
           </div>
-          <div className="tt-testi">
-            <p className="tt-testi-body">
+          <div className=”tt-testi”>
+            <p className=”tt-testi-body”>
               „Mark hat die Träume entschlüsselt, die in einer sehr stressigen Zeit
               zu mir kamen. Seine einfühlsamen und gekonnten Interpretationen gaben
               mir die Klarheit, Orientierung, das Verständnis und die Erleichterung,
               auf die mich meine Träume hinweisen wollten. Ich würde jedem, der die
               Botschaften in seinen eigenen Träumen verstehen möchte, Marks sehr
-              hilfreiche Dienste wärmstens empfehlen.“
+              hilfreiche Dienste wärmstens empfehlen.”
             </p>
-            <div className="tt-testi-attr">
-              <span className="tt-testi-mark"></span>
-              <span className="tt-testi-name">Ciara Clarke</span>
+            <div className=”tt-testi-attr”>
+              <span className=”tt-testi-mark”></span>
+              <span className=”tt-testi-name”>Ciara Clarke</span>
+            </div>
+          </div>
+          <div className=”tt-testi”>
+            <p className=”tt-testi-body”>
+              „Marks Deutungen für mich und meinen 10-jährigen Sohn waren einfühlsam,
+              präzise und stimmten vollkommen mit realen Lebenserfahrungen überein.
+              Ich bin dankbar für sein Wissen, seine ausführlichen Antworten und die
+              Sorgfalt, mit der er mit Menschen über ihre Träume spricht. Diese
+              Einsicht und Unterstützung zu haben, ist außerordentlich hilfreich.”
+            </p>
+            <div className=”tt-testi-attr”>
+              <span className=”tt-testi-mark”></span>
+              <span className=”tt-testi-name”>Nicky E.</span>
+            </div>
+          </div>
+          <div className=”tt-testi”>
+            <p className=”tt-testi-body”>
+              „Mark hat mir bereits mehrere meiner Träume interpretiert. Meist fand
+              ich sie beim Aufwachen selbst nur verwirrend, zum Teil beängstigend.
+              Durch Marks Übersetzungen wurden dann aber die Botschaften klar. Sie
+              waren wunderschön. Deutlich. Liebevoll.
+              <br/><br/>
+              Jetzt bin ich neugieriger auf meine Träume. Möchte ihre Sprache
+              verstehen und verinnerlichen, was sie mir sagen wollen.”
+            </p>
+            <div className=”tt-testi-attr”>
+              <span className=”tt-testi-mark”></span>
+              <span className=”tt-testi-name”>Lisa M.</span>
             </div>
           </div>
         </div>
