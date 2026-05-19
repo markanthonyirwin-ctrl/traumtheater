@@ -366,13 +366,36 @@ function TraumtheaterPage({ variant = 'balanced' }) {
               ['1990er','George Rhatigan entwickelt das Grundgerüst des Aisling-Systems in Irland. Die erste systematische Sammlung von Traumsymbolen entsteht aus gelebter Beratungspraxis.'],
               ['1997','Michael Sheridan veröffentlicht How to Interpret Your Dreams and Discover Your Life Purpose — das erste dokumentierte Werk des Systems.'],
               ['2000er','Sheridan wird regelmäßiger Gast bei Ireland AM, BBC, und Seattle Radio KKNW. Das System verbreitet sich international in mehrere Sprachen.'],
-              ['Heute','Hunderte zertifizierter Praktiker weltweit. Ein Symbolbuch mit über 3.000 verifizierten Einträgen. Klienten, die sich selbst erkennen.'],
+              ['2015','Michael kündigt seine Stelle als Softwareentwickler und widmet sich fortan ganz der Aisling School of Dream Interpretation, die er ins Internet bringt. Die Radiosendung startet, und Sandy hilft im Hintergrund beim Wachstum der Schule.'],
+              ['2016','Der Dream Interpretation Podcast mit Michael Sheridan ist eine wöchentliche halbstündige Sendung darüber, wie deine nächtlichen Träume dich für die wichtigen Themen in deinem Leben wachrütteln. Träume geben fundierte Hinweise zu allen Lebensbereichen — Beziehungen, Beruf, Lebensaufgabe, Gesundheit, besondere Fähigkeiten und mehr. Michael sagt dir genau, was deine Träume bedeuten. Bis heute wurden 365 Folgen aufgenommen.'],
+              ['Heute','Hunderte zertifizierter Praktiker weltweit. Ein Symbolbuch mit über 3.000 verifizierten Einträgen. Klienten, die sich selbst erkennen. Die Aisling School bietet auch weiterhin die genaueste, fundierteste und lebensverändernde Traumdeutungsausbildung der Welt.'],
             ].map(([y, t]) => (
               <div key={y} className="tt-tl-entry">
                 <span className="tt-tl-year">{y}</span>
                 <span className="tt-tl-text">{t}</span>
               </div>
             ))}
+          </div>
+
+          <div className="tt-tl-media-row">
+            <a className="tt-tl-media" href="https://healingthroughdreams.com/about-aisling-dream-interpretation/" target="_blank" rel="noopener noreferrer">
+              <div className="tt-tl-media-frame">
+                <img src="assets/Aisling-Dream-Interpretation-Logo-White-r35kx2zul84synncf5sakhwinm2y7ifo8j6lahyx6s.png" alt="Aisling Dream Interpretation" />
+              </div>
+              <span className="tt-tl-media-caption">Aisling Dream Interpretation</span>
+            </a>
+            <a className="tt-tl-media" href="https://podcasts.apple.com/gb/podcast/the-dream-interpretation-podcast/id1145722433" target="_blank" rel="noopener noreferrer">
+              <div className="tt-tl-media-frame">
+                <img src="assets/DI%20Podcast%20image.png" alt="The Dream Interpretation Podcast" />
+              </div>
+              <span className="tt-tl-media-caption">Dream Interpretation Podcast</span>
+            </a>
+            <a className="tt-tl-media" href="https://www.amazon.de/-/en/How-Interpret-Your-Dreams-discover/dp/0955729505/" target="_blank" rel="noopener noreferrer">
+              <div className="tt-tl-media-frame">
+                <img src="assets/HTID%20Book%20cover.png" alt="How to Interpret Your Dreams and Discover Your Life Purpose" />
+              </div>
+              <span className="tt-tl-media-caption">How to Interpret Your Dreams</span>
+            </a>
           </div>
         </div>
       </section>

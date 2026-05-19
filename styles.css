@@ -683,6 +683,50 @@
 }
 .tt-tl-text { font-size: 0.95rem; color: var(--ink-mid); line-height: 1.75; }
 
+/* Timeline media row (three clickable image tiles) */
+.tt-tl-media-row {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 1.8rem;
+  margin: 3rem auto 0;
+  max-width: 920px;
+  align-items: flex-start;
+}
+.tt-tl-media {
+  flex: 1 1 220px;
+  max-width: 260px;
+  display: flex; flex-direction: column; align-items: center;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+.tt-tl-media:hover { transform: translateY(-3px); }
+.tt-tl-media-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--ink);
+  border: 1px solid rgba(184,137,42,0.45);
+  padding: 1.3rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.tt-tl-media-frame img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.tt-tl-media-caption {
+  margin-top: 0.85rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sienna);
+  text-align: center;
+  line-height: 1.4;
+}
+
 /* About */
 .tt-about-inner { max-width: 860px; margin: 0 auto; text-align: center; }
 .tt-about-portrait {
@@ -895,6 +939,11 @@
   .tt-badge { font-size: 0.62rem; padding: 0.35rem 0.7rem; }
   .tt-cert { flex-basis: 100%; max-width: 320px; }
   .tt-cert-caption { font-size: 0.62rem; }
+
+  .tt-tl-media-row { gap: 1.2rem; margin-top: 2rem; }
+  .tt-tl-media { flex-basis: 45%; max-width: 220px; }
+  .tt-tl-media-frame { padding: 0.9rem; }
+  .tt-tl-media-caption { font-size: 0.58rem; letter-spacing: 0.12em; }
 
   /* Rune divider */
   .tt-rune-divider { padding: 0.8rem 1.2rem; }
