@@ -55,7 +55,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
             Traum — ich deute ihn schriftlich, nach 40 Jahren erprobter Methodik.
           </p>
           <div className="tt-dual-cta">
-            <a href="https://wa.me/4915788426547" className="tt-btn-wa">💬 Via WhatsApp</a>
+            <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
             <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Via E-Mail</a>
           </div>
           <p className="tt-cta-subline">Kostenlos · Vertraulich · Persönlich</p>
@@ -250,7 +250,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
               <li>Vertraulich behandelt — dein Traum bleibt dein Traum</li>
             </ul>
             <div className="tt-dual-cta" style={{ justifyContent: 'center' }}>
-              <a href="https://wa.me/4915788426547" className="tt-btn-wa">💬 Via WhatsApp</a>
+              <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
               <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Via E-Mail</a>
             </div>
             <p className="tt-cta-subline" style={{ textAlign: 'center', marginTop: '1rem' }}>
@@ -318,7 +318,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
             </div>
           </div>
           <div className="tt-dual-cta" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
-            <a href="https://wa.me/4915788426547" className="tt-btn-wa">💬 Traum per WhatsApp senden</a>
+            <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Traum per WhatsApp senden</a>
             <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Traum per E-Mail senden</a>
           </div>
           <p className="tt-privacy-note">
@@ -384,7 +384,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
             <span className="tt-badge">Deutsch · Niederländisch · Englisch</span>
           </div>
           <div className="tt-dual-cta" style={{ justifyContent: 'center' }}>
-            <a href="https://wa.me/4915788426547" className="tt-btn-wa">💬 Via WhatsApp</a>
+            <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
             <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Via E-Mail</a>
           </div>
         </div>
