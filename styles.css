@@ -745,6 +745,34 @@
   max-width: 680px; margin: 0 auto 1.2rem;
   text-align: left;
 }
+
+/* "Was du erhältst" — dark text on parchment, mirrors tt-about-body proportions */
+.tt-receive-body {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: var(--ink-soft);
+  max-width: 680px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+.tt-receive-body-lead { margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.tt-receive-list {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  color: var(--ink-soft);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+.tt-receive-list li { margin-bottom: 0.9rem; }
+.tt-receive-list li:last-child { margin-bottom: 0; }
+.tt-receive-list li strong {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-weight: 500;
+  color: var(--ink);
+}
 .tt-about-body:last-of-type { margin-bottom: 2rem; }
 .tt-about-lead {
   font-family: 'Cinzel', serif;

@@ -214,6 +214,34 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         </div>
       </section>
 
+      {/* ══════════ WHAT YOU RECEIVE ══════════ */}
+      <section>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '4rem 1.5rem' }}>
+          <p className="tt-sec-label">Das Dokument</p>
+          <h2 className="tt-sec-heading">Was du erhältst</h2>
+          <p className="tt-sec-sub">Drei bis fünf Seiten, sorgfältig strukturiert</p>
+          <p className="tt-receive-body">
+            Deine Deutung ist ein schriftliches Dokument, das ich für
+            deinen Traum verfasse — drei bis fünf Seiten, in deutscher
+            Sprache, nach der Aisling-Methode aufgebaut. Kein Chat-Output,
+            keine generische Symboltabelle. Ein Dokument, das du behältst
+            und auf das du immer wieder zurückkommen kannst.
+          </p>
+          <p className="tt-receive-body tt-receive-body-lead">
+            <strong>Im Dokument findest du:</strong>
+          </p>
+          <ol className="tt-receive-list">
+            <li><strong>Dein Traum mit Kontext.</strong> Der Wortlaut deines Traums und die Lebenssituation, aus der er entstanden ist.</li>
+            <li><strong>Eine kurze Einführung in die Methode.</strong> Das Subject Matter deines Traums und die I AM / I NEED Formel, damit du verstehst, wie ich lese.</li>
+            <li><strong>Eine Deutung Zeile für Zeile.</strong> Was dein Traum dir konkret sagt — persönlich, erkundend, ohne Fachjargon.</li>
+            <li><strong>Symbole, Farben, Orte und Zahlen.</strong> Was die Aisling-Tradition in den Bildern deines Traums sieht.</li>
+            <li><strong>Eine abschließende Reflexion.</strong> Der Kern deines Traums in einem Bild. Bei dunklen Träumen behutsam eingeordnet — mit Fokus auf die Botschaft, nicht die Angst.</li>
+            <li><strong>Konkrete Handlungsvorschläge.</strong> Was dein Traum dich einlädt zu tun, und nächste Schritte.</li>
+            <li><strong>Verbindung zu früheren Träumen.</strong> Wenn du schon einmal eingesandt hast, beziehe ich mich auf das, was deine Traumlinie zeigt.</li>
+          </ol>
+        </div>
+      </section>
+
       {/* ══════════ TRUST STRIP (no "Keine KI") ══════════ */}
       <div className="tt-trust">
         <div className="tt-trust-inner">
@@ -359,7 +387,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
       <section className="tt-panel-aged">
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <p className="tt-sec-label">Das Fundament</p>
-          <h2 className="tt-sec-heading">Vier Jahrzehnte Methodik</h2>
+          <h2 className="tt-sec-heading">Drei Jahrzehnte Methodik</h2>
           <p className="tt-sec-sub">Das Aisling-System im zeitlichen Kontext</p>
           <div className="tt-timeline">
             {[
@@ -418,7 +446,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           <p className="tt-about-body">
             <strong className="tt-about-lead">Ein System, keine Esoterik.</strong>
             {' '}Ich arbeite nach dem Aisling-System — einem der wenigen
-            Traumdeutungsrahmen, der in klinischer Praxis über Jahrzehnte
+            Traumdeutungsrahmen, der in geübter Praxis über Jahrzehnte
             hinweg angewandt und verfeinert wurde. Keine generischen
             Symbollisten. Keine spirituellen Projektionen. Sondern eine
             Methode, die ernst nimmt, was deine Seele sagt.
