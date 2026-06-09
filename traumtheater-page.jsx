@@ -52,7 +52,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           <p className="tt-hero-body">
             Dein Traum ist keine Zufälligkeit. Er ist eine persönliche Botschaft —
             präzise, tiefgründig, vollständig auf dich abgestimmt. Schick mir deinen
-            Traum — ich deute ihn schriftlich, nach 40 Jahren erprobter Methodik.
+            Traum — ich deute ihn schriftlich, nach der Aisling-Methode, in drei Jahrzehnten gewachsen.
           </p>
           <div className="tt-dual-cta">
             <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
@@ -118,7 +118,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
             <div className="tt-promise-item">
               <span className="tt-promise-numeral">II</span>
               <h3>Das System ist bewährt</h3>
-              <p>Über 40 Jahre klinische Anwendung. Nicht Theorie — erprobte Praxis aus tausenden Deutungen in mehreren Ländern.</p>
+              <p>Drei Jahrzehnte gelebter Praxis innerhalb der Aisling-Schule. Hunderte zertifizierter Praktiker weltweit haben damit gearbeitet.</p>
             </div>
             <div className="tt-promise-item">
               <span className="tt-promise-numeral">III</span>
@@ -218,7 +218,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
       <div className="tt-trust">
         <div className="tt-trust-inner">
           <span>✦ Zertifizierter Aisling-Praktiker</span>
-          <span>✦ 12 Jahre Erfahrung</span>
+          <span>✦ Ausgebildet bei Michael Sheridan</span>
           <span>✦ Persönlich geschrieben</span>
           <span>✦ Vertraulich</span>
         </div>
