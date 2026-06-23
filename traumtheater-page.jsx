@@ -490,13 +490,19 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           <h2 className="tt-legal-heading">Impressum</h2>
           <p className="tt-legal-block">
             Mark Anthony Irwin<br/>
-            Parkstraße, 15<br/>
+            Parkstraße 15<br/>
             47906 Kempen
           </p>
           <h3 className="tt-legal-subhead">Kontakt</h3>
           <p className="tt-legal-block">
             Telefon: +49 151 50317725<br/>
             E-Mail: traumtheaterde@pm.me
+          </p>
+          <h3 className="tt-legal-subhead">Redaktionell verantwortlich</h3>
+          <p className="tt-legal-block">
+            Mark Anthony Irwin<br/>
+            Anschrift wie oben<br/>
+            (gem. § 18 Abs. 2 MStV)
           </p>
         </div>
       </section>
