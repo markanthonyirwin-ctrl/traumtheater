@@ -484,8 +484,28 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         </div>
       </section>
 
+      {/* ══════════ IMPRESSUM ══════════ */}
+      <section className="tt-legal" id="impressum">
+        <div className="tt-legal-inner">
+          <h2 className="tt-legal-heading">Impressum</h2>
+          <p className="tt-legal-block">
+            Mark Anthony Irwin<br/>
+            Parkstraße, 15<br/>
+            47906 Kempen
+          </p>
+          <h3 className="tt-legal-subhead">Kontakt</h3>
+          <p className="tt-legal-block">
+            Telefon: +49 151 50317725<br/>
+            E-Mail: traumtheaterde@pm.me
+          </p>
+        </div>
+      </section>
+
       {/* ══════════ FOOTER ══════════ */}
       <footer className="tt-footer">
+        <nav className="tt-footer-links">
+          <a href="#impressum">Impressum</a>
+        </nav>
         <p>© Traumtheater &nbsp;·&nbsp; Persönliche Traumdeutung nach dem Aisling-System &nbsp;·&nbsp; Alle Inhalte vertraulich</p>
       </footer>
     </div>
