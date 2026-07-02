@@ -252,6 +252,45 @@
   font-weight: 500;
 }
 
+/* ══════════ Email copy (mobile mailto fallback) ══════════ */
+.tt-email-copy {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: center; gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+.tt-email-copy-label {
+  font-family: 'Cinzel', serif;
+  font-size: 0.6rem; letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.tt-email-copy-addr {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.92rem;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+.tt-email-copy-btn {
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem; letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  background: transparent;
+  border: 1px solid currentColor;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+/* Light sections (hero, offer) */
+.tt-email-copy--light .tt-email-copy-label { color: var(--ink-mid); }
+.tt-email-copy--light .tt-email-copy-addr  { color: var(--sienna); }
+.tt-email-copy--light .tt-email-copy-btn   { color: var(--ink-soft); }
+.tt-email-copy--light .tt-email-copy-btn:hover { background: var(--ink-soft); color: var(--cream); }
+/* Dark panels (retention, about) */
+.tt-email-copy--dark .tt-email-copy-label { color: rgba(245,236,218,0.6); }
+.tt-email-copy--dark .tt-email-copy-addr  { color: var(--gold-pale); }
+.tt-email-copy--dark .tt-email-copy-btn   { color: var(--gold-pale); }
+.tt-email-copy--dark .tt-email-copy-btn:hover { background: var(--gold-pale); color: var(--ink); }
+
 /* ══════════ Rune divider ══════════ */
 .tt-rune-divider {
   display: flex; align-items: center; gap: 1rem;

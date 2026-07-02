@@ -14,6 +14,30 @@
 
 const { useMemo } = React;
 
+// Shows the submission address as selectable text with a one-tap copy button.
+// Fallback for mobile, where a mailto: link may not open a configured mail app.
+function EmailCopy({ address, tone = 'light' }) {
+  const [copied, setCopied] = React.useState(false);
+  const copy = () => {
+    const done = () => { setCopied(true); setTimeout(() => setCopied(false), 2000); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(address).then(done).catch(() => {});
+    } else {
+      done();
+    }
+  };
+  return (
+    <div className={"tt-email-copy tt-email-copy--" + tone}>
+      <span className="tt-email-copy-label">oder E-Mail an</span>
+      <a className="tt-email-copy-addr" href={"mailto:" + address}>{address}</a>
+      <button type="button" className="tt-email-copy-btn" onClick={copy}
+        aria-label="E-Mail-Adresse kopieren">
+        {copied ? '✓ Kopiert' : 'Kopieren'}
+      </button>
+    </div>
+  );
+}
+
 function TraumtheaterPage({ variant = 'balanced' }) {
   const V = variant;
   const [navOpen, setNavOpen] = React.useState(false);
@@ -56,8 +80,9 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           </p>
           <div className="tt-dual-cta">
             <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
-            <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Via E-Mail</a>
+            <a href="mailto:mark@traum-theater.de" className="tt-btn-email">✉ Via E-Mail</a>
           </div>
+          <EmailCopy address="mark@traum-theater.de" tone="light" />
           <p className="tt-cta-subline">Kostenlos · Vertraulich · Persönlich</p>
         </div>
       </header>
@@ -279,8 +304,9 @@ function TraumtheaterPage({ variant = 'balanced' }) {
             </ul>
             <div className="tt-dual-cta" style={{ justifyContent: 'center' }}>
               <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
-              <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Via E-Mail</a>
+              <a href="mailto:mark@traum-theater.de" className="tt-btn-email">✉ Via E-Mail</a>
             </div>
+            <EmailCopy address="mark@traum-theater.de" tone="light" />
             <p className="tt-cta-subline" style={{ textAlign: 'center', marginTop: '1rem' }}>
               Keine Anmeldung · Kein Konto · Nur dein Traum
             </p>
@@ -375,8 +401,9 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           </div>
           <div className="tt-dual-cta" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
             <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Traum per WhatsApp senden</a>
-            <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Traum per E-Mail senden</a>
+            <a href="mailto:mark@traum-theater.de" className="tt-btn-email">✉ Traum per E-Mail senden</a>
           </div>
+          <EmailCopy address="mark@traum-theater.de" tone="dark" />
           <p className="tt-privacy-note">
             Deine Angaben werden <span>ausschließlich für deine Deutung</span> verwendet · Keine Weitergabe · Kein Newsletter ohne dein Einverständnis
           </p>
@@ -479,8 +506,9 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           </div>
           <div className="tt-dual-cta" style={{ justifyContent: 'center' }}>
             <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
-            <a href="mailto:TraumtheaterDE@pm.me" className="tt-btn-email">✉ Via E-Mail</a>
+            <a href="mailto:mark@traum-theater.de" className="tt-btn-email">✉ Via E-Mail</a>
           </div>
+          <EmailCopy address="mark@traum-theater.de" tone="dark" />
         </div>
       </section>
 
@@ -496,7 +524,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           <h3 className="tt-legal-subhead">Kontakt</h3>
           <p className="tt-legal-block">
             Telefon: +49 151 50317725<br/>
-            E-Mail: traumtheaterde@pm.me
+            E-Mail: kontakt@traum-theater.de
           </p>
           <h3 className="tt-legal-subhead">Redaktionell verantwortlich</h3>
           <p className="tt-legal-block">
