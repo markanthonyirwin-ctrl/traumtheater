@@ -528,6 +528,176 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         </div>
       </section>
 
+      {/* ══════════ AGB ══════════ */}
+      <section className="tt-legal" id="agb">
+        <div className="tt-legal-inner">
+          <h2 className="tt-legal-heading">Allgemeine Geschäftsbedingungen (AGB)</h2>
+          <p className="tt-legal-block tt-agb-intro">
+            Diese AGB regeln das Verhältnis zwischen dir und mir, Mark Anthony Irwin
+            (Traumtheater), wenn du eine Traumdeutung in Auftrag gibst. Sie sind bewusst
+            kurz und in klarer Sprache gehalten. Stand: Juli 2026.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 1 Anbieter und Geltungsbereich</h3>
+          <p className="tt-legal-block">
+            Anbieter der auf dieser Website beschriebenen Leistungen ist:<br/>
+            Mark Anthony Irwin · Traumtheater<br/>
+            Parkstraße 15, 47906 Kempen<br/>
+            E-Mail: mark@traum-theater.de · Telefon: +49 151 50317725
+          </p>
+          <p className="tt-legal-block">
+            Diese AGB gelten für alle Verträge über persönliche Traumdeutungen, die du
+            über E-Mail, WhatsApp oder auf anderem Wege mit mir schließt. Abweichende
+            Bedingungen erkenne ich nur an, wenn ich ihnen ausdrücklich schriftlich
+            zustimme.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 2 Gegenstand der Leistung</h3>
+          <p className="tt-legal-block">
+            Ich erstelle für dich eine persönliche, schriftliche Deutung eines von dir
+            eingesandten Traums nach der Aisling-Methode. Das Ergebnis ist ein
+            individuell verfasstes Textdokument, das ich dir auf demselben Weg zusende,
+            auf dem du deinen Traum eingereicht hast (in der Regel E-Mail oder WhatsApp).
+          </p>
+          <p className="tt-legal-block">
+            Die Deutung ist eine persönliche, interpretierende Dienstleistung. Ich
+            schulde die sorgfältige Erstellung der Deutung, nicht den Eintritt eines
+            bestimmten Ergebnisses, einer bestimmten Erkenntnis oder einer bestimmten
+            Wirkung.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 3 Zustandekommen des Vertrags</h3>
+          <p className="tt-legal-block">
+            Die Darstellung der Leistung auf dieser Website ist kein bindendes Angebot,
+            sondern eine Einladung, mir deinen Traum zuzusenden. Mit dem Einsenden deines
+            Traums gibst du ein Angebot zum Abschluss eines Vertrags ab. Der Vertrag kommt
+            zustande, wenn ich die Bearbeitung deines Traums bestätige oder mit der
+            Deutung beginne.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 4 Preise und Zahlung</h3>
+          <p className="tt-legal-block">
+            Der reguläre Preis für eine Traumdeutung beträgt 69 €. Für einen zeitlich
+            begrenzten Zeitraum biete ich die Deutung kostenlos an. Maßgeblich ist der
+            Preis, der zum Zeitpunkt deiner Einsendung auf dieser Website angegeben ist.
+            Preise verstehen sich als Endpreise; ich weise gemäß § 19 UStG
+            (Kleinunternehmerregelung) keine Umsatzsteuer aus. Fällt für deine Deutung
+            ein Preis an, teile ich dir dies vor Beginn der Bearbeitung mit; die Zahlung
+            wird nach Zustellung der Deutung fällig.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 5 Deine Mitwirkung</h3>
+          <p className="tt-legal-block">
+            Damit ich deinen Traum deuten kann, sendest du mir den Traumtext sowie den
+            Kontext, den du teilen möchtest. Du sicherst zu, dass deine Angaben nach bestem
+            Wissen wahrheitsgemäß sind. Für die Deutung von Träumen anderer Personen (z. B.
+            eines Kindes) bestätigst du, dass du dazu berechtigt bist, die betreffenden
+            Angaben weiterzugeben.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 6 Ablauf und Lieferung</h3>
+          <p className="tt-legal-block">
+            Nach Eingang deines Traums melde ich mich, stelle bei Bedarf eine kurze
+            Rückfrage und sende dir anschließend die schriftliche Deutung zu. Feste
+            Bearbeitungs- oder Lieferzeiten sind nicht vereinbart, sofern nicht
+            ausdrücklich etwas anderes zugesagt wurde; ich bemühe mich um eine zeitnahe
+            Bearbeitung.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 7 Widerrufsrecht für Verbraucher</h3>
+          <p className="tt-legal-block">
+            Wenn du Verbraucher bist und der Vertrag im Fernabsatz geschlossen wurde,
+            steht dir ein gesetzliches Widerrufsrecht zu.
+          </p>
+          <p className="tt-legal-block tt-agb-callout">
+            <strong>Widerrufsbelehrung</strong><br/><br/>
+            <strong>Widerrufsrecht.</strong> Du hast das Recht, binnen vierzehn Tagen ohne
+            Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt
+            vierzehn Tage ab dem Tag des Vertragsschlusses. Um dein Widerrufsrecht
+            auszuüben, musst du mich (Mark Anthony Irwin, Parkstraße 15, 47906 Kempen,
+            mark@traum-theater.de, +49 151 50317725) mittels einer eindeutigen Erklärung
+            (z. B. per Brief, E-Mail oder Nachricht) über deinen Entschluss, diesen
+            Vertrag zu widerrufen, informieren. Zur Wahrung der Widerrufsfrist reicht es
+            aus, dass du die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf
+            der Widerrufsfrist absendest.<br/><br/>
+            <strong>Folgen des Widerrufs.</strong> Wenn du diesen Vertrag widerrufst, habe
+            ich dir alle Zahlungen, die ich von dir erhalten habe, unverzüglich und
+            spätestens binnen vierzehn Tagen ab dem Tag zurückzuzahlen, an dem die
+            Mitteilung über deinen Widerruf bei mir eingegangen ist. Für diese Rückzahlung
+            verwende ich dasselbe Zahlungsmittel, das du bei der ursprünglichen
+            Transaktion eingesetzt hast, es sei denn, mit dir wurde ausdrücklich etwas
+            anderes vereinbart.
+          </p>
+          <p className="tt-legal-block">
+            <strong>Vorzeitiges Erlöschen des Widerrufsrechts.</strong> Verlangst du
+            ausdrücklich, dass ich mit der Deutung schon vor Ablauf der Widerrufsfrist
+            beginne, so erlischt dein Widerrufsrecht mit vollständiger Erbringung der
+            Leistung. Bei kostenlosen Deutungen entstehen dir durch einen Widerruf keine
+            Kosten.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 8 Art der Leistung — kein Ersatz für Beratung oder Behandlung</h3>
+          <p className="tt-legal-block">
+            Eine Traumdeutung ist eine persönliche, interpretierende und spirituell
+            geprägte Leistung. Sie ist <strong>keine medizinische, psychologische,
+            psychotherapeutische, rechtliche oder finanzielle Beratung</strong> und ersetzt
+            keine ärztliche, therapeutische oder sonstige fachliche Diagnose oder
+            Behandlung. Aussagen zu Gesundheit, Körper oder Lebensweg sind als Anregung zur
+            Selbstreflexion zu verstehen, nicht als Diagnose oder Handlungsempfehlung. Bei
+            gesundheitlichen, psychischen oder rechtlichen Anliegen wende dich bitte an
+            entsprechend qualifizierte Fachpersonen. Entscheidungen, die du auf Grundlage
+            einer Deutung triffst, triffst du in eigener Verantwortung.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 9 Haftung</h3>
+          <p className="tt-legal-block">
+            Für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit
+            sowie für Schäden aus Vorsatz oder grober Fahrlässigkeit hafte ich nach den
+            gesetzlichen Bestimmungen. Bei einfacher Fahrlässigkeit hafte ich nur bei
+            Verletzung einer wesentlichen Vertragspflicht (Pflicht, deren Erfüllung die
+            ordnungsgemäße Durchführung des Vertrags überhaupt erst ermöglicht und auf
+            deren Einhaltung du regelmäßig vertraust) und der Höhe nach begrenzt auf den
+            vertragstypisch vorhersehbaren Schaden. Eine darüber hinausgehende Haftung ist
+            ausgeschlossen. Diese Beschränkungen gelten nicht, soweit zwingendes Recht
+            (etwa das Produkthaftungsgesetz) entgegensteht.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 10 Urheberrecht und Nutzung</h3>
+          <p className="tt-legal-block">
+            Die von mir erstellte Deutung ist für deinen persönlichen Gebrauch bestimmt.
+            Du darfst sie behalten, lesen und für dich verwenden. Eine gewerbliche
+            Verwertung, Veröffentlichung oder Weitergabe des Deutungstextes als eigene
+            Leistung ist ohne meine Zustimmung nicht gestattet. Die Urheberrechte am
+            Deutungstext verbleiben bei mir.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 11 Datenschutz und Vertraulichkeit</h3>
+          <p className="tt-legal-block">
+            Deine Angaben und dein Traum werden ausschließlich zur Erstellung deiner
+            Deutung verwendet und vertraulich behandelt. Eine Weitergabe an Dritte erfolgt
+            nicht. Testimonials oder Auszüge veröffentliche ich nur mit deiner
+            ausdrücklichen Einwilligung und auf Wunsch anonymisiert.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 12 Streitbeilegung</h3>
+          <p className="tt-legal-block">
+            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung
+            (OS) bereit: https://ec.europa.eu/consumers/odr. Meine E-Mail-Adresse findest
+            du oben. Ich bin nicht verpflichtet und nicht bereit, an einem
+            Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+            teilzunehmen.
+          </p>
+
+          <h3 className="tt-legal-subhead">§ 13 Schlussbestimmungen</h3>
+          <p className="tt-legal-block">
+            Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des
+            UN-Kaufrechts; zwingende Verbraucherschutzvorschriften deines
+            Aufenthaltsstaats bleiben unberührt. Sollte eine Bestimmung dieser AGB
+            unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.
+          </p>
+        </div>
+      </section>
+
       {/* ══════════ IMPRESSUM ══════════ */}
       <section className="tt-legal" id="impressum">
         <div className="tt-legal-inner">
@@ -554,6 +724,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
       {/* ══════════ FOOTER ══════════ */}
       <footer className="tt-footer">
         <nav className="tt-footer-links">
+          <a href="#agb">AGB</a>
           <a href="#impressum">Impressum</a>
         </nav>
         <p>© Traumtheater &nbsp;·&nbsp; Persönliche Traumdeutung nach dem Aisling-System &nbsp;·&nbsp; Alle Inhalte vertraulich</p>

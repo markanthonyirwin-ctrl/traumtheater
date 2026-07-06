@@ -918,7 +918,19 @@
   font-family: 'Jost', sans-serif;
   font-size: 0.96rem; line-height: 1.7;
   color: rgba(245,236,218,0.82);
+  margin: 0 0 0.9rem;
 }
+.tt-agb-intro {
+  font-style: italic;
+  color: rgba(245,236,218,0.72);
+  margin-bottom: 1.6rem;
+}
+.tt-agb-callout {
+  border-left: 2px solid var(--gold-bright);
+  padding: 1rem 1.2rem;
+  background: rgba(139,98,25,0.12);
+}
+.tt-agb-callout strong { color: var(--parchment-light); }
 
 /* Footer */
 .tt-footer {
