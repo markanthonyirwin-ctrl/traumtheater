@@ -84,6 +84,10 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           </div>
           <EmailCopy address="mark@traum-theater.de" tone="light" />
           <p className="tt-cta-subline">Kostenlos · Vertraulich · Persönlich</p>
+          <a className="tt-verified tt-verified--light" href="https://www.provenexpert.com/mark-anthony-irwin/" target="_blank" rel="noopener noreferrer">
+            <img className="tt-verified-seal" src="assets/ProvenExpert-Bewertungssiegel.png" alt="ProvenExpert Kundenbewertungen — SEHR GUT, 100% Empfehlungen" />
+            <span className="tt-verified-note">Unabhängig geprüft auf ProvenExpert — zum Profil ↗</span>
+          </a>
         </div>
       </header>
 
@@ -319,6 +323,10 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         <p className="tt-sec-label">Was Klienten schreiben</p>
         <h2 className="tt-sec-heading">Stimmen</h2>
         <p className="tt-sec-sub">Echte Worte. Echte Träume. Echte Deutungen.</p>
+        <a className="tt-verified tt-verified--dark" href="https://www.provenexpert.com/mark-anthony-irwin/" target="_blank" rel="noopener noreferrer">
+          <img className="tt-verified-seal" src="assets/ProvenExpert-Bewertungssiegel.png" alt="ProvenExpert Kundenbewertungen — SEHR GUT, 100% Empfehlungen" />
+          <span className="tt-verified-note">Unabhängig geprüft auf ProvenExpert — zum Profil ↗</span>
+        </a>
         <div className="tt-testi-grid">
           <div className="tt-testi">
             <p className="tt-testi-body">
@@ -386,10 +394,6 @@ function TraumtheaterPage({ variant = 'balanced' }) {
             </div>
           </div>
         </div>
-        <a className="tt-verified" href="https://www.provenexpert.com/mark-anthony-irwin/" target="_blank" rel="noopener noreferrer">
-          <img className="tt-verified-seal" src="assets/ProvenExpert-Bewertungssiegel.png" alt="ProvenExpert Kundenbewertungen — SEHR GUT, 100% Empfehlungen" />
-          <span className="tt-verified-note">Unabhängig geprüft auf ProvenExpert — zum Profil ↗</span>
-        </a>
       </section>
 
       {/* ══════════ RETENTION / EINSENDEN ══════════ */}

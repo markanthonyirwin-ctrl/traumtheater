@@ -696,6 +696,10 @@
   color: var(--gold-pale);
   text-align: center;
 }
+/* Tone variants: gold caption on dark panels, sienna on light parchment */
+.tt-verified--dark .tt-verified-note { color: var(--gold-pale); }
+.tt-verified--light { margin-top: 1.3rem; }
+.tt-verified--light .tt-verified-note { color: var(--sienna); }
 
 /* Retention steps */
 .tt-retention-wrap { max-width: 820px; margin: 0 auto; }
