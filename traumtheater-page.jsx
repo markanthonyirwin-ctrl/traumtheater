@@ -555,10 +555,19 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         </div>
       </section>
 
+      {/* ══════════ DATENSCHUTZ ══════════ */}
+      <section className="tt-legal" id="datenschutz">
+        <div
+          className="tt-legal-inner tt-legal-doc"
+          dangerouslySetInnerHTML={{ __html: (window.TT_LEGAL && window.TT_LEGAL.datenschutz) || '' }}
+        />
+      </section>
+
       {/* ══════════ FOOTER ══════════ */}
       <footer className="tt-footer">
         <nav className="tt-footer-links">
           <a href="#impressum">Impressum</a>
+          <a href="#datenschutz">Datenschutz</a>
         </nav>
         <p>© Traumtheater &nbsp;·&nbsp; Persönliche Traumdeutung nach dem Aisling-System &nbsp;·&nbsp; Alle Inhalte vertraulich</p>
       </footer>

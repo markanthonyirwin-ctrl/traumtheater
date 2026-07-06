@@ -924,6 +924,43 @@
   color: rgba(245,236,218,0.82);
 }
 
+/* Injected Datenschutz document (dangerouslySetInnerHTML) */
+.tt-legal-doc { color: rgba(245,236,218,0.82); font-family: 'Jost', sans-serif; }
+.tt-legal-doc h2 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  color: var(--parchment-light);
+  margin-bottom: 1.4rem;
+}
+.tt-legal-doc h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: none;
+  color: var(--gold-bright);
+  margin: 2.2rem 0 0.8rem;
+}
+.tt-legal-doc h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold-pale);
+  margin: 1.5rem 0 0.5rem;
+}
+.tt-legal-doc p {
+  font-size: 0.92rem; line-height: 1.75;
+  color: rgba(245,236,218,0.78);
+  margin-bottom: 0.85rem;
+}
+.tt-legal-doc ul { margin: 0 0 0.85rem 1.2rem; }
+.tt-legal-doc li {
+  font-size: 0.92rem; line-height: 1.7;
+  color: rgba(245,236,218,0.78);
+  margin-bottom: 0.3rem;
+  list-style: disc;
+}
+.tt-legal-doc a { color: var(--gold-pale); word-break: break-word; }
+.tt-legal-doc a:hover { color: var(--cream); }
+.tt-legal-doc strong { color: rgba(245,236,218,0.95); }
+
 /* Footer */
 .tt-footer {
   background: rgba(15,7,2,0.97);
