@@ -373,7 +373,23 @@ function TraumtheaterPage({ variant = 'balanced' }) {
               <span className="tt-testi-name">Lisa M.</span>
             </div>
           </div>
+          <div className="tt-testi tt-testi--featured">
+            <p className="tt-testi-body">
+              „Die Traumdeutung von Mark hat mich unerwartet sehr berührt. Ich
+              hatte nicht erwartet, dass in den für uns oft so unsinnigen Träumen
+              doch soviel Weisheit und Wahrheit steckt und sie mir soviel geben
+              können. Vielen Dank, lieber Mark, für deine wertvolle Arbeit.“
+            </p>
+            <div className="tt-testi-attr">
+              <span className="tt-testi-mark"></span>
+              <span className="tt-testi-name">Sonja</span>
+            </div>
+          </div>
         </div>
+        <a className="tt-verified" href="https://www.provenexpert.com/mark-anthony-irwin/" target="_blank" rel="noopener noreferrer">
+          <img className="tt-verified-seal" src="assets/ProvenExpert-Bewertungssiegel.png" alt="ProvenExpert Kundenbewertungen — SEHR GUT, 100% Empfehlungen" />
+          <span className="tt-verified-note">Unabhängig geprüft auf ProvenExpert — zum Profil ↗</span>
+        </a>
       </section>
 
       {/* ══════════ RETENTION / EINSENDEN ══════════ */}
@@ -524,7 +540,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           <h3 className="tt-legal-subhead">Kontakt</h3>
           <p className="tt-legal-block">
             Telefon: +49 151 50317725<br/>
-            E-Mail: kontakt@traum-theater.de
+            E-Mail: mark@traum-theater.de
           </p>
           <h3 className="tt-legal-subhead">Redaktionell verantwortlich</h3>
           <p className="tt-legal-block">
