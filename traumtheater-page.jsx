@@ -8,7 +8,7 @@
 //   • Portrait used in About
 //   • Symbol book: 500 → 3,000 entries
 //   • Removed "Keine KI · Kein Algorithmus" badge
-//   • Offer price: €69 struck through, "Kostenlos" now, limited-time
+//   • Offer price: €69 struck through, €29 Einführungsangebot; pay-what-you-can note
 //   • Process step 1 expanded with title/text/context instruction
 //   • Testimonials section added (Monika, Ciara)
 
@@ -60,7 +60,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           <a href="#angebot">Angebot</a>
           <a href="#stimmen">Stimmen</a>
           <a href="#about">Über mich</a>
-          <a href="#einsenden" className="tt-nav-cta">Traum einsenden ✦</a>
+          <a href="#kontakt" className="tt-nav-cta">Kontakt ✦</a>
         </div>
       </nav>
 
@@ -75,15 +75,15 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           <p className="tt-tagline">Endlich verstehen, was deine Träume dir sagen</p>
           <p className="tt-hero-body">
             Dein Traum ist keine Zufälligkeit. Er ist eine persönliche Botschaft —
-            präzise, tiefgründig, vollständig auf dich abgestimmt. Schick mir deinen
-            Traum — ich deute ihn schriftlich, nach der Aisling-Methode, in drei Jahrzehnten gewachsen.
+            präzise, tiefgründig, vollständig auf dich abgestimmt. Melde dich —
+            ich deute deinen Traum schriftlich, nach der Aisling-Methode, in drei Jahrzehnten gewachsen.
           </p>
           <div className="tt-dual-cta">
             <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
             <a href="mailto:mark@traum-theater.de" className="tt-btn-email">✉ Via E-Mail</a>
           </div>
           <EmailCopy address="mark@traum-theater.de" tone="light" />
-          <p className="tt-cta-subline">Kostenlos · Vertraulich · Persönlich</p>
+          <p className="tt-cta-subline">Vertraulich · Persönlich · Schriftlich</p>
           <a className="tt-verified tt-verified--light" href="https://www.provenexpert.com/mark-anthony-irwin/" target="_blank" rel="noopener noreferrer">
             <img className="tt-verified-seal" src="assets/ProvenExpert-Bewertungssiegel.png" alt="ProvenExpert Kundenbewertungen — SEHR GUT, 100% Empfehlungen" />
             <span className="tt-verified-note">Unabhängig geprüft auf ProvenExpert — zum Profil ↗</span>
@@ -220,24 +220,24 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           <div className="tt-process-row">
             <div className="tt-process-step">
               <div className="tt-step-ring">i</div>
-              <h4>Traum einsenden</h4>
-              <p>Gib deinem Traum einen Titel. Schreib den Traumtext auf. Füge so viel Kontext hinzu wie möglich — zu deinem Traum und deiner aktuellen Lebenssituation.</p>
-              <p className="tt-step-detail">Per WhatsApp oder E-Mail — ganz wie du magst.</p>
+              <h4>Kontakt aufnehmen</h4>
+              <p>Melde dich per WhatsApp oder E-Mail. Erzähl mir kurz, worum es geht — noch nicht den ganzen Traum.</p>
+              <p className="tt-step-detail">Ganz unverbindlich, ganz wie du magst.</p>
             </div>
             <div className="tt-process-step">
               <div className="tt-step-ring">ii</div>
-              <h4>Kontext klären</h4>
-              <p>Manchmal stelle ich eine kurze Rückfrage. Nur wenn nötig — und nur das Wesentliche.</p>
+              <h4>Ablauf &amp; Zahlung</h4>
+              <p>Ich erkläre dir den Ablauf. Du bestätigst kurz die Einwilligung und zahlst den Einführungspreis sicher über einen Zahlungslink.</p>
             </div>
             <div className="tt-process-step">
               <div className="tt-step-ring">iii</div>
-              <h4>Deutung erhalten</h4>
-              <p>Du erhältst deine Deutung schriftlich. Durchdacht, klar, mit konkretem Bezug zu deinem Leben.</p>
+              <h4>Traum senden</h4>
+              <p>Jetzt schickst du mir deinen Traum — mit Titel und so viel Kontext wie möglich zu deiner aktuellen Lebenssituation.</p>
             </div>
             <div className="tt-process-step">
               <div className="tt-step-ring">iv</div>
-              <h4>Selbst erkennen</h4>
-              <p>Du liest. Du erkennst. Du weißt selbst, ob es stimmt — das ist die einzige Bestätigung, die zählt.</p>
+              <h4>Deutung erhalten</h4>
+              <p>Du erhältst deine Deutung schriftlich. Durchdacht, klar, mit konkretem Bezug zu deinem Leben — du liest und erkennst selbst, ob es stimmt.</p>
             </div>
           </div>
         </div>
@@ -281,7 +281,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         </div>
       </div>
 
-      {/* ══════════ OFFER — €69 → kostenlos ══════════ */}
+      {/* ══════════ OFFER — €69 → €29 Einführungsangebot ══════════ */}
       <div className="tt-content-block" id="angebot">
         <div className="tt-rune-divider" style={{ maxWidth: '100%', margin: '0 0 2.5rem', padding: 0 }}>
           <span className="tt-runes">᚛ ✦ ᚜</span>
@@ -289,15 +289,15 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         <div className="tt-offer-wrap">
           <div className="tt-offer-box">
             <p className="tt-offer-title">Persönliche Traumdeutung</p>
-            <p className="tt-offer-limited">✦ Für kurze Zeit kostenlos ✦</p>
+            <p className="tt-offer-limited">✦ Einführungsangebot ✦</p>
             <div className="tt-price-row">
               <span className="tt-price-was">€69</span>
-              <span className="tt-price-now">Kostenlos</span>
+              <span className="tt-price-now">€29</span>
             </div>
-            <p className="tt-price-note">Normalpreis €69 · Jetzt zeitlich begrenzt geschenkt</p>
+            <p className="tt-price-note">Normalpreis €69 · Einführungspreis für kurze Zeit</p>
             <p className="tt-offer-desc">
               Ein Traum. Vollständig gedeutet. Schriftlich zugestellt.<br/>
-              Persönlich — nicht automatisiert, nicht generisch.
+              Persönlich verfasst — nach der Aisling-Methode.
             </p>
             <ul className="tt-offer-features">
               <li>Vollständige Analyse aller Symbole und ihrer Verbindungen</li>
@@ -306,14 +306,22 @@ function TraumtheaterPage({ variant = 'balanced' }) {
               <li>Schriftliche Lieferung — zum Aufbewahren und Nachdenken</li>
               <li>Vertraulich behandelt — dein Traum bleibt dein Traum</li>
             </ul>
+            <div className="tt-pwyc">
+              <h4 className="tt-pwyc-title">Wenn der Preis gerade nicht passt</h4>
+              <p>Diese Arbeit soll an niemandem am Geld scheitern. Wenn dir eine
+                 Deutung wichtig ist, der Preis aber im Moment nicht möglich ist,
+                 schreib mir einfach. Wir finden eine Lösung, die für dich stimmt —
+                 ohne Erklärung, ohne Umstände.</p>
+            </div>
             <div className="tt-dual-cta" style={{ justifyContent: 'center' }}>
               <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
               <a href="mailto:mark@traum-theater.de" className="tt-btn-email">✉ Via E-Mail</a>
             </div>
             <EmailCopy address="mark@traum-theater.de" tone="light" />
             <p className="tt-cta-subline" style={{ textAlign: 'center', marginTop: '1rem' }}>
-              Keine Anmeldung · Kein Konto · Nur dein Traum
+              Sichere Zahlung · Vertraulich · In wenigen Schritten
             </p>
+            <p className="tt-price-vat">Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
           </div>
         </div>
       </div>
@@ -396,32 +404,32 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         </div>
       </section>
 
-      {/* ══════════ RETENTION / EINSENDEN ══════════ */}
-      <section className="tt-panel-dark" id="einsenden">
+      {/* ══════════ KONTAKT ══════════ */}
+      <section className="tt-panel-dark" id="kontakt">
         <div className="tt-retention-wrap">
-          <p className="tt-sec-label">Was danach passiert</p>
+          <p className="tt-sec-label">So beginnst du</p>
           <h2 className="tt-sec-heading">Wie es weitergeht</h2>
-          <p className="tt-sec-sub">Einfach. Persönlich. Ohne Verpflichtung.</p>
+          <p className="tt-sec-sub">Einfach. Persönlich. Kontakt ohne Verpflichtung.</p>
           <div className="tt-retention-steps">
             <div className="tt-ret-step">
               <span className="tt-ret-glyph">✦</span>
-              <h4>Du sendest deinen Traum</h4>
-              <p>Per WhatsApp oder E-Mail — wie es dir lieber ist. Mit Titel, Traumtext und so viel Kontext wie du teilen magst.</p>
+              <h4>Du nimmst Kontakt auf</h4>
+              <p>Per WhatsApp oder E-Mail — wie es dir lieber ist. Erzähl mir kurz, worum es geht, noch nicht den ganzen Traum.</p>
             </div>
             <div className="tt-ret-step">
               <span className="tt-ret-glyph">᚜</span>
-              <h4>Du erhältst deine Deutung</h4>
-              <p>Ich antworte schriftlich, persönlich, auf demselben Kanal. Durchdacht, klar, mit konkretem Bezug zu deinem Leben.</p>
+              <h4>Wir klären Ablauf &amp; Zahlung</h4>
+              <p>Kurze Einwilligung, Einführungspreis von 29 € sicher über einen Zahlungslink. Danach sendest du mir deinen Traum.</p>
             </div>
             <div className="tt-ret-step">
               <span className="tt-ret-glyph">◈</span>
-              <h4>Ich melde mich kurz nach</h4>
-              <p>Hat die Deutung dich berührt? Ich frage einmal nach — und du bist herzlich eingeladen, jederzeit einen weiteren Traum einzusenden.</p>
+              <h4>Du erhältst deine Deutung</h4>
+              <p>Schriftlich, persönlich, mit konkretem Bezug zu deinem Leben. Danach frage ich einmal nach, ob sie dich berührt hat.</p>
             </div>
           </div>
           <div className="tt-dual-cta" style={{ justifyContent: 'center', marginTop: '2.5rem' }}>
-            <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Traum per WhatsApp senden</a>
-            <a href="mailto:mark@traum-theater.de" className="tt-btn-email">✉ Traum per E-Mail senden</a>
+            <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
+            <a href="mailto:mark@traum-theater.de" className="tt-btn-email">✉ Via E-Mail</a>
           </div>
           <EmailCopy address="mark@traum-theater.de" tone="dark" />
           <p className="tt-privacy-note">

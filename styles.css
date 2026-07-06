@@ -604,6 +604,35 @@
   font-size: 0.65rem; margin-top: 0.35rem; flex-shrink: 0;
 }
 
+/* Pay-what-you-can note inside the offer box */
+.tt-pwyc {
+  border-top: 1px solid rgba(139,98,25,0.3);
+  margin: 0 0 1.8rem;
+  padding: 1.4rem 0 0;
+  text-align: center;
+}
+.tt-pwyc-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.72rem; letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--sienna);
+  margin-bottom: 0.6rem;
+}
+.tt-pwyc p {
+  font-style: italic;
+  font-size: 0.94rem; line-height: 1.7;
+  color: var(--ink-mid);
+  max-width: 460px; margin: 0 auto;
+}
+
+/* Kleinunternehmer VAT note under the CTA */
+.tt-price-vat {
+  margin-top: 0.7rem;
+  font-size: 0.68rem;
+  color: rgba(74,50,24,0.6);
+  text-align: center;
+}
+
 /* ══════════ Testimonials ══════════ */
 .tt-testimonials {
   padding: var(--sec-pad-y) 2.5rem;
