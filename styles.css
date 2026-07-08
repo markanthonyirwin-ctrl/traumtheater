@@ -931,10 +931,46 @@
 .tt-legal {
   background: var(--ink);
   color: var(--cream);
-  padding: 3.5rem 2.5rem;
+  padding: 0;
   border-top: 1px solid rgba(139,98,25,0.25);
 }
-.tt-legal-inner { max-width: 680px; margin: 0 auto; }
+.tt-legal:last-of-type { border-bottom: 1px solid rgba(139,98,25,0.25); }
+.tt-legal-inner { max-width: none; margin: 0; padding-top: 0.4rem; }
+
+/* Collapsible legal sections (native <details>/<summary>) */
+.tt-legal-details {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+.tt-legal-summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.5rem 0;
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--parchment-light);
+  letter-spacing: 0.04em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.2s;
+  user-select: none;
+}
+.tt-legal-summary::-webkit-details-marker { display: none; }
+.tt-legal-summary:hover { color: var(--gold-pale); }
+.tt-legal-summary::after {
+  content: '+';
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  color: var(--gold-pale);
+  font-weight: 300;
+  margin-left: 1rem;
+  transition: color 0.2s;
+}
+.tt-legal-details[open] .tt-legal-summary::after { content: '−'; }
+.tt-legal-details[open] { padding-bottom: 2.5rem; }
 .tt-legal-heading {
   font-size: clamp(1.5rem, 3vw, 2.1rem);
   color: var(--parchment-light);

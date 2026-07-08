@@ -42,6 +42,23 @@ function TraumtheaterPage({ variant = 'balanced' }) {
   const V = variant;
   const [navOpen, setNavOpen] = React.useState(false);
 
+  // When a footer link like #datenschutz is clicked, open the matching
+  // <details> so the reader lands inside the expanded section instead of
+  // an anonymous collapsed bar.
+  React.useEffect(() => {
+    const openHashTarget = () => {
+      const id = window.location.hash.slice(1);
+      if (!id) return;
+      const target = document.getElementById(id);
+      if (!target) return;
+      const details = target.querySelector('details');
+      if (details) details.open = true;
+    };
+    openHashTarget();
+    window.addEventListener('hashchange', openHashTarget);
+    return () => window.removeEventListener('hashchange', openHashTarget);
+  }, []);
+
   return (
     <div className="tt-root" data-variant={V}>
       {/* ══════════ NAV ══════════ */}
@@ -540,51 +557,62 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         </div>
       </section>
 
-      {/* ══════════ IMPRESSUM ══════════ */}
+      {/* ══════════ IMPRESSUM (collapsible) ══════════ */}
       <section className="tt-legal" id="impressum">
-        <div className="tt-legal-inner">
-          <h2 className="tt-legal-heading">Impressum</h2>
-          <p className="tt-legal-block">
-            Mark Anthony Irwin<br/>
-            Parkstraße 15<br/>
-            47906 Kempen
-          </p>
-          <h3 className="tt-legal-subhead">Kontakt</h3>
-          <p className="tt-legal-block">
-            Telefon: +49 151 50317725<br/>
-            E-Mail: mark@traum-theater.de
-          </p>
-          <h3 className="tt-legal-subhead">Redaktionell verantwortlich</h3>
-          <p className="tt-legal-block">
-            Mark Anthony Irwin<br/>
-            Anschrift wie oben<br/>
-            (gem. § 18 Abs. 2 MStV)
-          </p>
-        </div>
+        <details className="tt-legal-details">
+          <summary className="tt-legal-summary">Impressum</summary>
+          <div className="tt-legal-inner">
+            <p className="tt-legal-block">
+              Mark Anthony Irwin<br/>
+              Parkstraße 15<br/>
+              47906 Kempen
+            </p>
+            <h3 className="tt-legal-subhead">Kontakt</h3>
+            <p className="tt-legal-block">
+              Telefon: +49 151 50317725<br/>
+              E-Mail: mark@traum-theater.de
+            </p>
+            <h3 className="tt-legal-subhead">Redaktionell verantwortlich</h3>
+            <p className="tt-legal-block">
+              Mark Anthony Irwin<br/>
+              Anschrift wie oben<br/>
+              (gem. § 18 Abs. 2 MStV)
+            </p>
+          </div>
+        </details>
       </section>
 
-      {/* ══════════ DATENSCHUTZ ══════════ */}
+      {/* ══════════ DATENSCHUTZ (collapsible) ══════════ */}
       <section className="tt-legal" id="datenschutz">
-        <div
-          className="tt-legal-inner tt-legal-doc"
-          dangerouslySetInnerHTML={{ __html: (window.TT_LEGAL && window.TT_LEGAL.datenschutz) || '' }}
-        />
+        <details className="tt-legal-details">
+          <summary className="tt-legal-summary">Datenschutz</summary>
+          <div
+            className="tt-legal-inner tt-legal-doc"
+            dangerouslySetInnerHTML={{ __html: (window.TT_LEGAL && window.TT_LEGAL.datenschutz) || '' }}
+          />
+        </details>
       </section>
 
-      {/* ══════════ AGB ══════════ */}
+      {/* ══════════ AGB (collapsible) ══════════ */}
       <section className="tt-legal" id="agb">
-        <div
-          className="tt-legal-inner tt-legal-doc"
-          dangerouslySetInnerHTML={{ __html: (window.TT_LEGAL && window.TT_LEGAL.agb) || '' }}
-        />
+        <details className="tt-legal-details">
+          <summary className="tt-legal-summary">AGB</summary>
+          <div
+            className="tt-legal-inner tt-legal-doc"
+            dangerouslySetInnerHTML={{ __html: (window.TT_LEGAL && window.TT_LEGAL.agb) || '' }}
+          />
+        </details>
       </section>
 
-      {/* ══════════ WIDERRUFSBELEHRUNG ══════════ */}
+      {/* ══════════ WIDERRUFSBELEHRUNG (collapsible) ══════════ */}
       <section className="tt-legal" id="widerruf">
-        <div
-          className="tt-legal-inner tt-legal-doc"
-          dangerouslySetInnerHTML={{ __html: (window.TT_LEGAL && window.TT_LEGAL.widerruf) || '' }}
-        />
+        <details className="tt-legal-details">
+          <summary className="tt-legal-summary">Widerruf</summary>
+          <div
+            className="tt-legal-inner tt-legal-doc"
+            dangerouslySetInnerHTML={{ __html: (window.TT_LEGAL && window.TT_LEGAL.widerruf) || '' }}
+          />
+        </details>
       </section>
 
       {/* ══════════ FOOTER ══════════ */}

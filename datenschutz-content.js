@@ -8,7 +8,6 @@
 // German is the authoritative version.
 window.TT_LEGAL = {
   datenschutz: `
-<h2>Datenschutzerkl&auml;rung</h2>
 <h3>1. Datenschutz auf einen Blick</h3>
 <h4>Allgemeine Hinweise</h4>
 <p>Die folgenden Hinweise geben einen einfachen &Uuml;berblick dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie pers&ouml;nlich identifiziert werden k&ouml;nnen. Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.</p>
@@ -99,8 +98,7 @@ window.TT_LEGAL = {
 `,
 
   agb: `
-<h2>Allgemeine Gesch&auml;ftsbedingungen</h2>
-<p>f&uuml;r die Erbringung von Dienstleistungen von Mark Anthony Irwin, Traumtheater, Parkstra&szlig;e 15, 47906 Kempen, E-Mail: kontakt@traum-theater.de (nachfolgend &bdquo;Auftragnehmer&ldquo;) gegen&uuml;ber seinen Kunden (nachfolgend &bdquo;Auftraggeber&ldquo;)</p>
+<p><em>Allgemeine Gesch&auml;ftsbedingungen f&uuml;r die Erbringung von Dienstleistungen von Mark Anthony Irwin, Traumtheater, Parkstra&szlig;e 15, 47906 Kempen, E-Mail: kontakt@traum-theater.de (nachfolgend &bdquo;Auftragnehmer&ldquo;) gegen&uuml;ber seinen Kunden (nachfolgend &bdquo;Auftraggeber&ldquo;).</em></p>
 
 <h3>1. Allgemeines</h3>
 <p>1.1 Diese Allgemeinen Gesch&auml;ftsbedingungen (AGB) f&uuml;r die Erbringung von Dienstleistungen gelten f&uuml;r Vertr&auml;ge, die zwischen dem Auftraggeber und dem Auftragnehmer unter Einbeziehung dieser AGB geschlossen werden.</p>
@@ -147,7 +145,6 @@ window.TT_LEGAL = {
 `,
 
   widerruf: `
-<h2>Widerrufsbelehrung</h2>
 <h3>Widerrufsrecht f&uuml;r Verbraucher</h3>
 <p><em>Verbraucher ist jede nat&uuml;rliche Person, die ein Rechtsgesch&auml;ft zu Zwecken abschlie&szlig;t, die &uuml;berwiegend weder ihrer gewerblichen noch ihrer selbst&auml;ndigen beruflichen T&auml;tigkeit zugerechnet werden k&ouml;nnen.</em></p>
 <p>Sie haben das Recht, binnen 14 Tagen ohne Angabe von Gr&uuml;nden diesen Vertrag zu widerrufen. Die Widerrufsfrist betr&auml;gt 14 Tage ab dem Tag des Vertragsabschlusses.</p>
