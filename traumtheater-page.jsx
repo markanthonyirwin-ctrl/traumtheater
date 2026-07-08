@@ -571,11 +571,29 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         />
       </section>
 
+      {/* ══════════ AGB ══════════ */}
+      <section className="tt-legal" id="agb">
+        <div
+          className="tt-legal-inner tt-legal-doc"
+          dangerouslySetInnerHTML={{ __html: (window.TT_LEGAL && window.TT_LEGAL.agb) || '' }}
+        />
+      </section>
+
+      {/* ══════════ WIDERRUFSBELEHRUNG ══════════ */}
+      <section className="tt-legal" id="widerruf">
+        <div
+          className="tt-legal-inner tt-legal-doc"
+          dangerouslySetInnerHTML={{ __html: (window.TT_LEGAL && window.TT_LEGAL.widerruf) || '' }}
+        />
+      </section>
+
       {/* ══════════ FOOTER ══════════ */}
       <footer className="tt-footer">
         <nav className="tt-footer-links">
           <a href="#impressum">Impressum</a>
           <a href="#datenschutz">Datenschutz</a>
+          <a href="#agb">AGB</a>
+          <a href="#widerruf">Widerruf</a>
         </nav>
         <p>© Traumtheater &nbsp;·&nbsp; Persönliche Traumdeutung nach dem Aisling-System &nbsp;·&nbsp; Alle Inhalte vertraulich</p>
       </footer>
