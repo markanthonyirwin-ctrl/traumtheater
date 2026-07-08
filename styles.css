@@ -633,6 +633,23 @@
   text-align: center;
 }
 
+/* Service-scope notice above the CTA (not medical/psychological advice) */
+.tt-offer-notice {
+  margin: 0 0 1.4rem;
+  padding: 0.9rem 1rem;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: var(--ink-mid);
+  border-left: 2px solid var(--gold);
+  background: rgba(139,98,25,0.06);
+  text-align: left;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tt-offer-notice strong { color: var(--sienna); }
+.tt-offer-notice a { color: var(--sienna); text-decoration: underline; }
+
 /* ══════════ Testimonials ══════════ */
 .tt-testimonials {
   padding: var(--sec-pad-y) 2.5rem;

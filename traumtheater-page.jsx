@@ -330,6 +330,12 @@ function TraumtheaterPage({ variant = 'balanced' }) {
                  schreib mir einfach. Wir finden eine Lösung, die für dich stimmt —
                  ohne Erklärung, ohne Umstände.</p>
             </div>
+            <p className="tt-offer-notice">
+              <strong>Wichtiger Hinweis:</strong> Die Traumdeutung ist eine
+              reflektierende Dienstleistung nach der Aisling-Methode. Sie ist
+              keine medizinische, psychotherapeutische oder psychologische
+              Beratung und ersetzt keine solche. Details in den <a href="#agb">AGB § 2a</a>.
+            </p>
             <div className="tt-dual-cta" style={{ justifyContent: 'center' }}>
               <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
               <a href="mailto:mark@traum-theater.de" className="tt-btn-email">✉ Via E-Mail</a>
