@@ -88,12 +88,14 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         </div>
         <div className="tt-hero-text">
           <div className="tt-eyebrow">Persönliche Traumdeutung</div>
-          <h1 className="tt-site-title">Traum<span className="tt-accent">theater</span></h1>
-          <p className="tt-tagline">Endlich verstehen, was deine Träume dir sagen</p>
+          <div className="tt-site-title">Traum<span className="tt-accent">theater</span></div>
+          <h1 className="tt-tagline">Deine Träume, persönlich gedeutet</h1>
           <p className="tt-hero-body">
-            Dein Traum ist keine Zufälligkeit. Er ist eine persönliche Botschaft —
-            präzise, tiefgründig, vollständig auf dich abgestimmt. Melde dich —
-            ich deute deinen Traum schriftlich, nach der Aisling-Methode, in drei Jahrzehnten gewachsen.
+            Jeder Traum erzählt etwas über den Moment, in dem du gerade stehst.
+            Ich lese deinen Traum nicht aus einem Lexikon, sondern persönlich —
+            nach der Aisling-Methode, einer irischen Tradition, mit der ich
+            seit 2014 arbeite. Du bekommst eine ausführliche, schriftliche
+            Deutung, in Ruhe geschrieben, auf Deutsch oder Englisch.
           </p>
           <div className="tt-dual-cta">
             <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
@@ -205,7 +207,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
       <div className="tt-content-block" id="symbole">
         <p className="tt-sec-label">Aus dem Symbolbuch</p>
         <h2 className="tt-sec-heading" style={{ textAlign: 'center' }}>Was Symbole bedeuten</h2>
-        <p className="tt-sec-sub">Acht Symbole — was das Aisling-System darin sieht</p>
+        <p className="tt-sec-sub">Acht Symbole — was die Aisling-Methode darin sieht</p>
         <div className="tt-dict-grid">
           {[
             ['Wasser','Dein geistiges Leben. Klares Wasser: Verbindung. Trübes Wasser: Unterbrechung. Die Tiefe zeigt die Tiefe deiner Seele.'],
@@ -466,10 +468,10 @@ function TraumtheaterPage({ variant = 'balanced' }) {
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <p className="tt-sec-label">Das Fundament</p>
           <h2 className="tt-sec-heading">Drei Jahrzehnte Methodik</h2>
-          <p className="tt-sec-sub">Das Aisling-System im zeitlichen Kontext</p>
+          <p className="tt-sec-sub">Die Aisling-Methode im zeitlichen Kontext</p>
           <div className="tt-timeline">
             {[
-              ['1990er','George Rhatigan entwickelt das Grundgerüst des Aisling-Systems in Irland. Die erste systematische Sammlung von Traumsymbolen entsteht aus gelebter Beratungspraxis.'],
+              ['1990er','George Rhatigan entwickelt das Grundgerüst der Aisling-Methode in Irland. Die erste systematische Sammlung von Traumsymbolen entsteht aus gelebter Beratungspraxis.'],
               ['1997','Michael Sheridan veröffentlicht How to Interpret Your Dreams and Discover Your Life Purpose — das erste dokumentierte Werk des Systems.'],
               ['2000er','Sheridan wird regelmäßiger Gast bei Ireland AM, BBC, und Seattle Radio KKNW. Das System verbreitet sich international in mehrere Sprachen.'],
               ['2015','Michael kündigt seine Stelle als Softwareentwickler und widmet sich fortan ganz der Aisling School of Dream Interpretation, die er ins Internet bringt. Die Radiosendung startet, und Sandy hilft im Hintergrund beim Wachstum der Schule.'],
@@ -509,7 +511,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
       {/* ══════════ ABOUT (with portrait) ══════════ */}
       <section className="tt-panel-dark" id="about">
         <div className="tt-about-inner">
-          <img className="tt-about-portrait" src="assets/mark-portrait.png" alt="Mark Irwin" />
+          <img className="tt-about-portrait" src="assets/mark-portrait.png" alt="Mark Anthony Irwin, zertifizierter Traumdeuter (Aisling-Methode)" />
           <p className="tt-sec-label">Persönlich</p>
           <h2 className="tt-sec-heading">Über mich und die Deutungen</h2>
           <p className="tt-about-body">
@@ -523,7 +525,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           </p>
           <p className="tt-about-body">
             <strong className="tt-about-lead">Ein System, keine Esoterik.</strong>
-            {' '}Ich arbeite nach dem Aisling-System — einem der wenigen
+            {' '}Ich arbeite nach der Aisling-Methode — einer der wenigen
             Traumdeutungsrahmen, der in geübter Praxis über Jahrzehnte
             hinweg angewandt und verfeinert wurde. Keine generischen
             Symbollisten. Keine spirituellen Projektionen. Sondern eine
@@ -548,12 +550,12 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           </div>
 
           <div className="tt-badge-row">
-            <span className="tt-badge">Aisling-System</span>
+            <span className="tt-badge">Aisling-Methode</span>
             <span className="tt-badge">Studium bei Michael Sheridan</span>
             <span className="tt-badge">Schriftliche Deutung</span>
             <span className="tt-badge">3.000+ Symbole</span>
             <span className="tt-badge">Vertraulich</span>
-            <span className="tt-badge">Deutsch · Niederländisch · Englisch</span>
+            <span className="tt-badge">Deutsch · Englisch</span>
           </div>
           <div className="tt-dual-cta" style={{ justifyContent: 'center' }}>
             <a href="https://wa.me/4915150317725" className="tt-btn-wa">💬 Via WhatsApp</a>
@@ -629,7 +631,7 @@ function TraumtheaterPage({ variant = 'balanced' }) {
           <a href="#agb">AGB</a>
           <a href="#widerruf">Widerruf</a>
         </nav>
-        <p>© Traumtheater &nbsp;·&nbsp; Persönliche Traumdeutung nach dem Aisling-System &nbsp;·&nbsp; Alle Inhalte vertraulich</p>
+        <p>© Traumtheater &nbsp;·&nbsp; Persönliche Traumdeutung nach dem Aisling-Methode &nbsp;·&nbsp; Alle Inhalte vertraulich</p>
       </footer>
     </div>
   );

@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#1a0e04">
 
 <!-- Primary SEO -->
-<title>Traumtheater — Persönliche Traumdeutung nach dem Aisling-System</title>
-<meta name="description" content="Endlich verstehen, was deine Träume dir sagen. Persönliche, schriftliche Traumdeutung nach dem Aisling-System. Für kurze Zeit kostenlos statt €69.">
-<meta name="keywords" content="Traumdeutung, Traumanalyse, Aisling-System, Träume verstehen, persönliche Traumdeutung, schriftliche Traumdeutung">
+<title>Traumtheater — Persönliche Traumdeutung nach der Aisling-Methode</title>
+<meta name="description" content="Persönliche, schriftliche Traumdeutung nach der Aisling-Methode — auf Deutsch oder Englisch. Kein Lexikon, keine Symboltabelle: eine ausführliche Deutung deines Traums, in Ruhe für dich geschrieben.">
+<meta name="keywords" content="persönliche Traumdeutung, schriftliche Traumdeutung, Traumdeutung online, spirituelle Traumdeutung, Aisling-Methode, Traumdeuter, Traumdeutung buchen">
 <meta name="author" content="Traumtheater">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://traum-theater.de/">
@@ -19,45 +19,101 @@
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Traumtheater">
 <meta property="og:title" content="Traumtheater — Persönliche Traumdeutung">
-<meta property="og:description" content="Endlich verstehen, was deine Träume dir sagen. Schriftliche Deutung nach dem Aisling-System — für kurze Zeit kostenlos.">
+<meta property="og:description" content="Ich lese deinen Traum nicht aus einem Lexikon, sondern persönlich — nach der Aisling-Methode, in ausführlicher schriftlicher Form.">
 <meta property="og:image" content="https://traum-theater.de/assets/logo.png">
 <meta property="og:url" content="https://traum-theater.de/">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Traumtheater — Persönliche Traumdeutung">
-<meta name="twitter:description" content="Endlich verstehen, was deine Träume dir sagen. Schriftliche Deutung nach dem Aisling-System.">
+<meta name="twitter:description" content="Ich lese deinen Traum nicht aus einem Lexikon, sondern persönlich — nach der Aisling-Methode, schriftlich zugestellt.">
 <meta name="twitter:image" content="https://traum-theater.de/assets/logo.png">
 
 <!-- Favicon (reuses the logo; browser will scale) -->
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
 
-<!-- Structured data: LocalBusiness + AggregateRating -->
+<!-- Structured data: Person + Service (solo practitioner model) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Traumtheater",
-  "description": "Persönliche, schriftliche Traumdeutung nach dem Aisling-System.",
-  "image": "https://traum-theater.de/assets/logo.png",
-  "url": "https://traum-theater.de/",
-  "inLanguage": ["de", "nl", "en"],
-  "priceRange": "€0–€69",
-  "review": [
+  "@graph": [
     {
-      "@type": "Review",
-      "author": {"@type": "Person", "name": "Monika Dziatkiewicz"},
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Ich habe deine E-Mail drei Mal gelesen und ins Polnische übersetzt — wow! Es ist eine unglaubliche Deutung."
+      "@type": "Person",
+      "@id": "https://traum-theater.de/#person",
+      "name": "Mark Anthony Irwin",
+      "givenName": "Mark",
+      "familyName": "Irwin",
+      "jobTitle": "Traumdeuter",
+      "description": "Zertifizierter Traumdeuter nach der Aisling-Methode.",
+      "image": "https://traum-theater.de/assets/mark-portrait.png",
+      "url": "https://traum-theater.de/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kempen",
+        "postalCode": "47906",
+        "addressCountry": "DE"
+      },
+      "email": "mark@traum-theater.de",
+      "telephone": "+4915150317725",
+      "knowsLanguage": ["de", "en"],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Aisling School Channel",
+          "dateCreated": "2024-12",
+          "recognizedBy": {"@type": "Organization", "name": "Aisling School"}
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "Aisling Dream Interpreter",
+          "dateCreated": "2026-04",
+          "recognizedBy": {"@type": "Organization", "name": "Aisling School"}
+        }
+      ],
+      "sameAs": [
+        "https://www.provenexpert.com/mark-anthony-irwin/"
+      ]
     },
     {
-      "@type": "Review",
-      "author": {"@type": "Person", "name": "Ciara Clarke"},
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Mark hat die Träume entschlüsselt, die in einer sehr stressigen Zeit zu mir kamen. Seine einfühlsamen Interpretationen gaben mir Klarheit, Orientierung und Erleichterung."
+      "@type": "Service",
+      "@id": "https://traum-theater.de/#service",
+      "name": "Persönliche schriftliche Traumdeutung",
+      "description": "Ausführliche, persönlich verfasste schriftliche Traumdeutung nach der Aisling-Methode. Kein Lexikon, keine Symboltabelle: eine Deutung, die den Traum, den Kontext und die Lebenssituation des Klienten ernst nimmt.",
+      "serviceType": "Dream interpretation",
+      "provider": {"@id": "https://traum-theater.de/#person"},
+      "areaServed": [
+        {"@type": "Country", "name": "Germany"},
+        {"@type": "Country", "name": "Austria"},
+        {"@type": "Country", "name": "Switzerland"}
+      ],
+      "availableLanguage": ["de", "en"],
+      "offers": {
+        "@type": "Offer",
+        "price": "29.00",
+        "priceCurrency": "EUR",
+        "description": "Einführungsangebot (regulärer Preis 69 €). §19 UStG — keine Umsatzsteuer.",
+        "availability": "https://schema.org/InStock",
+        "url": "https://traum-theater.de/#angebot"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Monika Dziatkiewicz"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Ich habe deine E-Mail drei Mal gelesen und ins Polnische übersetzt — wow! Es ist eine unglaubliche Deutung."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Ciara Clarke"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Mark hat die Träume entschlüsselt, die in einer sehr stressigen Zeit zu mir kamen. Seine einfühlsamen Interpretationen gaben mir Klarheit, Orientierung und Erleichterung."
+        }
+      ],
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "3", "bestRating": "5"}
     }
-  ],
-  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "2"}
+  ]
 }
 </script>
 

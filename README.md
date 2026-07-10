@@ -1,6 +1,6 @@
 # Traumtheater
 
-Persönliche Traumdeutung nach dem Aisling-System — website source.
+Persönliche Traumdeutung nach der Aisling-Methode — website source.
 
 ## What this is
 
