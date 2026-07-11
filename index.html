@@ -32,7 +32,7 @@
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
 
-<!-- Structured data: Person + Service (solo practitioner model) -->
+<!-- Structured data: Person + ProfessionalService (solo practitioner as trade name) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,12 +47,6 @@
       "description": "Zertifizierter Traumdeuter nach der Aisling-Methode.",
       "image": "https://traum-theater.de/assets/mark-portrait.png",
       "url": "https://traum-theater.de/",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kempen",
-        "postalCode": "47906",
-        "addressCountry": "DE"
-      },
       "email": "mark@traum-theater.de",
       "telephone": "+4915150317725",
       "knowsLanguage": ["de", "en"],
@@ -74,23 +68,42 @@
       ],
       "sameAs": [
         "https://www.provenexpert.com/mark-anthony-irwin/"
-      ]
+      ],
+      "worksFor": {"@id": "https://traum-theater.de/#business"}
     },
     {
-      "@type": "Service",
-      "@id": "https://traum-theater.de/#service",
-      "name": "Persönliche schriftliche Traumdeutung",
-      "description": "Ausführliche, persönlich verfasste schriftliche Traumdeutung nach der Aisling-Methode. Kein Lexikon, keine Symboltabelle: eine Deutung, die den Traum, den Kontext und die Lebenssituation des Klienten ernst nimmt.",
-      "serviceType": "Dream interpretation",
-      "provider": {"@id": "https://traum-theater.de/#person"},
+      "@type": "ProfessionalService",
+      "@id": "https://traum-theater.de/#business",
+      "name": "Traumtheater",
+      "alternateName": "Traumtheater — Persönliche Traumdeutung",
+      "description": "Persönliche, schriftliche Traumdeutung nach der Aisling-Methode. Kein Lexikon, keine Symboltabelle: eine ausführliche Deutung, die den Traum, den Kontext und die Lebenssituation des Klienten ernst nimmt.",
+      "image": "https://traum-theater.de/assets/logo.png",
+      "url": "https://traum-theater.de/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kempen",
+        "postalCode": "47906",
+        "addressCountry": "DE"
+      },
+      "email": "kontakt@traum-theater.de",
+      "telephone": "+4915150317725",
+      "priceRange": "€29",
+      "founder": {"@id": "https://traum-theater.de/#person"},
+      "employee": {"@id": "https://traum-theater.de/#person"},
       "areaServed": [
         {"@type": "Country", "name": "Germany"},
         {"@type": "Country", "name": "Austria"},
         {"@type": "Country", "name": "Switzerland"}
       ],
       "availableLanguage": ["de", "en"],
-      "offers": {
+      "makesOffer": {
         "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Persönliche schriftliche Traumdeutung",
+          "serviceType": "Dream interpretation",
+          "provider": {"@id": "https://traum-theater.de/#person"}
+        },
         "price": "29.00",
         "priceCurrency": "EUR",
         "description": "Einführungsangebot (regulärer Preis 69 €). §19 UStG — keine Umsatzsteuer.",
@@ -109,6 +122,12 @@
           "author": {"@type": "Person", "name": "Ciara Clarke"},
           "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
           "reviewBody": "Mark hat die Träume entschlüsselt, die in einer sehr stressigen Zeit zu mir kamen. Seine einfühlsamen Interpretationen gaben mir Klarheit, Orientierung und Erleichterung."
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Sonja"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Die Traumdeutung von Mark hat mich unerwartet sehr berührt. Ich hatte nicht erwartet, dass in den für uns oft so unsinnigen Träumen doch soviel Weisheit und Wahrheit steckt und sie mir soviel geben können. Vielen Dank, lieber Mark, für deine wertvolle Arbeit."
         }
       ],
       "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5", "reviewCount": "3", "bestRating": "5"}
