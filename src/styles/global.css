@@ -1486,3 +1486,41 @@
   text-align: center;
 }
 .tt-post-cta h3 { margin-bottom: 0.6rem; }
+
+/* ══════════════════════════════════════════════
+   SPECIFICITY CORRECTIONS
+   The original stylesheet targets .tt-root h1 / .tt-root p, which outrank the
+   single-class rules above. These restore the intended three-family system.
+════════════════════════════════════════════════ */
+
+/* Form controls do not inherit font by default — this is where Arial and
+   Times were leaking into an otherwise three-family page. */
+.tt-root button,
+.tt-root input,
+.tt-root select,
+.tt-root textarea { font: inherit; }
+
+/* The tagline is the H1 and carries the keywords. Uncial Antiqua is a display
+   face — unreadable for a full sentence. IM Fell italic, as originally designed. */
+.tt-root h1.tt-tagline {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  letter-spacing: 0;
+}
+
+/* Section decks sit between heading and body, so they need their own size. */
+.tt-root p.tt-sec-sub {
+  font-size: var(--size-subheading);
+  font-family: var(--font-body);
+  font-style: normal;
+  color: var(--ink-soft);
+}
+.tt-root .tt-panel-dark p.tt-sec-sub,
+.tt-root .tt-testimonials p.tt-sec-sub { color: rgba(245, 236, 218, 0.92); }
+
+/* Testimonial quotes keep the literary face at readable size. */
+.tt-root p.tt-testi-body {
+  font-family: var(--font-accent);
+  font-size: var(--size-body);
+}
