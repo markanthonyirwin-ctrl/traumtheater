@@ -1,0 +1,25 @@
+# Netlify build config.
+#
+# This file MUST land in the same commit as the Astro scaffold. Before Astro,
+# the site was served straight from the repo root with no build step; the
+# moment package.json exists, Netlify starts running a build and publishing
+# from `dist`. Committing this together keeps the deploy from breaking.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Long-cache the fingerprinted assets Astro emits.
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Self-hosted fonts are stable — cache them hard too.
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
