@@ -200,16 +200,31 @@ const jsonLd = [
     Österreich und der Schweiz.
   </p>
 
-  {/* Social proof immediately before the call to action. */}
-  <figure class="tt-hero-testi">
-    <blockquote>
-      „Die Traumdeutung von Mark hat mich unerwartet sehr berührt. Ich hatte nicht
-      erwartet, dass in den für uns oft so unsinnigen Träumen doch soviel Weisheit
-      und Wahrheit steckt und sie mir soviel geben können. Vielen Dank, lieber Mark,
-      für deine wertvolle Arbeit.“
-    </blockquote>
-    <figcaption>Sonja</figcaption>
-  </figure>
+  {/* Social proof immediately before the call to action.
+      Every quote ships in the HTML; the script only decides which is visible,
+      so crawlers and no-JS visitors still get all of them. */}
+  <section class="tt-hero-testi" aria-label="Stimmen von Klientinnen und Klienten" data-testi>
+    <div class="tt-hero-testi-track">
+      {testimonials.map(([name, body], i) => (
+        <figure class="tt-hero-testi-slide" data-testi-slide={i} data-active={i === 0 ? 'true' : 'false'}>
+          <blockquote>{body}</blockquote>
+          <figcaption>{name}</figcaption>
+        </figure>
+      ))}
+    </div>
+    <div class="tt-hero-testi-dots" role="tablist" aria-label="Stimme auswählen">
+      {testimonials.map(([name], i) => (
+        <button
+          type="button"
+          class="tt-hero-testi-dot"
+          data-testi-dot={i}
+          data-active={i === 0 ? 'true' : 'false'}
+          role="tab"
+          aria-label={`Stimme von ${name}`}
+        />
+      ))}
+    </div>
+  </section>
 
   <div class="tt-hero-cta-wrap">
     <CtaButtons center={true} />

@@ -1682,3 +1682,79 @@
 .tt-root .tt-trustcard-portrait { width: 118px; height: 118px; }
 .tt-root .tt-trustcard { padding: 1.35rem 1.9rem; }
 .tt-root .tt-trustcard-aside { gap: 0.8rem; }
+/* ══════════════════════════════════════════════
+   REVIEW ROUND 4
+════════════════════════════════════════════════ */
+
+/* Trust card sits directly on the parchment - no panel, no frame. */
+.tt-root .tt-trustcard {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0.5rem 2rem 1rem;
+}
+
+/* Testimonial carousel.
+   Slides share one grid cell, so the container takes the height of the
+   longest quote and nothing shifts as it rotates. No truncation, no
+   character limit, no editing of a client's words. */
+.tt-root .tt-hero-testi {
+  max-width: 820px;
+  margin: 0 auto 1.75rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+.tt-root .tt-hero-testi-track {
+  display: grid;
+}
+.tt-root .tt-hero-testi-slide {
+  grid-area: 1 / 1;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+  align-self: center;
+}
+.tt-root .tt-hero-testi-slide[data-active='true'] {
+  opacity: 1;
+  visibility: visible;
+}
+.tt-root .tt-hero-testi-slide blockquote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 0.9rem;
+}
+.tt-root .tt-hero-testi-slide figcaption {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.tt-root .tt-hero-testi-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+}
+.tt-root .tt-hero-testi-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: none;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+.tt-root .tt-hero-testi-dot[data-active='true'] { background: var(--gold); }
+.tt-root .tt-hero-testi-dot:hover { background: var(--gold-pale); }
+
+@media (max-width: 720px) {
+  .tt-root .tt-hero-testi-slide blockquote { font-size: 1.2rem; }
+  .tt-root .tt-trustcard { padding: 0.5rem 1rem 1rem; }
+}
