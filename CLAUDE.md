@@ -56,6 +56,7 @@ Either way there is no manual build step — but the file does have to reach Git
 - **Languages served: German and English only.** Not Dutch, not Polish.
 - **Markets: Germany, Austria, Switzerland.** Keep `areaServed` DE/AT/CH in the JSON-LD and don't let copy read as Germany-only. No hreflang — identical German across three countries is duplicate content, not three locales.
 - **Reviews:** ProvenExpert shows 12 five-star reviews. If that number changes, update it in **both** the trust block copy and `aggregateRating.reviewCount` in `src/pages/index.astro`.
+- **Two e-mail addresses, and they are not interchangeable.** `mark@traum-theater.de` is for all client communication — every CTA, the copy-email button, and the `Person` node in the JSON-LD. `kontakt@traum-theater.de` is for legal enquiries and sits on the `ProfessionalService` node. Don't collapse them into one.
 - **Voice in copy:** second-person ("du"), short sentences, no exclamation marks, no emoji in prose.
 
 ## Typography — three families, three sizes
