@@ -183,9 +183,9 @@ const jsonLd = [
         Ich bin 47 und zertifizierter Traumdeuter nach der Aisling-Methode — einer
         irischen Tradition, die seit den 1990er-Jahren gewachsen ist und heute
         weltweit von mehreren hundert zertifizierten Praktikern angewendet wird.
-        Seit 2011 arbeite ich mit Träumen, auf Deutsch und Englisch, für
-        Klientinnen und Klienten in Deutschland, Österreich und der Schweiz.
+        Seit 2011 arbeite ich mit Träumen.
       </p>
+      <p class="tt-trustcard-hello tt-trustcard-lead">Kein Kaffeesatz.</p>
       <p class="tt-trustcard-what">
         Fundiert und spirituell zugleich, ohne esoterische Überfrachtung. Du
         bekommst keine allgemeinen Sätze, die auf jeden passen, sondern eine
@@ -195,10 +195,86 @@ const jsonLd = [
     </div>
   </section>
 
+  <p class="tt-trustcard-reach">
+    Auf Deutsch und Englisch — für Klientinnen und Klienten in Deutschland,
+    Österreich und der Schweiz.
+  </p>
+
+  {/* Social proof immediately before the call to action. */}
+  <figure class="tt-hero-testi">
+    <blockquote>
+      „Die Traumdeutung von Mark hat mich unerwartet sehr berührt. Ich hatte nicht
+      erwartet, dass in den für uns oft so unsinnigen Träumen doch soviel Weisheit
+      und Wahrheit steckt und sie mir soviel geben können. Vielen Dank, lieber Mark,
+      für deine wertvolle Arbeit.“
+    </blockquote>
+    <figcaption>Sonja</figcaption>
+  </figure>
+
   <div class="tt-hero-cta-wrap">
-    <CtaButtons tone="light" center={true} />
+    <CtaButtons center={true} />
     <p class="tt-cta-subline">Vertraulich · Persönlich · Schriftlich</p>
   </div>
+
+  {/* ══════════ PROCESS ══════════ */}
+  <section class="tt-panel-aged">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <p class="tt-sec-label">So läuft es ab</p>
+      <h2 class="tt-sec-heading">Vier Schritte</h2>
+      <p class="tt-sec-sub">Klar, persönlich, diskret</p>
+      <div class="tt-process-row">
+        <div class="tt-process-step">
+          <div class="tt-step-ring">i</div>
+          <h4>Kontakt aufnehmen</h4>
+          <p>Melde dich per WhatsApp oder E-Mail. Erzähl mir kurz, worum es geht — noch nicht den ganzen Traum.</p>
+          <p class="tt-step-detail">Ganz unverbindlich, ganz wie du magst.</p>
+        </div>
+        <div class="tt-process-step">
+          <div class="tt-step-ring">ii</div>
+          <h4>Ablauf &amp; Zahlung</h4>
+          <p>Ich erkläre dir den Ablauf. Du bestätigst kurz die Einwilligung und zahlst den Einführungspreis sicher über einen Zahlungslink.</p>
+        </div>
+        <div class="tt-process-step">
+          <div class="tt-step-ring">iii</div>
+          <h4>Traum senden</h4>
+          <p>Jetzt schickst du mir deinen Traum — mit Titel und so viel Kontext wie möglich zu deiner aktuellen Lebenssituation.</p>
+        </div>
+        <div class="tt-process-step">
+          <div class="tt-step-ring">iv</div>
+          <h4>Deutung erhalten</h4>
+          <p>Du erhältst deine Deutung schriftlich. Durchdacht, klar, mit konkretem Bezug zu deinem Leben — du liest und erkennst selbst, ob es stimmt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ══════════ WHAT YOU RECEIVE ══════════ */}
+  <section>
+    <div style="max-width: 900px; margin: 0 auto; padding: 4rem 1.5rem;">
+      <p class="tt-sec-label">Das Dokument</p>
+      <h2 class="tt-sec-heading">Was du erhältst</h2>
+      <p class="tt-sec-sub">Fünf bis zehn Seiten, sorgfältig strukturiert</p>
+      <p class="tt-receive-body">
+        Deine Deutung ist ein schriftliches Dokument, das ich für deinen Traum verfasse
+        — fünf bis zehn Seiten, in deutscher Sprache, nach der Aisling-Methode aufgebaut.
+        Kein Chat-Output, keine generische Symboltabelle. Ein Dokument, das du behältst
+        und auf das du immer wieder zurückkommen kannst.
+      </p>
+      <p class="tt-receive-body tt-receive-body-lead"><strong>Im Dokument findest du:</strong></p>
+      <ol class="tt-receive-list">
+        <li><strong>Dein Traum mit Kontext.</strong> Der Wortlaut deines Traums und die Lebenssituation, aus der er entstanden ist.</li>
+        <li><strong>Eine kurze Einführung in die Methode.</strong> Das Subject Matter deines Traums und die I AM / I NEED Formel, damit du verstehst, wie ich lese.</li>
+        <li><strong>Eine Deutung Zeile für Zeile.</strong> Was dein Traum dir konkret sagt — persönlich, erkundend, ohne Fachjargon.</li>
+        <li><strong>Symbole, Farben, Orte und Zahlen.</strong> Was die Aisling-Tradition in den Bildern deines Traums sieht.</li>
+        <li><strong>Eine abschließende Reflexion.</strong> Der Kern deines Traums in einem Bild. Bei dunklen Träumen behutsam eingeordnet — mit Fokus auf die Botschaft, nicht die Angst.</li>
+        <li><strong>Konkrete Handlungsvorschläge.</strong> Was dein Traum dich einlädt zu tun, und nächste Schritte.</li>
+        <li><strong>Verbindung zu früheren Träumen.</strong> Wenn du schon einmal eingesandt hast, beziehe ich mich auf das, was deine Traumlinie zeigt.</li>
+      </ol>
+      <p class="tt-receive-cta">
+        <a href="/beispiel-deutung">Lies eine vollständige Deutung — anonymisiert, von Anfang bis Ende →</a>
+      </p>
+    </div>
+  </section>
 
   <div class="tt-rune-divider"><span class="tt-runes">᚛ ✦ ᚜</span></div>
 
@@ -303,63 +379,6 @@ const jsonLd = [
     </p>
   </div>
 
-  {/* ══════════ PROCESS ══════════ */}
-  <section class="tt-panel-aged">
-    <div style="max-width: 1100px; margin: 0 auto;">
-      <p class="tt-sec-label">So läuft es ab</p>
-      <h2 class="tt-sec-heading">Vier Schritte</h2>
-      <p class="tt-sec-sub">Klar, persönlich, diskret</p>
-      <div class="tt-process-row">
-        <div class="tt-process-step">
-          <div class="tt-step-ring">i</div>
-          <h4>Kontakt aufnehmen</h4>
-          <p>Melde dich per WhatsApp oder E-Mail. Erzähl mir kurz, worum es geht — noch nicht den ganzen Traum.</p>
-          <p class="tt-step-detail">Ganz unverbindlich, ganz wie du magst.</p>
-        </div>
-        <div class="tt-process-step">
-          <div class="tt-step-ring">ii</div>
-          <h4>Ablauf &amp; Zahlung</h4>
-          <p>Ich erkläre dir den Ablauf. Du bestätigst kurz die Einwilligung und zahlst den Einführungspreis sicher über einen Zahlungslink.</p>
-        </div>
-        <div class="tt-process-step">
-          <div class="tt-step-ring">iii</div>
-          <h4>Traum senden</h4>
-          <p>Jetzt schickst du mir deinen Traum — mit Titel und so viel Kontext wie möglich zu deiner aktuellen Lebenssituation.</p>
-        </div>
-        <div class="tt-process-step">
-          <div class="tt-step-ring">iv</div>
-          <h4>Deutung erhalten</h4>
-          <p>Du erhältst deine Deutung schriftlich. Durchdacht, klar, mit konkretem Bezug zu deinem Leben — du liest und erkennst selbst, ob es stimmt.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* ══════════ WHAT YOU RECEIVE ══════════ */}
-  <section>
-    <div style="max-width: 900px; margin: 0 auto; padding: 4rem 1.5rem;">
-      <p class="tt-sec-label">Das Dokument</p>
-      <h2 class="tt-sec-heading">Was du erhältst</h2>
-      <p class="tt-sec-sub">Drei bis fünf Seiten, sorgfältig strukturiert</p>
-      <p class="tt-receive-body">
-        Deine Deutung ist ein schriftliches Dokument, das ich für deinen Traum verfasse
-        — drei bis fünf Seiten, in deutscher Sprache, nach der Aisling-Methode aufgebaut.
-        Kein Chat-Output, keine generische Symboltabelle. Ein Dokument, das du behältst
-        und auf das du immer wieder zurückkommen kannst.
-      </p>
-      <p class="tt-receive-body tt-receive-body-lead"><strong>Im Dokument findest du:</strong></p>
-      <ol class="tt-receive-list">
-        <li><strong>Dein Traum mit Kontext.</strong> Der Wortlaut deines Traums und die Lebenssituation, aus der er entstanden ist.</li>
-        <li><strong>Eine kurze Einführung in die Methode.</strong> Das Subject Matter deines Traums und die I AM / I NEED Formel, damit du verstehst, wie ich lese.</li>
-        <li><strong>Eine Deutung Zeile für Zeile.</strong> Was dein Traum dir konkret sagt — persönlich, erkundend, ohne Fachjargon.</li>
-        <li><strong>Symbole, Farben, Orte und Zahlen.</strong> Was die Aisling-Tradition in den Bildern deines Traums sieht.</li>
-        <li><strong>Eine abschließende Reflexion.</strong> Der Kern deines Traums in einem Bild. Bei dunklen Träumen behutsam eingeordnet — mit Fokus auf die Botschaft, nicht die Angst.</li>
-        <li><strong>Konkrete Handlungsvorschläge.</strong> Was dein Traum dich einlädt zu tun, und nächste Schritte.</li>
-        <li><strong>Verbindung zu früheren Träumen.</strong> Wenn du schon einmal eingesandt hast, beziehe ich mich auf das, was deine Traumlinie zeigt.</li>
-      </ol>
-    </div>
-  </section>
-
   {/* ══════════ TRUST STRIP ══════════ */}
   <div class="tt-trust">
     <div class="tt-trust-inner">
@@ -414,7 +433,7 @@ const jsonLd = [
           psychotherapeutische oder psychologische Beratung und ersetzt keine solche.
           Details in den <a href="/agb">AGB § 2a</a>.
         </p>
-        <CtaButtons tone="light" center={true} />
+        <CtaButtons center={true} />
         <p class="tt-cta-subline" style="text-align: center; margin-top: 1rem;">
           Sichere Zahlung · Vertraulich · In wenigen Schritten
         </p>
@@ -473,7 +492,7 @@ const jsonLd = [
         </div>
       </div>
       <div style="margin-top: 2.5rem;">
-        <CtaButtons tone="dark" center={true} />
+        <CtaButtons center={true} />
       </div>
       <p class="tt-privacy-note">
         Deine Angaben werden <span>ausschließlich für deine Deutung</span> verwendet ·
@@ -568,7 +587,7 @@ const jsonLd = [
         <span class="tt-badge">Deutsch · Englisch</span>
         <span class="tt-badge">DE · AT · CH</span>
       </div>
-      <CtaButtons tone="dark" center={true} />
+      <CtaButtons center={true} />
     </div>
   </section>
 </Base>

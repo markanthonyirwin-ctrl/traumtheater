@@ -1,23 +1,12 @@
 ---
 export interface Props {
-  tone?: 'light' | 'dark';
   center?: boolean;
 }
-const { tone = 'light', center = false } = Astro.props;
+const { center = false } = Astro.props;
 const address = 'mark@traum-theater.de';
 ---
 
 <div class="tt-dual-cta" style={center ? 'justify-content: center;' : undefined}>
   <a href="https://wa.me/4915150317725" class="tt-btn-wa">💬 Via WhatsApp</a>
   <a href={`mailto:${address}`} class="tt-btn-email">✉ Via E-Mail</a>
-</div>
-
-<div class={`tt-email-copy tt-email-copy--${tone}`}>
-  <span class="tt-email-copy-label">oder E-Mail an</span>
-  <a class="tt-email-copy-addr" href={`mailto:${address}`}>{address}</a>
-  <button
-    type="button"
-    class="tt-email-copy-btn"
-    data-address={address}
-    aria-label="E-Mail-Adresse kopieren">Kopieren</button>
 </div>

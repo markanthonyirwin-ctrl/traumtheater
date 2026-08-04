@@ -14,7 +14,9 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/404'),
+      // /beispiel-deutung is a placeholder until Mark supplies the real
+      // anonymised example. Keep it out of the sitemap while it is noindex.
+      filter: (page) => !page.includes('/404') && !page.includes('/beispiel-deutung'),
     }),
   ],
 });

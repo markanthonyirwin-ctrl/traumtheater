@@ -1,0 +1,71 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaButtons from '../components/CtaButtons.astro';
+
+// PLACEHOLDER PAGE — noindex until Mark supplies the real anonymised example.
+// Thin or placeholder content that Google indexes is an SEO liability, so this
+// page stays out of the index and out of the sitemap until it is filled in.
+// To publish: replace the sections below and set `noindex` to false.
+const noindex = true;
+---
+
+<Base
+  title="Eine Deutung im Original — Traumtheater"
+  description="Eine vollständige, anonymisierte Traumdeutung nach der Aisling-Methode — von der Traumschilderung bis zu den Handlungsvorschlägen. So sieht das Dokument aus, das du bekommst."
+  path="/beispiel-deutung"
+  noindex={noindex}>
+  <article class="tt-post">
+    <header class="tt-post-header">
+      <p class="tt-sec-label">Das Dokument</p>
+      <h1 class="tt-sec-heading">Eine Deutung im Original</h1>
+      <p class="tt-sec-sub">
+        Damit du vorher weißt, was du bekommst — eine vollständige Deutung,
+        anonymisiert, von Anfang bis Ende.
+      </p>
+    </header>
+
+    <div class="tt-post-body">
+      <p>
+        Die meisten Menschen buchen eine Traumdeutung, ohne je gesehen zu haben,
+        wie so etwas aussieht. Das hier ist eine echte Deutung nach der
+        Aisling-Methode — mit Erlaubnis anonymisiert, sonst unverändert. Du kannst
+        Schritt für Schritt nachlesen, wie aus einem Traum eine Bedeutung wird.
+      </p>
+
+      <hr />
+
+      <h2>1. Der Traum mit Kontext</h2>
+      <p><em>[Traumschilderung im Wortlaut, plus die Lebenssituation, aus der der Traum entstanden ist.]</em></p>
+
+      <h2>2. Die Methode in Kürze</h2>
+      <p><em>[Subject Matter des Traums und die I AM / I NEED Formel — damit die Leserin versteht, wie gelesen wird.]</em></p>
+
+      <h2>3. Die Deutung, Zeile für Zeile</h2>
+      <p><em>[Der Hauptteil: was der Traum konkret sagt, persönlich und erkundend, ohne Fachjargon.]</em></p>
+
+      <h2>4. Symbole, Farben, Orte und Zahlen</h2>
+      <p><em>[Was die Aisling-Tradition in den einzelnen Bildern sieht — und warum hier diese Lesart gilt.]</em></p>
+
+      <h2>5. Abschließende Reflexion</h2>
+      <p><em>[Der Kern des Traums in einem Bild.]</em></p>
+
+      <h2>6. Konkrete Handlungsvorschläge</h2>
+      <p><em>[Wozu der Traum einlädt, und die nächsten Schritte.]</em></p>
+
+      <h2>7. Verbindung zu früheren Träumen</h2>
+      <p><em>[Falls vorhanden: was die Traumlinie über die Zeit zeigt.]</em></p>
+    </div>
+
+    <aside class="tt-post-cta">
+      <h3>Und deiner?</h3>
+      <p>
+        Schick mir deinen Traum mit etwas Kontext zu deiner Lebenssituation.
+        Du bekommst eine Deutung in genau dieser Form zurück.
+        Einführungsangebot 29 € statt 69 €.
+      </p>
+      <CtaButtons center={true} />
+    </aside>
+
+    <p class="tt-legal-back"><a href="/">← Zurück zur Startseite</a></p>
+  </article>
+</Base>

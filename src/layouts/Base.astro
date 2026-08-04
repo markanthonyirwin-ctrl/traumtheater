@@ -127,25 +127,6 @@ const navLinks = [
         nav?.setAttribute('data-open', 'false');
         toggle?.setAttribute('aria-expanded', 'false');
       });
-
-      // Copy-to-clipboard for the e-mail address (mobile mail apps often
-      // ignore mailto:), matching the old React EmailCopy behaviour.
-      document.querySelectorAll('.tt-email-copy-btn').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const addr = btn.getAttribute('data-address');
-          if (!addr) return;
-          const done = () => {
-            const original = btn.textContent;
-            btn.textContent = '✓ Kopiert';
-            setTimeout(() => { btn.textContent = original; }, 2000);
-          };
-          if (navigator.clipboard?.writeText) {
-            navigator.clipboard.writeText(addr).then(done).catch(() => {});
-          } else {
-            done();
-          }
-        });
-      });
     </script>
   </body>
 </html>
