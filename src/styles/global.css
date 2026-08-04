@@ -1566,3 +1566,54 @@
 .tt-root .tt-trustcard-hello { margin-bottom: 0.5rem !important; }
 .tt-root .tt-trustcard-what { margin-bottom: 0.85rem !important; }
 .tt-root .tt-trustcard-proof { padding-top: 0.8rem; }
+/* ══════════════════════════════════════════════
+   REVIEW ROUND 2
+   1. Breathing room between the sticky nav and the logo
+   2. ProvenExpert seal doubled - it was unreadable at 76px
+   3. Trust block set in a single typeface (Source Sans 3)
+════════════════════════════════════════════════ */
+.tt-root[data-variant="editorial"] .tt-hero {
+  padding-top: 3.5rem;
+}
+
+/* One font in the trust block. The greeting was the only IM Fell line;
+   it keeps its prominence through size and weight instead. */
+.tt-root .tt-trustcard-hello {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0;
+}
+
+/* Seal doubled from 76px. Stacked above the caption so the extra width
+   does not force the row taller than it needs to be. */
+.tt-root .tt-trustcard-proof {
+  align-items: center;
+  gap: 1.1rem;
+}
+.tt-root .tt-trustcard-proof img {
+  width: 152px;
+}
+/* Seal moved under the portrait, into the left column. The left column was
+   150px of portrait beside ~350px of text - that dead space now carries the
+   ProvenExpert proof instead of adding a row to the bottom of the card. */
+.tt-root .tt-trustcard-aside {
+  flex: 0 0 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.tt-root .tt-trustcard-proof {
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  border-top: none;
+  padding-top: 0;
+}
+.tt-root .tt-trustcard-proof img { width: 152px; }
+.tt-root .tt-trustcard-what { margin-bottom: 0 !important; }
+
+@media (max-width: 720px) {
+  .tt-root .tt-trustcard-aside { flex: 0 0 auto; }
+}

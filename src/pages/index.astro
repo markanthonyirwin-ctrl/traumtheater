@@ -4,7 +4,7 @@ import CtaButtons from '../components/CtaButtons.astro';
 
 const title = 'Traumtheater — Persönliche Traumdeutung nach der Aisling-Methode';
 const description =
-  'Persönliche, schriftliche Traumdeutung nach der Aisling-Methode — auf Deutsch oder Englisch, für Deutschland, Österreich und die Schweiz. Kein Lexikon, keine Symboltabelle: eine ausführliche Deutung deines Traums, in Ruhe für dich geschrieben.';
+  'Persönliche, schriftliche Traumdeutung nach der Aisling-Methode — fundiert und spirituell, ohne esoterische Überfrachtung. Ausführlich und nachvollziehbar, auf Deutsch oder Englisch, für Deutschland, Österreich und die Schweiz.';
 
 const benefits = [
   ['♥', 'Gesundheit', 'Träume zeigen den Zustand deines Körpers oft Jahre vor dem Auftreten von Symptomen. Frühwarnsystem und Heilungshinweis in einem.'],
@@ -88,7 +88,7 @@ const jsonLd = [
         name: 'Traumtheater',
         alternateName: 'Traumtheater — Persönliche Traumdeutung',
         description:
-          'Persönliche, schriftliche Traumdeutung nach der Aisling-Methode. Kein Lexikon, keine Symboltabelle: eine ausführliche Deutung, die den Traum, den Kontext und die Lebenssituation des Klienten ernst nimmt.',
+          'Persönliche, schriftliche Traumdeutung nach der Aisling-Methode. Fundiert und spirituell zugleich, ohne esoterische Überfrachtung: eine ausführliche Deutung, deren Herleitung nachvollziehbar bleibt und die Traum, Kontext und Lebenssituation des Klienten ernst nimmt.',
         image: `${site}/assets/logo.png`,
         url: site + '/',
         address: {
@@ -157,25 +157,14 @@ const jsonLd = [
 
   {/* ══════════ TRUST BLOCK — a real, qualified human before any poetry ══════════ */}
   <section class="tt-trustcard" aria-label="Über den Traumdeuter">
-    <img
-      class="tt-trustcard-portrait"
-      src="/assets/mark-portrait.png"
-      alt="Mark Anthony Irwin, zertifizierter Traumdeuter nach der Aisling-Methode"
-      width="180"
-      height="180"
-    />
-    <div class="tt-trustcard-text">
-      <p class="tt-trustcard-hello">Hallo, ich bin Mark Anthony Irwin, Traumdeuter.</p>
-      <p class="tt-trustcard-cred">
-        Zertifizierter Traumdeuter nach der Aisling-Methode. Mit Träumen arbeite ich
-        seit 2011 — über 15 Jahre.
-      </p>
-      <p class="tt-trustcard-what">
-        Ich deute deinen Traum persönlich und schriftlich. Kein Lexikon, keine
-        Symboltabelle, sondern eine ausführliche Deutung für die Lebenssituation,
-        in der du gerade stehst — auf Deutsch oder Englisch, für Klientinnen und
-        Klienten in Deutschland, Österreich und der Schweiz.
-      </p>
+    <div class="tt-trustcard-aside">
+      <img
+        class="tt-trustcard-portrait"
+        src="/assets/mark-portrait.png"
+        alt="Mark Anthony Irwin, zertifizierter Traumdeuter nach der Aisling-Methode"
+        width="180"
+        height="180"
+      />
       <a
         class="tt-trustcard-proof"
         href="https://www.provenexpert.com/mark-anthony-irwin/"
@@ -184,9 +173,25 @@ const jsonLd = [
         <img src="/assets/ProvenExpert-Bewertungssiegel.png" alt="ProvenExpert Bewertungssiegel" />
         <span>
           <strong>12 Fünf-Sterne-Bewertungen</strong><br />
-          Unabhängig geprüft auf ProvenExpert — zum Profil ↗
+          Unabhängig geprüft auf ProvenExpert ↗
         </span>
       </a>
+    </div>
+    <div class="tt-trustcard-text">
+      <p class="tt-trustcard-hello">Hallo, mein Name ist Mark Irwin.</p>
+      <p class="tt-trustcard-cred">
+        Ich bin 47 und zertifizierter Traumdeuter nach der Aisling-Methode — einer
+        irischen Tradition, die seit den 1990er-Jahren gewachsen ist und heute
+        weltweit von mehreren hundert zertifizierten Praktikern angewendet wird.
+        Seit 2011 arbeite ich mit Träumen, auf Deutsch und Englisch, für
+        Klientinnen und Klienten in Deutschland, Österreich und der Schweiz.
+      </p>
+      <p class="tt-trustcard-what">
+        Fundiert und spirituell zugleich, ohne esoterische Überfrachtung. Du
+        bekommst keine allgemeinen Sätze, die auf jeden passen, sondern eine
+        ausführliche schriftliche Deutung, deren Herleitung du Schritt für
+        Schritt nachvollziehen kannst.
+      </p>
     </div>
   </section>
 
@@ -521,7 +526,7 @@ const jsonLd = [
       <p class="tt-sec-label">Persönlich</p>
       <h2 class="tt-sec-heading">Über mich und die Deutungen</h2>
       <p class="tt-about-body">
-        Mein Name ist Mark Irwin. Ich bin 46 Jahre alt, gebürtig aus Cork in Irland,
+        Mein Name ist Mark Irwin. Ich bin 47 Jahre alt, gebürtig aus Cork in Irland,
         und lebe seit 2015 in Kempen. Mit der Traumarbeit begann ich 2011: Ich stieß
         auf die Aisling-Methode und fing an, meinen eigenen Träumen systematisch
         nachzugehen — Nacht für Nacht, über Jahre hinweg. Was als persönliche Neugier

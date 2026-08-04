@@ -49,6 +49,6 @@ Schreib zuerst nur auf, was war. Die Deutung kann warten. Der Traum kann es nich
 
 Manche Träume lassen sich nicht auflösen, egal wie oft du sie liest. Meist sind es genau die, die am längsten bleiben — der wiederkehrende, der zu intensive, der, bei dem du beim Aufwachen wusstest, dass er wichtig war.
 
-Dafür gibt es die persönliche Deutung. Du schickst mir den Traum mit deinem Kontext, und du bekommst eine ausführliche schriftliche Deutung nach der Aisling-Methode zurück. Kein Lexikon, keine Symboltabelle — eine Deutung, die deine Situation kennt.
+Dafür gibt es die persönliche Deutung. Du schickst mir den Traum mit deinem Kontext, und du bekommst eine ausführliche schriftliche Deutung nach der Aisling-Methode zurück — fundiert, nachvollziehbar und auf deine Situation bezogen.
 
 Fang aber mit dem Heft an. Zwei Wochen. Dann reden wir.
