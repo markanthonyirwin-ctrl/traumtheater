@@ -59,22 +59,23 @@ Either way there is no manual build step — but the file does have to reach Git
 - **Two e-mail addresses, and they are not interchangeable.** `mark@traum-theater.de` is for all client communication — every CTA, the copy-email button, and the `Person` node in the JSON-LD. `kontakt@traum-theater.de` is for legal enquiries and sits on the `ProfessionalService` node. Don't collapse them into one.
 - **Voice in copy:** second-person ("du"), short sentences, no exclamation marks, no emoji in prose.
 
-## Typography — three families, three sizes
+## Typography — two families, three sizes
 
-Locked in the 2026 rebuild after testers reported the body text was unreadable (it was IM Fell English at 16px).
+Locked in the 2026 rebuild after testers reported the body text was unreadable (it was IM Fell English at 16px) and that too many typefaces stacked in the hero.
 
-- **Uncial Antiqua** — the "Traumtheater" wordmark and `h2` section headings. Display only.
-- **IM Fell English** — italic literary accents only: the tagline and testimonial quotes.
+- **IM Fell English** — the "Traumtheater" wordmark, all headings, the tagline, and testimonial quotes.
 - **Source Sans 3** — everything else: body, subheadings, labels, nav, buttons, legal.
 - Body is **18px minimum**. Sizes come from `--size-heading` / `--size-subheading` / `--size-body`, plus `--size-small` for labels and `--size-fine` for legal fine print.
-- **Cinzel and Jost were removed.** Do not reintroduce them.
+- **Cinzel, Jost and Uncial Antiqua were all removed.** Do not reintroduce them. Uncial went in August 2026 — with the wordmark moved to IM Fell it had no remaining purpose, and three faces in the hero read as visual noise.
+- The wordmark's two-tone colour is not a font feature: `.tt-site-title` is ink, `.tt-site-title .tt-accent` is sienna. Keep both.
 - All fonts are **self-hosted** in `public/assets/fonts`. Never add a Google Fonts CDN link — that is a GDPR issue, and the site currently makes zero third-party requests.
+- **Never round-trip `global.css` through PowerShell's `Get-Content`/`Set-Content` without `-Encoding utf8` on the read.** Doing so double-encodes every `◆`, `✦` and em dash into mojibake. Use `[System.IO.File]::ReadAllText`/`WriteAllText` instead.
 
 ## Things I want to keep
 
 - The editorial / old-book aesthetic (serif display, ornamental rules, paper texture)
-- The hero: logo → eyebrow → Uncial wordmark → `h1` tagline
-- The above-the-fold trust block (portrait, name, credential, 15 years, ProvenExpert). It exists to kill "scam" perception and comes **before** any poetic content.
+- The hero is a **two-column layout**: logo on the left, eyebrow → wordmark → `h1` tagline on the right. This is what keeps the trust block above the fold; the earlier stacked, centred hero pushed it to 743px on a 743px viewport, i.e. entirely off the first screen.
+- The above-the-fold trust block (portrait, name, credential, 15 years, ProvenExpert). It exists to kill "scam" perception and comes **before** any poetic content. If you change hero spacing, re-measure that the whole card still clears the fold.
 - The testimonials in their original languages (English / Polish translated to German by the author)
 - The "€29 statt €69" Einführungsangebot framing
 

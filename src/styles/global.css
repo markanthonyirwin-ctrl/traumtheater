@@ -1,6 +1,6 @@
-﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   TRAUMTHEATER â€” shared styles (density via data-variant)
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ══════════════════════════════════════════════
+   TRAUMTHEATER — shared styles (density via data-variant)
+════════════════════════════════════════════════ */
 .tt-root {
   --parchment-light: #f5ecda;
   --parchment:       #e8d5a8;
@@ -16,7 +16,7 @@
   --forest-mid:      #355737;
   --cream:           #f7f0e2;
 
-  /* Density knobs â€” overridden per variant below */
+  /* Density knobs — overridden per variant below */
   --sec-pad-y: 4rem;
   --block-pad-y: 3rem;
   --container: 1140px;
@@ -39,7 +39,7 @@
   min-height: 100%;
 }
 
-/* Variant A â€” Cozy: tighter sections, denser rhythm, warmer */
+/* Variant A — Cozy: tighter sections, denser rhythm, warmer */
 .tt-root[data-variant="cozy"] {
   --sec-pad-y: 3rem;
   --block-pad-y: 2.2rem;
@@ -50,7 +50,7 @@
   --body-leading: 1.7;
 }
 
-/* Variant B â€” Balanced: the refined middle */
+/* Variant B — Balanced: the refined middle */
 .tt-root[data-variant="balanced"] {
   --sec-pad-y: 4rem;
   --block-pad-y: 3rem;
@@ -61,7 +61,7 @@
   --body-leading: 1.8;
 }
 
-/* Variant C â€” Editorial: airy, print-like margins, more air */
+/* Variant C — Editorial: airy, print-like margins, more air */
 .tt-root[data-variant="editorial"] {
   --sec-pad-y: 6rem;
   --block-pad-y: 4.5rem;
@@ -77,8 +77,8 @@
   box-sizing: border-box; margin: 0; padding: 0;
 }
 
-.tt-root h1 { font-family: 'Uncial Antiqua', serif; font-weight: 400; letter-spacing: 0.04em; }
-.tt-root h2 { font-family: 'Uncial Antiqua', serif; font-weight: 400; letter-spacing: 0.03em; }
+.tt-root h1 { font-family: 'IM Fell English', Georgia, serif; font-weight: 400; letter-spacing: 0.04em; }
+.tt-root h2 { font-family: 'IM Fell English', Georgia, serif; font-weight: 400; letter-spacing: 0.03em; }
 .tt-root h3 { font-family: 'Source Sans 3', system-ui, sans-serif; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
 .tt-root h4 { font-family: 'Source Sans 3', system-ui, sans-serif; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
 
@@ -94,7 +94,7 @@
 }
 .tt-root > * { position: relative; z-index: 1; }
 
-/* â•â•â•â•â•â•â•â•â•â• NAV â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ NAV ══════════ */
 .tt-nav {
   position: sticky;
   top: 0; z-index: 50;
@@ -104,7 +104,7 @@
   display: flex; justify-content: space-between; align-items: center;
 }
 .tt-nav-brand {
-  font-family: 'Uncial Antiqua', serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 1.1rem;
   color: var(--gold-pale);
   text-decoration: none;
@@ -127,7 +127,7 @@
   border: 1px solid var(--forest-mid);
 }
 
-/* â•â•â•â•â•â•â•â•â•â• HERO â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ HERO ══════════ */
 .tt-hero {
   max-width: var(--container);
   margin: 0 auto;
@@ -174,7 +174,7 @@
   font-weight: 600;
 }
 .tt-root[data-variant="editorial"] .tt-eyebrow { justify-content: center; }
-.tt-eyebrow::before, .tt-eyebrow::after { content: 'â—†'; font-size: 0.55rem; color: var(--gold); }
+.tt-eyebrow::before, .tt-eyebrow::after { content: '◆'; font-size: 0.55rem; color: var(--gold); }
 
 .tt-site-title {
   font-size: var(--h1-size);
@@ -203,7 +203,7 @@
   line-height: 1.85;
 }
 
-/* â•â•â•â•â•â•â•â•â•â• BUTTONS â€” FIXED for legibility â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ BUTTONS — FIXED for legibility ══════════ */
 .tt-dual-cta { display: flex; gap: 0.9rem; flex-wrap: wrap; }
 
 .tt-btn-wa {
@@ -241,7 +241,7 @@
 }
 .tt-btn-email:hover { transform: translate(-2px,-2px); box-shadow: 5px 5px 0 rgba(26,14,4,0.35); background: #fff; }
 
-/* â•â•â•â•â•â•â•â•â•â• Subline under CTA â€” FIX: black, not faint gold â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ Subline under CTA — FIX: black, not faint gold ══════════ */
 .tt-cta-subline {
   margin-top: 0.9rem;
   font-family: 'Source Sans 3', system-ui, sans-serif;
@@ -252,7 +252,7 @@
   font-weight: 500;
 }
 
-/* â•â•â•â•â•â•â•â•â•â• Email copy (mobile mailto fallback) â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ Email copy (mobile mailto fallback) ══════════ */
 .tt-email-copy {
   display: flex; flex-wrap: wrap; align-items: center;
   justify-content: center; gap: 0.5rem;
@@ -291,7 +291,7 @@
 .tt-email-copy--dark .tt-email-copy-btn   { color: var(--gold-pale); }
 .tt-email-copy--dark .tt-email-copy-btn:hover { background: var(--gold-pale); color: var(--ink); }
 
-/* â•â•â•â•â•â•â•â•â•â• Rune divider â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ Rune divider ══════════ */
 .tt-rune-divider {
   display: flex; align-items: center; gap: 1rem;
   padding: 1.2rem 2.5rem;
@@ -308,7 +308,7 @@
   opacity: 0.7; white-space: nowrap;
 }
 
-/* â•â•â•â•â•â•â•â•â•â• Content block â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ Content block ══════════ */
 .tt-content-block {
   max-width: var(--container);
   margin: 0 auto;
@@ -326,14 +326,14 @@
 }
 .tt-drop-cap {
   float: left;
-  font-family: 'Uncial Antiqua', serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 3.4rem;
   line-height: 0.9;
   padding: 0.35rem 0.55rem 0 0;
   color: var(--sienna);
 }
 
-/* â•â•â•â•â•â•â•â•â•â• Panels â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ Panels ══════════ */
 .tt-panel-aged {
   padding: var(--sec-pad-y) 2.5rem;
   background: rgba(245,236,218,0.18);
@@ -363,7 +363,7 @@
   margin-bottom: 0.6rem;
   display: flex; align-items: center; justify-content: center; gap: 0.7rem;
 }
-.tt-sec-label::before, .tt-sec-label::after { content: 'â—†'; font-size: 0.5rem; }
+.tt-sec-label::before, .tt-sec-label::after { content: '◆'; font-size: 0.5rem; }
 .tt-panel-dark .tt-sec-label,
 .tt-testimonials .tt-sec-label { color: var(--gold-bright); }
 
@@ -388,7 +388,7 @@
 .tt-panel-dark .tt-sec-sub { color: rgba(245,236,218,0.68); }
 .tt-testimonials .tt-sec-sub { color: #ffffff; }
 
-/* â•â•â•â•â•â•â•â•â•â• Grids â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ Grids ══════════ */
 .tt-grid-3 {
   display: grid; grid-template-columns: repeat(3,1fr);
   gap: var(--gap-grid);
@@ -423,7 +423,7 @@
   border: 1px solid rgba(184,137,42,0.1); pointer-events: none;
 }
 .tt-promise-numeral {
-  font-family: 'Uncial Antiqua', serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 3rem; color: var(--gold-bright);
   display: block; margin-bottom: 0.6rem; line-height: 1;
 }
@@ -436,7 +436,7 @@
   color: rgba(245,236,218,0.68); line-height: 1.75;
 }
 
-/* Benefits 3Ã—2 */
+/* Benefits 3×2 */
 .tt-grid-2x3 {
   display: grid; grid-template-columns: repeat(3,1fr);
   gap: 2rem; max-width: 1100px; margin: 0 auto;
@@ -465,7 +465,7 @@
   margin-bottom: 0.45rem;
   display: flex; gap: 0.4rem; align-items: center;
 }
-.tt-dict-word::before { content: 'â—†'; font-size: 0.5rem; color: var(--gold); }
+.tt-dict-word::before { content: '◆'; font-size: 0.5rem; color: var(--gold); }
 .tt-dict-meaning {
   font-style: italic; font-size: 0.9rem;
   color: var(--ink-mid); line-height: 1.65;
@@ -489,7 +489,7 @@
   border-radius: 50%; border: 2px solid var(--gold);
   background: var(--parchment-light);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Uncial Antiqua', serif; font-size: 1.4rem;
+  font-family: 'IM Fell English', Georgia, serif; font-size: 1.4rem;
   color: var(--gold-bright);
   box-shadow: 0 0 0 5px var(--parchment);
 }
@@ -503,7 +503,7 @@
   line-height: 1.65;
 }
 
-/* â•â•â•â•â•â•â•â•â•â• Trust strip â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ Trust strip ══════════ */
 .tt-trust {
   background: rgba(26,14,4,0.97);
   border-top: 1px solid rgba(139,98,25,0.25);
@@ -522,7 +522,7 @@
   color: rgba(212,168,75,0.75);
 }
 
-/* â•â•â•â•â•â•â•â•â•â• OFFER BOX â€” with price strikethrough â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ OFFER BOX — with price strikethrough ══════════ */
 .tt-offer-wrap { max-width: 680px; margin: 0 auto; text-align: center; }
 .tt-offer-box {
   background: rgba(245,236,218,0.65);
@@ -531,7 +531,7 @@
   position: relative;
 }
 .tt-offer-box::before {
-  content: 'âœ¦ âœ¦ âœ¦';
+  content: '✦ ✦ ✦';
   position: absolute; top: -0.85rem; left: 50%;
   transform: translateX(-50%);
   background: var(--parchment);
@@ -571,7 +571,7 @@
   text-decoration-thickness: 2px;
 }
 .tt-price-now {
-  font-family: 'Uncial Antiqua', serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 2.6rem;
   color: var(--ink);
   line-height: 1;
@@ -600,7 +600,7 @@
   padding: 0.35rem 0; align-items: flex-start;
 }
 .tt-offer-features li::before {
-  content: 'âœ¦'; color: var(--gold);
+  content: '✦'; color: var(--gold);
   font-size: 0.65rem; margin-top: 0.35rem; flex-shrink: 0;
 }
 
@@ -650,7 +650,7 @@
 .tt-offer-notice strong { color: var(--sienna); }
 .tt-offer-notice a { color: var(--sienna); text-decoration: underline; }
 
-/* â•â•â•â•â•â•â•â•â•â• Testimonials â•â•â•â•â•â•â•â•â•â• */
+/* ══════════ Testimonials ══════════ */
 .tt-testimonials {
   padding: var(--sec-pad-y) 2.5rem;
   background: rgba(26,14,4,0.96);
@@ -677,10 +677,10 @@
   position: relative;
 }
 .tt-testi::before {
-  content: 'â€œ';
+  content: '“';
   position: absolute;
   top: -0.2rem; left: 0.8rem;
-  font-family: 'Uncial Antiqua', serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 5rem;
   color: rgba(212,168,75,0.4);
   line-height: 1;
@@ -712,7 +712,7 @@
   font-weight: 500;
 }
 
-/* Featured (full-width) verified testimonial â€” avoids a 5th-card orphan */
+/* Featured (full-width) verified testimonial — avoids a 5th-card orphan */
 .tt-testi--featured {
   grid-column: 1 / -1;
   max-width: 680px;
@@ -720,7 +720,7 @@
   width: 100%;
 }
 
-/* ProvenExpert verified seal â€” self-hosted image, links out to the profile */
+/* ProvenExpert verified seal — self-hosted image, links out to the profile */
 .tt-verified {
   display: flex; flex-direction: column; align-items: center;
   gap: 0.8rem;
@@ -866,7 +866,7 @@
   text-align: left;
 }
 
-/* "Was du erhÃ¤ltst" â€” dark text on parchment, mirrors tt-about-body proportions */
+/* "Was du erhältst" — dark text on parchment, mirrors tt-about-body proportions */
 .tt-receive-body {
   font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 1.02rem;
@@ -986,7 +986,7 @@
   margin-left: 1rem;
   transition: color 0.2s;
 }
-.tt-legal-details[open] .tt-legal-summary::after { content: 'âˆ’'; }
+.tt-legal-details[open] .tt-legal-summary::after { content: '−'; }
 .tt-legal-details[open] { padding-bottom: 2.5rem; }
 .tt-legal-heading {
   font-size: clamp(1.5rem, 3vw, 2.1rem);
@@ -1068,9 +1068,9 @@
   color: rgba(212,168,75,0.45);
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   RESPONSIVE â€” tablet and mobile
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ══════════════════════════════════════════════
+   RESPONSIVE — tablet and mobile
+════════════════════════════════════════════════ */
 
 /* Mobile nav toggle (shown on small screens only) */
 .tt-nav-toggle {
@@ -1085,7 +1085,7 @@
 }
 .tt-nav-toggle svg { width: 20px; height: 20px; }
 
-/* â€”â€”â€” Tablet (â‰¤ 1024px) â€”â€”â€” */
+/* ——— Tablet (≤ 1024px) ——— */
 @media (max-width: 1024px) {
   .tt-root[data-variant="editorial"] {
     --sec-pad-y: 4.5rem;
@@ -1103,7 +1103,7 @@
   .tt-content-block { padding-left: 1.5rem; padding-right: 1.5rem; }
 }
 
-/* â€”â€”â€” Mobile (â‰¤ 720px) â€”â€”â€” */
+/* ——— Mobile (≤ 720px) ——— */
 @media (max-width: 720px) {
   .tt-root {
     --sec-pad-y: 3rem !important;
@@ -1113,7 +1113,7 @@
     --gap-grid: 1rem !important;
   }
 
-  /* NAV â†’ hamburger */
+  /* NAV → hamburger */
   .tt-nav {
     padding: 0.7rem 1.1rem;
     flex-wrap: wrap;
@@ -1153,7 +1153,7 @@
   .tt-hero-body { margin: 0 auto 1.5rem; font-size: 0.98rem; }
   .tt-dual-cta { justify-content: center; }
 
-  /* Buttons â€” full width stack */
+  /* Buttons — full width stack */
   .tt-btn-wa, .tt-btn-email {
     width: 100%;
     justify-content: center;
@@ -1168,7 +1168,7 @@
   .tt-opening-text { font-size: 1rem; padding-left: 1rem; line-height: 1.8; }
   .tt-drop-cap { font-size: 2.8rem; padding: 0.3rem 0.4rem 0 0; }
 
-  /* Grids â†’ single column */
+  /* Grids → single column */
   .tt-grid-3, .tt-grid-2x3, .tt-promise-grid, .tt-dict-grid,
   .tt-retention-steps, .tt-testi-grid {
     grid-template-columns: 1fr !important;
@@ -1221,7 +1221,7 @@
   .tt-rune-divider .tt-runes { font-size: 0.9rem; letter-spacing: 0.4em; }
 }
 
-/* â€”â€”â€” Small phone (â‰¤ 400px) â€”â€”â€” */
+/* ——— Small phone (≤ 400px) ——— */
 @media (max-width: 400px) {
   .tt-site-title { font-size: 2.5rem !important; }
   .tt-tagline { font-size: 1.05rem !important; }
@@ -1230,16 +1230,15 @@
 
 /* ══════════════════════════════════════════════
    TYPOGRAPHY SYSTEM — 2026 rebuild
-   Three families:
-     Uncial Antiqua  — "Traumtheater" wordmark + section headings (display voice)
-     IM Fell English — italic literary accents only: tagline, testimonial quotes
+   Two families:
+     IM Fell English — wordmark, all headings, tagline, testimonial quotes
      Source Sans 3   — everything else: body, subheadings, labels, nav, legal
    Three sizes: heading / subheading / body. Body floor 18px.
    Cinzel and Jost removed. Previously the BODY font was IM Fell English at
    16px and .tt-sec-sub was IM Fell italic — the two tester complaints.
 ════════════════════════════════════════════════ */
 .tt-root {
-  --font-display: 'Uncial Antiqua', Georgia, serif;
+  --font-display: 'IM Fell English', Georgia, serif;
   --font-accent:  'IM Fell English', Georgia, serif;
   --font-body:    'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
@@ -1500,7 +1499,7 @@
 .tt-root select,
 .tt-root textarea { font: inherit; }
 
-/* The tagline is the H1 and carries the keywords. Uncial Antiqua is a display
+/* The tagline is the H1 and carries the keywords. It is set in IM Fell italic
    face — unreadable for a full sentence. IM Fell italic, as originally designed. */
 .tt-root h1.tt-tagline {
   font-family: var(--font-accent);
@@ -1524,3 +1523,46 @@
   font-family: var(--font-accent);
   font-size: var(--size-body);
 }
+
+/* Wordmark in IM Fell. Two-tone colour comes from .tt-site-title .tt-accent. */
+.tt-root .tt-site-title { font-family: var(--font-accent); letter-spacing: 0.01em; }
+
+/* ══════════════════════════════════════════════
+   HERO LAYOUT — logo left, wordmark right, trust block underneath
+   The editorial variant previously collapsed the hero to one centred
+   column with a 520px logo, which pushed the trust block onto the
+   second screen. Restores the two-column grid and shrinks the logo 30%.
+════════════════════════════════════════════════ */
+.tt-root[data-variant="editorial"] .tt-hero {
+  grid-template-columns: 360px 1fr;
+  text-align: left;
+  align-items: center;
+  gap: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+.tt-root[data-variant="editorial"] .tt-hero-text {
+  max-width: none;
+  margin: 0;
+}
+.tt-root[data-variant="editorial"] .tt-hero-logo-wrap img {
+  max-width: 364px;
+  margin: 0;
+}
+.tt-root[data-variant="editorial"] .tt-eyebrow {
+  justify-content: flex-start;
+}
+/* Close the last 52px so the whole trust block, ProvenExpert badge included,
+   clears the fold on a standard laptop viewport (~740px of content height). */
+.tt-root[data-variant="editorial"] .tt-hero {
+  padding-top: 2rem;
+  padding-bottom: 0.75rem;
+}
+.tt-root[data-variant="editorial"] .tt-eyebrow { margin-bottom: 0.75rem; }
+.tt-root .tt-trustcard {
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.25rem;
+}
+.tt-root .tt-trustcard-hello { margin-bottom: 0.5rem !important; }
+.tt-root .tt-trustcard-what { margin-bottom: 0.85rem !important; }
+.tt-root .tt-trustcard-proof { padding-top: 0.8rem; }
