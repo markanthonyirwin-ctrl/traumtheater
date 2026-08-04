@@ -4,64 +4,67 @@ Persönliche Traumdeutung nach der Aisling-Methode — website source.
 
 ## What this is
 
-A single-page website built as static HTML + CSS + a React component (loaded in-browser via Babel). No build step, no npm install. You can open `index.html` directly in a browser and it works.
+A static [Astro](https://astro.build) site. Every page is rendered to plain HTML at build time, so search engines and social link-preview bots see the full content in the raw response.
+
+It was previously a single-page React app that transpiled JSX in the browser. That shipped a 338-byte empty `<body>` — invisible to Google, Bing and WhatsApp previews. The August 2026 rebuild fixed that.
+
+## Requirements
+
+Node 18.20+, 20.3+ or 22+. (Netlify pins Node 22 via `netlify.toml`.)
+
+## Local development
+
+```bash
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # → dist/
+npm run preview  # serve the built dist/
+```
 
 ## Files
 
 ```
-index.html              — entry point (meta tags, fonts, React loader)
-styles.css              — all styling
-traumtheater-page.jsx   — the page component (hero, testimonials, offer, etc.)
-assets/
-  logo.png              — Traumtheater mark
-  mark-portrait.png     — portrait photo
-  paper-texture.jpg     — background texture
+astro.config.mjs        site URL, static output, sitemap
+netlify.toml            build command + publish dir
+src/
+  layouts/              Base.astro (head/nav/footer), LegalPage.astro
+  components/           CtaButtons.astro
+  pages/                index, impressum, datenschutz, agb, widerruf, blog/
+  content/blog/         blog posts (markdown)
+  content/legal/        legal text as HTML
+  content.config.ts     blog collection schema
+  styles/global.css     all styling
+public/assets/          images + self-hosted fonts
 ```
 
-## Local preview
+## Adding a blog post
 
-Just open `index.html` in a browser. For a cleaner dev experience (avoids CORS issues with local file:// URLs), serve the folder:
-
-```bash
-# Python
-python3 -m http.server 8000
-# → http://localhost:8000
-
-# or Node
-npx serve .
-```
+Drop a markdown file into `src/content/blog/` and push. See [`CLAUDE.md`](./CLAUDE.md) for the front-matter format and the browser-based publishing route.
 
 ## Hosting
 
-This folder deploys to any static host as-is:
-
-- **Netlify** — drag the folder to [netlify.com/drop](https://app.netlify.com/drop)
-- **Cloudflare Pages** — connect the GitHub repo, no build command, output directory `/`
-- **GitHub Pages** — push to `main`, enable Pages in repo settings
-- **Vercel** — import repo, framework preset: "Other"
+Netlify, building from `main`. Build command `npm run build`, publish directory `dist`. Both are set in `netlify.toml`, so no dashboard configuration is required.
 
 ## Editing
 
-See [`CLAUDE.md`](./CLAUDE.md) for a guide to editing with Claude Code.
-
-Main things you'll likely want to change, and where:
+See [`CLAUDE.md`](./CLAUDE.md) for house style, the typography rules, and what to ask before changing.
 
 | What | Where |
 |---|---|
-| Headline, tagline, body copy | `traumtheater-page.jsx` |
-| Testimonials | `traumtheater-page.jsx` — search for `TESTIMONIALS` |
-| Prices / offer wording | `traumtheater-page.jsx` — search for `OFFER` |
-| Colors, fonts, spacing | `styles.css` — CSS variables at the top |
-| SEO (title, description) | `index.html` — `<meta>` tags in `<head>` |
-| Images | replace files in `assets/` (keep same filenames) |
+| Homepage copy | `src/pages/index.astro` |
+| Testimonials | `src/pages/index.astro` — `testimonials` array |
+| Prices / offer wording | `src/pages/index.astro` — the `#angebot` section |
+| Meta tags, JSON-LD | `src/pages/index.astro` frontmatter + `src/layouts/Base.astro` |
+| Colors, fonts, spacing | `src/styles/global.css` — CSS variables at the top |
+| Legal text | `src/content/legal/*.html`, `src/pages/impressum.astro` |
+| Images | replace files in `public/assets/` (keep filenames) |
 
 ## Tech notes
 
-- React 18 + Babel load from unpkg CDN (pinned versions, integrity hashes)
-- JSX is transpiled in the browser — fine for a site this size, but means a brief flash of unstyled content on slow connections
-- Fonts: Uncial Antiqua, IM Fell English, Cinzel, Jost (all Google Fonts)
-- No tracking, no analytics, no forms — contact happens via `mailto:` and WhatsApp links
+- No client-side framework. Two small vanilla scripts handle the mobile nav and the copy-email button; all content is static HTML.
+- Fonts are self-hosted (Uncial Antiqua, IM Fell English, Source Sans 3). No third-party requests anywhere on the site — no Google Fonts, no CDN, no analytics.
+- `sitemap-index.xml` is generated at build time by `@astrojs/sitemap`.
 
 ## License
 
-All rights reserved, Mark [surname]. Content and design are not for reuse.
+All rights reserved, Mark Anthony Irwin. Content and design are not for reuse.

@@ -1,0 +1,71 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaButtons from '../../components/CtaButtons.astro';
+import { getCollection, render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const site = 'https://traum-theater.de';
+const path = `/blog/${post.id}`;
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' });
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.data.title,
+    description: post.data.description,
+    datePublished: post.data.pubDate.toISOString(),
+    ...(post.data.updatedDate && { dateModified: post.data.updatedDate.toISOString() }),
+    inLanguage: 'de',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${site}${path}` },
+    author: { '@type': 'Person', name: 'Mark Anthony Irwin', '@id': `${site}/#person` },
+    publisher: { '@id': `${site}/#business` },
+    image: `${site}/assets/logo.png`,
+  },
+];
+---
+
+<Base
+  title={`${post.data.title} — Traumtheater`}
+  description={post.data.description}
+  path={path}
+  jsonLd={jsonLd}>
+  <article class="tt-post">
+    <header class="tt-post-header">
+      <p class="tt-post-date">{fmt(post.data.pubDate)}</p>
+      <h1 class="tt-sec-heading">{post.data.title}</h1>
+    </header>
+
+    <div class="tt-post-body">
+      <Content />
+    </div>
+
+    <aside class="tt-post-cta">
+      <h3>Möchtest du deinen Traum gedeutet haben?</h3>
+      <p>
+        Ich lese deinen Traum persönlich und schriftlich — nach der Aisling-Methode.
+        Einführungsangebot 29 € statt 69 €.
+      </p>
+      <CtaButtons tone="light" center={true} />
+    </aside>
+
+    <p class="tt-legal-back"><a href="/blog">← Alle Beiträge</a></p>
+  </article>
+</Base>

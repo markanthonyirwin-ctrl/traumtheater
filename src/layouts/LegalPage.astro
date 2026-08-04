@@ -1,0 +1,22 @@
+---
+import Base from './Base.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  path: string;
+  heading: string;
+  /** Pre-rendered HTML extracted from the old datenschutz-content.js. */
+  html?: string;
+}
+
+const { title, description, path, heading, html } = Astro.props;
+---
+
+<Base title={title} description={description} path={path}>
+  <article class="tt-legal-page">
+    <h1 class="tt-sec-heading">{heading}</h1>
+    {html ? <div class="tt-legal-doc-page" set:html={html} /> : <div class="tt-legal-doc-page"><slot /></div>}
+    <p class="tt-legal-back"><a href="/">← Zurück zur Startseite</a></p>
+  </article>
+</Base>
