@@ -1758,3 +1758,32 @@
   .tt-root .tt-hero-testi-slide blockquote { font-size: 1.2rem; }
   .tt-root .tt-trustcard { padding: 0.5rem 1rem 1rem; }
 }
+/* ══════════════════════════════════════════════
+   NAV BREAKPOINT
+   Nav links are 16px now (readability pass) rather than the original 11px,
+   so eight items no longer fit on one row below ~1150px - the bar silently
+   wrapped to two rows. Rather than shrink the text back down, hand over to
+   the hamburger earlier. Only nav rules here; the 720px block still owns
+   the rest of the mobile layout.
+════════════════════════════════════════════════ */
+@media (max-width: 1150px) {
+  .tt-root .tt-nav { flex-wrap: wrap; }
+  .tt-root .tt-nav-toggle { display: flex; }
+  .tt-root .tt-nav-links {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(139, 98, 25, 0.25);
+    margin-top: 0.7rem;
+  }
+  .tt-root .tt-nav[data-open='true'] .tt-nav-links { display: flex; }
+  .tt-root .tt-nav-links a {
+    padding: 0.8rem 0.2rem;
+    border-bottom: 1px solid rgba(139, 98, 25, 0.15);
+  }
+  .tt-root .tt-nav-links a:last-child { border-bottom: none; }
+  .tt-root .tt-nav-cta { text-align: center; margin-top: 0.4rem; }
+}
