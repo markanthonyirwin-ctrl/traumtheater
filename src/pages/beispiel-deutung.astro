@@ -1,0 +1,359 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaButtons from '../components/CtaButtons.astro';
+
+// Mark's own dream, interpreted in the same format a client receives — so
+// there is no client-confidentiality question here. Safe to index.
+const noindex = false;
+
+const symbols: [string, string][] = [
+  ['Haus, das renoviert wird', 'Der Körper und der eigene Zustand. Reparaturarbeiten zeigen an, dass etwas geheilt wird oder geheilt werden möchte.'],
+  ['Der Freund, Handwerker', 'Der Anteil in Ihnen, der mit den Händen baut und wieder herstellt. Er arbeitet, während Sie danebenstehen.'],
+  ['Partnerin, hörbar aber nicht sichtbar', 'Die Beziehung ist das Thema des Traums. Das Bild zeigt eine bestehende, aber gerade nicht angesehene Verbindung.'],
+  ['Sich vom Haus entfernen', 'Wegbewegung von dem, was Ihre Aufmerksamkeit möchte.'],
+  ['Treppe', 'Die Wirbelsäule. Nach unten gehen bedeutet, vom Kopf ins Herz zu kommen und ein Thema nicht länger nur über den Verstand zu lösen.'],
+  ['Alt, gebrochen, überwuchert', 'Vernachlässigung. Ein Weg, der lange nicht benutzt wurde.'],
+  ['Stein', 'Der Weg ist trotz allem tragfähig und beständig.'],
+  ['Sonniger Tag', 'Heilende Energie. Die Bedingungen sind gut.'],
+  ['Fast laufendes Tempo', 'Ihr Grundmuster in diesem Traum. Der Weg wird zurückgelegt, aber nicht betreten.'],
+  ['Gepard', 'Das schnellste Tier der Welt. In diesem Traum Ihr eigenes Tempo, das Ihnen gegenübersteht.'],
+  ['Tier, das entgegenkommt und anhält', 'Eine Qualität, die Sie besitzen und vor der Sie sich fürchten.'],
+  ['Vorbeigehen wollen', 'Ausweichen vor genau dem, was Sie ansehen sollen.'],
+  ['Linke Seite', 'Gefühl, weibliche Seite, manchmal die Vergangenheit.'],
+  ['Aufwachen im Moment des Sprungs', 'Der Traum endet dort, wo die Begegnung stattfinden müsste.'],
+];
+
+const lines: [string, string[]][] = [
+  ['Ich befand mich in der Nähe eines Hauses, das mein Freund gerade renovierte.', [
+    'Häuser stehen in Träumen für den Körper und für den Zustand, in dem wir uns befinden. Eine Renovierung ist Reparaturarbeit, also ein Hinweis darauf, dass etwas instand gesetzt werden soll oder bereits instand gesetzt wird.',
+    'Zwei Details finde ich hier bedeutsam. Erstens ist es nicht Ihr Haus, und Sie renovieren nicht. Ihr Freund tut es. Zweitens sind Sie nur in der Nähe, nicht drinnen und nicht beteiligt.',
+    'Vertraute Menschen tauchen in Träumen meist wegen einer Eigenschaft auf, die wir selbst mitbringen. Ihr Freund ist Handwerker, also jemand, der mit den Händen baut und wieder herstellt. Ich lese ihn als den Anteil in Ihnen, der genau das kann. Der arbeitet in diesem Traum. Sie stehen daneben.',
+  ]],
+  ['Meine Partnerin war ebenfalls da, aber nur als Hintergrundpräsenz, ich konnte ihre Stimme hören, sie aber nicht sehen, und ich kann mich nicht mehr erinnern, worüber wir gesprochen haben.', [
+    'Das ist für mich die stillste und zugleich ehrlichste Zeile des ganzen Traums.',
+    'Die Verbindung ist da. Sie ist nicht abgebrochen, es gibt keinen Streit, keine Abwesenheit. Aber sie läuft im Hintergrund, ohne Bild und ohne Inhalt.',
+    'Der Traum sagt hier nichts darüber, wie Ihre Partnerin ist. Er beschreibt, wie Sie sie in diesem Moment wahrnehmen: hörbar, aber nicht sichtbar, anwesend, aber nicht im Blickfeld.',
+    'Das passt sehr genau zu der Phase, in der Sie gerade stecken. Wenn ein Mensch etwas Großes anschiebt, so wie Sie mit Ihrer neuen Selbständigkeit, rückt vieles andere in den Hintergrund, ohne dass er es merkt und ohne dass er es will.',
+  ]],
+  ['Ich entfernte mich vom Haus', [
+    'Sie bewegen sich weg von der Stelle, an der repariert wird.',
+    'In der Traumsprache ist das, wovon wir uns entfernen, oft genau das, was unsere Aufmerksamkeit möchte. Das ist das erste Mal in diesem Traum, dass Sie sich von etwas wegbewegen. Es wird nicht das letzte Mal bleiben.',
+  ]],
+  ['und begann, eine lange Treppe aus alten, gebrochenen, überwucherten Steinstufen hinabzusteigen.', [
+    'Treppen stehen für die Wirbelsäule, und der Weg nach unten ist der Weg vom Kopf ins Herz.',
+    'Dass Sie diesen Weg überhaupt gehen, ist gut. Sie sind auf dem richtigen Weg, und der Traum bestätigt das, indem er ihn lang und aus Stein zeigt. Er ist tragfähig.',
+    'Aber sehen Sie sich den Zustand an: alt, gebrochen, überwuchert. Überwuchert wird nur, was lange nicht benutzt wurde.',
+    'Ich glaube, Ihr Traum sagt Ihnen damit sehr freundlich: Der Weg von Ihrem Kopf zu Ihrem Herzen ist vorhanden, er ist sogar stabil, aber er ist seit langer Zeit nicht gepflegt worden.',
+  ]],
+  ['Es war ein sonniger Tag', [
+    'Die Sonne ist eines der positivsten Bilder, die es in Träumen gibt. Sie steht für heilende Energie und dafür, dass diese Energie gerade verfügbar ist.',
+    'Das möchte ich betonen, weil der Traum unangenehm endet. Die ganze Szene spielt im Sonnenlicht. Ihr Traum stellt Sie nicht in Dunkelheit, nicht in Nebel, nicht in Kälte. Was hier geschieht, geschieht unter guten Bedingungen.',
+  ]],
+  ['und ich bewegte mich in einem fast laufenden Tempo.', [
+    'Hier liegt der Kern.',
+    'Sie steigen nicht hinab, Sie eilen hinab. Auf alten, gebrochenen Stufen. Der Traum zeigt Ihr Tempo nicht als Stärke, sondern als das, was Sie auf einem beschädigten Weg tun.',
+    'Wenn der Weg nach unten der Weg ins Gefühl ist, dann ist ein fast laufendes Tempo genau die Art, wie man auf diesem Weg nie ankommt. Man legt ihn zurück, ohne ihn wirklich zu betreten.',
+  ]],
+  ['Am Fuß der Treppe erschien ein Gepard.', [
+    'Er erscheint dort, wo der Weg vom Kopf ins Herz endet. Und er erscheint vor Ihnen.',
+    'Träume ordnen Zeit sehr einfach: Was hinter uns liegt, ist Vergangenheit, was direkt vor uns steht, ist Gegenwart. Das hier ist kein altes Thema, das Sie aufarbeiten sollen. Das ist Ihr Jetzt.',
+    'Und dann ist da die Wahl des Tieres. Ein Gepard ist das schnellste Landtier der Welt. Sie haben mir gesagt, Sie hätten im Traum gedacht, Ihr Tempo werde Sie retten.',
+    'Wenn alles in einem Traum ein Teil des Träumers ist, dann heißt das: Das schnellste Wesen der Welt steht Ihnen im Weg, während Sie sich durch Schnelligkeit zu retten versuchen. Ihr Tempo steht Ihnen gegenüber und sieht Sie an.',
+  ]],
+  ['Er lief ruhig ein Stück die Treppe zu mir hinauf, hielt dann an und wartete.', [
+    'Diese Zeile verändert für mich den ganzen Traum.',
+    'Das Tier greift nicht an. Es lauert nicht. Es kommt Ihnen ruhig ein Stück entgegen, geht Ihnen also einen Teil des Weges entgegen, und dann hält es an und wartet.',
+    'Ein Tier, das auf einen Menschen zukommt und kurz davor stehenbleibt, zeigt in aller Regel eine Fähigkeit oder eine Qualität, die dieser Mensch bereits besitzt und vor der er sich fürchtet. Das Anhalten und das Warten sind dabei entscheidend. Es ist eine Einladung, keine Bedrohung.',
+  ]],
+  ['Als ich an ihm vorbeizugehen versuchte, sprang der Gepard von der linken Seite auf mich zu.', [
+    'Der Sprung kommt erst, nachdem Sie versucht haben, vorbeizugehen.',
+    'Solange Sie stehen, steht auch das Tier. Sie lösen die Bewegung aus, indem Sie ausweichen. Das ist kein Vorwurf, es ist eine wichtige Information: Was Sie erschreckt hat, hat auf Ihre Ausweichbewegung reagiert.',
+    'Und es kommt von links. Die linke Seite steht für das Gefühl, für die weibliche Seite in uns und manchmal für die Vergangenheit. Was Sie also überrascht, kommt genau aus der Richtung, um die es in diesem Traum von Anfang an geht. Sie waren auf dem Weg ins Herz, Sie wollten daran vorbei, und das Gefühl hat Sie von der Seite eingeholt.',
+    'Ich glaube nicht, dass Ihr Traum hier einen Angriff zeigt. Ich glaube, er zeigt, was passiert, wenn man an dem vorbeigeht, was einem geduldig entgegengekommen ist.',
+  ]],
+  ['In dem Moment des Sprunges wachte ich auf.', [
+    'Der Traum endet genau im Moment der Berührung. Sie sind aufgewacht, bevor es zur Begegnung kam.',
+    'Das ist keine schlechte Nachricht, es ist eine Markierung. Der Traum wurde an genau der Stelle unterbrochen, an der die eigentliche Arbeit beginnt. Träume, die so enden, kommen erfahrungsgemäß wieder, und beim nächsten Mal geht die Szene meist ein Stück weiter.',
+  ]],
+];
+---
+
+<Base
+  title="Eine Deutung im Original — Beispiel einer Traumdeutung | Traumtheater"
+  description="Eine vollständige Traumdeutung nach der Aisling-Methode — von der Traumschilderung über die Deutung Zeile für Zeile bis zu den Handlungsschritten. Damit du vorher weißt, was du bekommst."
+  path="/beispiel-deutung"
+  noindex={noindex}>
+  <article class="tt-example">
+    <header class="tt-example-header">
+      <p class="tt-sec-label">Das Dokument</p>
+      <h1 class="tt-sec-heading">Eine Deutung im Original</h1>
+      <p class="tt-sec-sub">
+        Die meisten Menschen buchen eine Traumdeutung, ohne je gesehen zu haben,
+        wie so etwas aussieht. Das hier ist eine vollständige Deutung — von der
+        Traumschilderung bis zu den Handlungsschritten.
+      </p>
+      <p class="tt-example-note">
+        Dies ist mein eigener Traum — gedeutet nach derselben Methode und im selben
+        Format, das du als Klientin oder Klient bekommst. Kein Klientendokument:
+        was mir Menschen anvertrauen, bleibt zwischen uns. Einzelne Namen habe ich
+        verändert.
+      </p>
+      <p class="tt-example-note">
+        Warum hier <em>Sie</em> steht: In der Deutung übernehme ich die Anrede, die
+        du selbst wählst. Wer mir per <em>du</em> schreibt, bekommt seine Deutung
+        auch im <em>du</em>.
+      </p>
+    </header>
+
+    <div class="tt-example-doc">
+      <p class="tt-example-meta">Traumdeutung · Juni 2026</p>
+
+      <h2>Der Traum</h2>
+      <p class="tt-example-dreamtitle">Der Gepard auf der Treppe</p>
+      <blockquote class="tt-example-dream">
+        <p>
+          Ich befand mich in der Nähe eines Hauses, das mein Freund gerade renovierte.
+          Meine Partnerin war ebenfalls da, aber nur als Hintergrundpräsenz, ich konnte
+          ihre Stimme hören, sie aber nicht sehen, und ich kann mich nicht mehr erinnern,
+          worüber wir gesprochen haben.
+        </p>
+        <p>
+          Ich entfernte mich vom Haus und begann, eine lange Treppe aus alten,
+          gebrochenen, überwucherten Steinstufen hinabzusteigen. Es war ein sonniger Tag
+          und ich bewegte mich in einem fast laufenden Tempo.
+        </p>
+        <p>
+          Am Fuß der Treppe erschien ein Gepard. Er lief ruhig ein Stück die Treppe zu
+          mir hinauf, hielt dann an und wartete.
+        </p>
+        <p>
+          Als ich an ihm vorbeizugehen versuchte, sprang der Gepard von der linken Seite
+          auf mich zu. In dem Moment des Sprunges wachte ich auf.
+        </p>
+      </blockquote>
+
+      <h2>Über diese Deutung</h2>
+      <p>
+        Ich arbeite mit der Aisling-Methode. Sie geht davon aus, dass jedes Element eines
+        Traums einen Teil von Ihnen darstellt: die Orte, die Menschen, die Tiere, das
+        Wetter, sogar Ihr eigenes Tempo. Nichts darin handelt von jemand anderem. Das
+        klingt zunächst ungewohnt, ist aber der befreiende Teil daran. Wenn alles in
+        Ihrem Traum Sie sind, dann liegt auch alles, was sich ändern lässt, bei Ihnen.
+      </p>
+      <p>
+        Ich möchte dazusagen, wie ich das hier verstehe. Ich biete Ihnen eine Deutung an,
+        ich verkünde keine Wahrheit. Nehmen Sie mit, was bei Ihnen ankommt, und lassen Sie
+        liegen, was sich fremd anfühlt. Sie kennen Ihr Leben, ich kenne nur diesen einen
+        Traum.
+      </p>
+      <p>
+        Ihr Traum ist kurz, aber er ist außergewöhnlich klar gebaut. Ich habe selten einen
+        Text vor mir, der seine Kernfrage so sauber in eine einzige Sekunde zusammenzieht.
+        Alles läuft auf den Moment hinaus, in dem Sie versuchen, an etwas vorbeizugehen.
+      </p>
+
+      <h2>Das Kernthema</h2>
+      <p>
+        Ihre Partnerin ist in diesem Traum anwesend. Wenn das geschieht, geht es fast
+        immer um die Beziehung selbst, und alle anderen Bilder werden in diesem
+        Zusammenhang gelesen. Wichtig dabei: Ein solcher Traum sagt nie, was Ihre
+        Partnerin ändern sollte. Er spricht ausschließlich über Ihren eigenen Anteil daran.
+      </p>
+      <p>
+        Der Titel setzt zwei Dinge nebeneinander: einen Gepard, also das schnellste Tier,
+        das es gibt, und eine Treppe. Eine Treppe hinabzusteigen bedeutet in der
+        Traumsprache, das Bewusstsein vom Kopf hinunter ins Herz zu bewegen. Es ist der
+        Weg vom Denken zum Fühlen, und er taucht auf, wenn jemand ein Thema zu sehr über
+        den Verstand löst.
+      </p>
+      <p>
+        Damit ist das Thema für mich sehr deutlich umrissen. Es geht um Ihr Tempo, und
+        darum, was Ihr Tempo mit dem Zugang zu Ihren eigenen Gefühlen und zu Ihrer
+        Beziehung macht.
+      </p>
+      <p>
+        Sie sind auf dem Weg nach unten. Sie nehmen diesen Weg auch wirklich, das ist gut.
+        Aber Sie nehmen ihn im Laufschritt. Und am Ende dieses Weges wartet etwas auf Sie,
+        an dem Sie vorbeimöchten.
+      </p>
+      <p>
+        Was mir dabei auffällt: Sie sind in diesem Traum durchgehend in Bewegung. Sie
+        entfernen sich, Sie steigen hinab, Sie sind fast am Laufen, Sie versuchen
+        vorbeizugehen. Das einzige Wesen im Traum, das anhält und wartet, ist der Gepard.
+      </p>
+
+      <h2>Ich bin … ich sollte …</h2>
+      <p>
+        In dieser Arbeit fasse ich einen Traum gern in zwei Sätzen zusammen, die aus Ihrer
+        eigenen Perspektive gesprochen sind. Der erste beschreibt, wo Sie im Moment stehen.
+        Der zweite zeigt die Richtung, in die Ihr Traum Sie einlädt.
+      </p>
+      <div class="tt-example-formula">
+        <p class="tt-example-formula-label">Ich bin …</p>
+        <p>
+          Wenn es um meine Beziehung und mein Herz geht, <strong>bin ich</strong> in
+          Bewegung und im Tempo. Ich entferne mich von der Stelle, an der repariert wird.
+          Ich höre meine Partnerin, sehe sie aber nicht, und weiß hinterher nicht mehr,
+          worum es ging. Mein Weg vom Kopf ins Herz ist alt, gebrochen und überwuchert.
+          Wenn mir etwas entgegenkommt und geduldig wartet, versuche ich, daran
+          vorbeizugehen.
+        </p>
+      </div>
+      <div class="tt-example-formula">
+        <p class="tt-example-formula-label">Ich sollte …</p>
+        <p>
+          Wenn es um meine Beziehung und mein Herz geht, <strong>sollte ich</strong>
+          langsamer werden. Ich sollte stehenbleiben, wo etwas auf mich wartet, statt daran
+          vorbeizugehen. Ich sollte hinsehen und nicht nur hören. Und ich sollte dem
+          begegnen, was von meiner linken Seite kommt, also meinem Gefühl, statt ihm
+          auszuweichen.
+        </p>
+      </div>
+
+      <h2>Ihr Traum, Zeile für Zeile</h2>
+      <p>
+        Ich gehe den Traum jetzt der Reihe nach mit Ihnen durch. Manches davon wird sofort
+        sitzen, anderes vielleicht erst in ein paar Tagen.
+      </p>
+      {lines.map(([line, paras]) => (
+        <section class="tt-example-line">
+          <p class="tt-example-quote">„{line}“</p>
+          {paras.map((p) => <p>{p}</p>)}
+        </section>
+      ))}
+
+      <h2>Symbole, Farben, Orte und Zahlen</h2>
+      <dl class="tt-example-symbols">
+        {symbols.map(([term, meaning]) => (
+          <>
+            <dt>{term}</dt>
+            <dd>{meaning}</dd>
+          </>
+        ))}
+      </dl>
+      <p>
+        Zahlen und Farben: In diesem Traum werden keine Zahlen genannt und keine Farben
+        benannt. Nur das Sonnenlicht ist als Qualität vorhanden, und das ist ein gutes
+        Zeichen.
+      </p>
+
+      <h2>Ein Wort der Beruhigung</h2>
+      <p>
+        Ein Traum, der mit einem Raubtiersprung endet, fühlt sich beim Aufwachen bedrohlich
+        an. Deshalb möchte ich klar sagen, wie ich ihn sehe.
+      </p>
+      <p>
+        Es ist kein Alptraum in dem Sinn, dass Ihnen etwas Böses widerfährt. Der Traum
+        spielt bei Sonnenschein. Das Tier verhält sich fast die ganze Zeit ruhig. Es kommt
+        Ihnen entgegen und wartet auf Sie. Es reagiert erst, als Sie ausweichen. Das ist
+        kein Zeichen von Gefahr. Das ist ein Zeichen von Geduld.
+      </p>
+      <p>
+        Einen Punkt möchte ich trotzdem ansprechen, weil er zur Sorgfalt gehört und weil
+        ich lieber offen bin.
+      </p>
+      <p>
+        Treppen stehen für die Wirbelsäule, und Ihre Treppe ist alt und gebrochen. Dazu
+        kommt, dass Sie sich auf diesen beschädigten Stufen im Laufschritt bewegen, und
+        dass ein Tier auf Sie zukommt, dem Sie ausweichen wollen. In der Summe ist das ein
+        leiser Hinweis darauf, auf Ihren Körper zu achten.
+      </p>
+      <p>
+        Ich bin kein Arzt und stelle keine Diagnose. Ich lese hier auch keinen Notfall.
+        Aber wenn Sie beruflich gerade Vollgas geben, wäre ein ganz normaler Check und ein
+        ehrlicher Blick auf Rücken, Schlaf und Erholung eine ruhige, vernünftige Sache.
+        Nicht aus Angst. Eher so, wie man bei einem Auto, das gerade viele Kilometer macht,
+        einmal unter die Haube schaut.
+      </p>
+
+      <h2>Verbindungen zu früheren Träumen</h2>
+      <p>
+        Dies ist der erste Traum, den Sie mir geschickt haben, deshalb gibt es noch keine
+        früheren Träume, mit denen ich ihn verbinden könnte.
+      </p>
+      <p>
+        Das ist völlig normal und kein Nachteil. Träume arbeiten in Serien. Sie greifen ein
+        Thema auf, prüfen, ob es angekommen ist, und gehen dann weiter oder wiederholen es
+        deutlicher. Sobald mir zwei oder drei Träume von Ihnen vorliegen, entsteht ein Bild,
+        das ein einzelner Traum noch nicht zeigen kann.
+      </p>
+      <p>
+        Dieser hier ist ein sehr guter Anfang. Er ist klar, er ist kurz, und er hat ein
+        offenes Ende. Genau solche Träume kommen wieder.
+      </p>
+
+      <h2>Eine abschließende Betrachtung</h2>
+      <p>
+        Wenn ich diesen Traum auf eine einzige Szene zusammenziehen müsste, dann auf diese:
+        Das Tier kommt Ihnen ein Stück entgegen, hält an und wartet. Und Sie versuchen,
+        daran vorbeizugehen.
+      </p>
+      <p>Das ist der ganze Traum.</p>
+      <p>
+        Es kommt Ihnen etwas auf halbem Weg entgegen. Es tut nichts. Es wartet nur. Und
+        Ihre erste Bewegung ist, weiterzugehen.
+      </p>
+      <p>
+        Ich glaube, Ihr Traum sagt Ihnen etwas sehr Freundliches und zugleich sehr
+        Direktes. Ihr Tempo hat Sie weit gebracht. Sie haben gerade eine Selbständigkeit
+        begonnen, und dafür brauchte es Antrieb, Mut und Geschwindigkeit. Das ist eine
+        echte Stärke, und der Traum nimmt sie Ihnen nicht weg.
+      </p>
+      <p>
+        Aber es gibt eine Stelle in Ihrem Leben, an der Tempo nicht mehr die Lösung ist,
+        sondern das Hindernis. Diese Stelle liegt am unteren Ende der Treppe. Es ist die
+        Stelle, an der Ihre Partnerin nur noch als Stimme im Hintergrund vorkommt.
+      </p>
+      <p>
+        Sie dachten im Traum, Ihr Tempo würde Sie retten. Ich glaube, Ihr Traum zeigt Ihnen
+        sanft das Gegenteil: Hier rettet Sie das Stehenbleiben.
+      </p>
+
+      <h2>Handlungsschritte</h2>
+      <p>
+        Nichts davon ist ein Muss. Es sind Vorschläge, mit denen Sie arbeiten können, wenn
+        etwas davon bei Ihnen ankommt.
+      </p>
+      <ul class="tt-example-actions">
+        <li>Fragen Sie sich in den nächsten Tagen einmal bewusst: Wo in meinem Leben gehe ich gerade an etwas vorbei, das geduldig auf mich wartet?</li>
+        <li>Nehmen Sie sich in dieser Woche einen Moment mit Ihrer Partnerin, in dem Sie sie nicht nur hören, sondern ansehen. Ohne Anlass, ohne Thema, ohne Tagesordnung.</li>
+        <li>Achten Sie einmal auf Ihr tatsächliches Tempo im Alltag, beim Gehen, beim Essen, beim Sprechen. Nicht um es zu bewerten, nur um es zu bemerken.</li>
+        <li>Gönnen Sie Ihrem Rücken und Ihrer Erholung in dieser Phase etwas mehr Aufmerksamkeit, als die neue Selbständigkeit es Ihnen gerade nahelegt.</li>
+        <li>Und wenn der Gepard wiederkommt: Bleiben Sie im Traum stehen, wenn es Ihnen möglich ist. Sehen Sie ihn an. Er hat auf Sie gewartet, nicht auf Ihre Flucht.</li>
+      </ul>
+
+      <h2>Nächste Schritte</h2>
+      <p>
+        Lassen Sie diese Deutung ein paar Tage stehen, bevor Sie sie bewerten.
+        Erfahrungsgemäß meldet sich das, was zutrifft, von selbst wieder, oft an einer
+        Alltagsstelle, mit der man es nicht in Verbindung gebracht hätte.
+      </p>
+      <p>
+        Notieren Sie sich, was beim Lesen sofort resoniert hat und was sich fremd anfühlt.
+        Beides ist nützlich für die weitere Arbeit.
+      </p>
+      <p>
+        Dieser Traum hat eine offene Stelle, nämlich den Moment des Sprungs. Wenn er
+        zurückkommt, schreiben Sie ihn bitte gleich nach dem Aufwachen auf, noch vor dem
+        ersten Kaffee, und schicken Sie ihn mir.
+      </p>
+
+      <p class="tt-example-sign">— Mark</p>
+      <p class="tt-example-footnote">
+        Gedeutet mit der Aisling-Methode. Der Abschlussbericht wird als professionell
+        formatierte, druckfertige PDF mit einem Umfang von fünf bis zehn Seiten geliefert.
+      </p>
+    </div>
+
+    <aside class="tt-post-cta">
+      <h3>Und dein Traum?</h3>
+      <p>
+        Schick mir deinen Traum mit etwas Kontext zu deiner Lebenssituation. Du bekommst
+        eine Deutung in genau dieser Form zurück. Einführungsangebot 29 € statt 69 €.
+      </p>
+      <CtaButtons center={true} />
+    </aside>
+
+    <p class="tt-legal-back"><a href="/">← Zurück zur Startseite</a></p>
+  </article>
+</Base>

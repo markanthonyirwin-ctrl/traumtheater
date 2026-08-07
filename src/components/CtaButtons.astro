@@ -1,0 +1,12 @@
+---
+export interface Props {
+  center?: boolean;
+}
+const { center = false } = Astro.props;
+const address = 'mark@traum-theater.de';
+---
+
+<div class="tt-dual-cta" style={center ? 'justify-content: center;' : undefined}>
+  <a href="https://wa.me/4915150317725" class="tt-btn-wa">💬 Via WhatsApp</a>
+  <a href={`mailto:${address}`} class="tt-btn-email">✉ Via E-Mail</a>
+</div>

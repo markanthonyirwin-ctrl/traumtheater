@@ -1,0 +1,20 @@
+{
+  "name": "traumtheater",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Traumtheater — persönliche Traumdeutung nach der Aisling-Methode. Static Astro site.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.2.5"
+  },
+  "devDependencies": {
+    "@fontsource/source-sans-3": "^5.3.0"
+  }
+}

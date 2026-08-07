@@ -32,7 +32,7 @@
   line-height: var(--body-leading);
   color: var(--ink-soft);
   background-color: var(--parchment);
-  background-image: url('assets/paper-texture.jpg');
+  background-image: url('/assets/paper-texture.jpg');
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-position: top center;
@@ -77,10 +77,10 @@
   box-sizing: border-box; margin: 0; padding: 0;
 }
 
-.tt-root h1 { font-family: 'Uncial Antiqua', serif; font-weight: 400; letter-spacing: 0.04em; }
-.tt-root h2 { font-family: 'Uncial Antiqua', serif; font-weight: 400; letter-spacing: 0.03em; }
-.tt-root h3 { font-family: 'Cinzel', serif; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
-.tt-root h4 { font-family: 'Cinzel', serif; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+.tt-root h1 { font-family: 'IM Fell English', Georgia, serif; font-weight: 400; letter-spacing: 0.04em; }
+.tt-root h2 { font-family: 'IM Fell English', Georgia, serif; font-weight: 400; letter-spacing: 0.03em; }
+.tt-root h3 { font-family: 'Source Sans 3', system-ui, sans-serif; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+.tt-root h4 { font-family: 'Source Sans 3', system-ui, sans-serif; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
 
 .tt-root::before {
   content: '';
@@ -104,7 +104,7 @@
   display: flex; justify-content: space-between; align-items: center;
 }
 .tt-nav-brand {
-  font-family: 'Uncial Antiqua', serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 1.1rem;
   color: var(--gold-pale);
   text-decoration: none;
@@ -112,7 +112,7 @@
 }
 .tt-nav-links { display: flex; align-items: center; gap: 1.8rem; }
 .tt-nav-links a {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -164,7 +164,7 @@
 .tt-root[data-variant="editorial"] .tt-hero-logo-wrap img { max-width: 520px; margin: 0 auto; }
 
 .tt-eyebrow {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.92rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -212,7 +212,7 @@
   color: #ffffff !important;
   border: 1px solid #1faa52;
   padding: 0.85rem 1.6rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -230,7 +230,7 @@
   color: var(--ink) !important;
   border: 1.5px solid var(--ink-soft);
   padding: 0.85rem 1.6rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -244,7 +244,7 @@
 /* ══════════ Subline under CTA — FIX: black, not faint gold ══════════ */
 .tt-cta-subline {
   margin-top: 0.9rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.65rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -259,19 +259,19 @@
   margin-top: 0.9rem;
 }
 .tt-email-copy-label {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.6rem; letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 .tt-email-copy-addr {
-  font-family: 'Jost', sans-serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.92rem;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 1px;
 }
 .tt-email-copy-btn {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.58rem; letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 0.3rem 0.7rem;
@@ -326,7 +326,7 @@
 }
 .tt-drop-cap {
   float: left;
-  font-family: 'Uncial Antiqua', serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 3.4rem;
   line-height: 0.9;
   padding: 0.35rem 0.55rem 0 0;
@@ -354,7 +354,7 @@
 .tt-panel-dark > * { position: relative; }
 
 .tt-sec-label {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.7rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
@@ -423,7 +423,7 @@
   border: 1px solid rgba(184,137,42,0.1); pointer-events: none;
 }
 .tt-promise-numeral {
-  font-family: 'Uncial Antiqua', serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 3rem; color: var(--gold-bright);
   display: block; margin-bottom: 0.6rem; line-height: 1;
 }
@@ -458,7 +458,7 @@
   position: relative;
 }
 .tt-dict-word {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.76rem; font-weight: 600;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--sienna);
@@ -489,7 +489,7 @@
   border-radius: 50%; border: 2px solid var(--gold);
   background: var(--parchment-light);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Uncial Antiqua', serif; font-size: 1.4rem;
+  font-family: 'IM Fell English', Georgia, serif; font-size: 1.4rem;
   color: var(--gold-bright);
   box-shadow: 0 0 0 5px var(--parchment);
 }
@@ -516,7 +516,7 @@
   gap: 2rem; align-items: center;
 }
 .tt-trust-inner span {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.68rem; letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(212,168,75,0.75);
@@ -545,14 +545,14 @@
   border: 1px solid rgba(139,98,25,0.2); pointer-events: none;
 }
 .tt-offer-title {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.82rem; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--sienna);
   margin-bottom: 0.5rem;
 }
 
 .tt-offer-limited {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.68rem; letter-spacing: 0.22em;
   text-transform: uppercase; color: var(--sienna);
   margin-bottom: 1rem; font-weight: 600;
@@ -563,7 +563,7 @@
   gap: 0.9rem; margin: 0.2rem 0 0.6rem;
 }
 .tt-price-was {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 1.6rem;
   color: rgba(74,50,24,0.55);
   text-decoration: line-through;
@@ -571,13 +571,13 @@
   text-decoration-thickness: 2px;
 }
 .tt-price-now {
-  font-family: 'Uncial Antiqua', serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 2.6rem;
   color: var(--ink);
   line-height: 1;
 }
 .tt-price-note {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.65rem; letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--sienna);
@@ -612,7 +612,7 @@
   text-align: center;
 }
 .tt-pwyc-title {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.72rem; letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--sienna);
@@ -680,7 +680,7 @@
   content: '“';
   position: absolute;
   top: -0.2rem; left: 0.8rem;
-  font-family: 'Uncial Antiqua', serif;
+  font-family: 'IM Fell English', Georgia, serif;
   font-size: 5rem;
   color: rgba(212,168,75,0.4);
   line-height: 1;
@@ -704,7 +704,7 @@
   background: var(--gold-bright);
 }
 .tt-testi-name {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.76rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -736,7 +736,7 @@
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 .tt-verified-note {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.62rem; letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-pale);
@@ -780,7 +780,7 @@
 }
 .tt-privacy-note {
   text-align: center; margin-top: 2rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.68rem; letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(245,236,218,0.72);
@@ -796,7 +796,7 @@
 }
 .tt-tl-entry:last-child { border-bottom: none; }
 .tt-tl-year {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.86rem; font-weight: 600;
   color: var(--gold-bright);
   min-width: 5rem; letter-spacing: 0.06em;
@@ -838,7 +838,7 @@
 }
 .tt-tl-media-caption {
   margin-top: 0.85rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.65rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -868,7 +868,7 @@
 
 /* "Was du erhältst" — dark text on parchment, mirrors tt-about-body proportions */
 .tt-receive-body {
-  font-family: 'Jost', sans-serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 1.02rem;
   line-height: 1.85;
   color: var(--ink-soft);
@@ -882,7 +882,7 @@
   margin: 0 auto;
   padding-left: 1.5rem;
   color: var(--ink-soft);
-  font-family: 'Jost', sans-serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.98rem;
   line-height: 1.75;
 }
@@ -895,7 +895,7 @@
 }
 .tt-about-body:last-of-type { margin-bottom: 2rem; }
 .tt-about-lead {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-weight: 600;
   font-size: 0.78rem;
   letter-spacing: 0.16em;
@@ -924,7 +924,7 @@
 }
 .tt-cert-caption {
   margin-bottom: 0.7rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.65rem; letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-pale);
@@ -938,7 +938,7 @@
   background: rgba(184,137,42,0.14);
   border: 1px solid rgba(184,137,42,0.35);
   padding: 0.42rem 0.9rem;
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.68rem; letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold-pale);
@@ -979,7 +979,7 @@
 .tt-legal-summary:hover { color: var(--gold-pale); }
 .tt-legal-summary::after {
   content: '+';
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 1.4rem;
   color: var(--gold-pale);
   font-weight: 300;
@@ -994,34 +994,34 @@
   margin-bottom: 1.4rem;
 }
 .tt-legal-subhead {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.74rem; font-weight: 600;
   letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--gold-bright);
   margin: 1.6rem 0 0.6rem;
 }
 .tt-legal-block {
-  font-family: 'Jost', sans-serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.96rem; line-height: 1.7;
   color: rgba(245,236,218,0.82);
 }
 
 /* Injected Datenschutz document (dangerouslySetInnerHTML) */
-.tt-legal-doc { color: rgba(245,236,218,0.82); font-family: 'Jost', sans-serif; }
+.tt-legal-doc { color: rgba(245,236,218,0.82); font-family: 'Source Sans 3', system-ui, sans-serif; }
 .tt-legal-doc h2 {
   font-size: clamp(1.5rem, 3vw, 2.1rem);
   color: var(--parchment-light);
   margin-bottom: 1.4rem;
 }
 .tt-legal-doc h3 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.9rem; font-weight: 600;
   letter-spacing: 0.1em; text-transform: none;
   color: var(--gold-bright);
   margin: 2.2rem 0 0.8rem;
 }
 .tt-legal-doc h4 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.72rem; font-weight: 600;
   letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--gold-pale);
@@ -1054,7 +1054,7 @@
   margin-bottom: 1rem;
 }
 .tt-footer-links a {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.66rem; letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--gold-pale);
@@ -1062,7 +1062,7 @@
 }
 .tt-footer-links a:hover { color: var(--cream); }
 .tt-footer p {
-  font-family: 'Cinzel', serif;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
   font-size: 0.64rem; letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(212,168,75,0.45);
@@ -1226,4 +1226,671 @@
   .tt-site-title { font-size: 2.5rem !important; }
   .tt-tagline { font-size: 1.05rem !important; }
   .tt-hero-logo-wrap img { max-width: 230px !important; }
+}
+
+/* ══════════════════════════════════════════════
+   TYPOGRAPHY SYSTEM — 2026 rebuild
+   Two families:
+     IM Fell English — wordmark, all headings, tagline, testimonial quotes
+     Source Sans 3   — everything else: body, subheadings, labels, nav, legal
+   Three sizes: heading / subheading / body. Body floor 18px.
+   Cinzel and Jost removed. Previously the BODY font was IM Fell English at
+   16px and .tt-sec-sub was IM Fell italic — the two tester complaints.
+════════════════════════════════════════════════ */
+.tt-root {
+  --font-display: 'IM Fell English', Georgia, serif;
+  --font-accent:  'IM Fell English', Georgia, serif;
+  --font-body:    'Source Sans 3', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --size-display:    clamp(2.8rem, 5.2vw, 4.6rem);
+  --size-heading:    clamp(1.75rem, 3.2vw, 2.5rem);
+  --size-subheading: 1.3rem;
+  --size-body:       1.125rem;
+  --size-small:      1rem;
+  --size-fine:       0.9rem;
+
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: 1.75;
+}
+
+.tt-root p,
+.tt-root li,
+.tt-root .tt-hero-body,
+.tt-root .tt-opening-text,
+.tt-root .tt-about-body,
+.tt-root .tt-receive-body,
+.tt-root .tt-dict-meaning,
+.tt-root .tt-tl-text { font-size: var(--size-body); }
+
+.tt-site-title { font-family: var(--font-display); font-size: var(--size-display); }
+.tt-root h2,
+.tt-sec-heading { font-family: var(--font-display); font-size: var(--size-heading); }
+
+.tt-tagline    { font-family: var(--font-accent); }
+.tt-testi-body { font-family: var(--font-accent); font-size: var(--size-body); }
+
+/* Subheadings: raised, de-italicised, contrast fixed */
+.tt-root h3,
+.tt-root h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--size-subheading);
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.tt-sec-sub {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-size: var(--size-subheading);
+  color: var(--ink-soft);
+}
+.tt-panel-dark .tt-sec-sub,
+.tt-testimonials .tt-sec-sub { color: rgba(245,236,218,0.92); }
+
+/* Nothing below 16px except genuine legal fine print */
+.tt-sec-label,
+.tt-eyebrow,
+.tt-nav-links a,
+.tt-badge,
+.tt-cta-subline,
+.tt-step-detail,
+.tt-trust-inner span { font-size: var(--size-small); }
+
+.tt-price-vat,
+.tt-offer-notice,
+.tt-privacy-note,
+.tt-legal-doc { font-size: var(--size-fine); }
+
+/* ══════════════════════════════════════════════
+   ABOVE-THE-FOLD TRUST BLOCK
+   A real, qualified human before any poetic content.
+════════════════════════════════════════════════ */
+.tt-trustcard {
+  max-width: 860px;
+  margin: 0 auto 2rem;
+  padding: 2rem 2.2rem;
+  display: flex;
+  gap: 1.8rem;
+  align-items: flex-start;
+  background: rgba(247, 240, 226, 0.72);
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  box-shadow: 0 2px 14px rgba(26, 14, 4, 0.10);
+}
+
+.tt-trustcard-portrait {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  box-shadow: 0 2px 10px rgba(26, 14, 4, 0.18);
+}
+
+.tt-trustcard-text { flex: 1 1 auto; min-width: 0; }
+
+.tt-trustcard-hello {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 0.7rem !important;
+}
+
+.tt-trustcard-cred {
+  font-weight: 600;
+  color: var(--sienna);
+  margin-bottom: 0.6rem !important;
+}
+
+.tt-trustcard-what {
+  color: var(--ink-soft);
+  margin-bottom: 1.1rem !important;
+}
+
+.tt-trustcard-proof {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+  color: var(--ink-mid);
+  font-size: var(--size-small);
+  line-height: 1.45;
+  border-top: 1px solid rgba(139, 98, 25, 0.35);
+  padding-top: 1rem;
+}
+.tt-trustcard-proof img { width: 76px; height: auto; flex: 0 0 auto; }
+.tt-trustcard-proof strong { color: var(--sienna); font-size: 1.05rem; }
+.tt-trustcard-proof:hover { color: var(--ink); }
+
+.tt-hero-cta-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem 1rem;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .tt-trustcard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.6rem 1.2rem;
+    gap: 1.2rem;
+  }
+  .tt-trustcard-portrait { width: 128px; height: 128px; }
+  .tt-trustcard-proof { flex-direction: column; gap: 0.6rem; text-align: center; }
+}
+
+/* ══════════════════════════════════════════════
+   LEGAL PAGES — own URLs, readable measure
+════════════════════════════════════════════════ */
+.tt-legal-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 4.5rem;
+}
+.tt-legal-page > h1 { margin-bottom: 2rem; text-align: left; }
+
+.tt-legal-doc-page { color: var(--ink-soft); }
+.tt-legal-doc-page h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--ink);
+  margin: 2.4rem 0 0.8rem;
+}
+.tt-legal-doc-page h3,
+.tt-legal-doc-page h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--sienna);
+  margin: 1.8rem 0 0.5rem;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+.tt-legal-doc-page p,
+.tt-legal-doc-page li {
+  font-size: var(--size-fine);
+  line-height: 1.75;
+  margin-bottom: 0.85rem;
+}
+.tt-legal-doc-page ul,
+.tt-legal-doc-page ol { padding-left: 1.3rem; margin-bottom: 1rem; }
+.tt-legal-doc-page a { color: var(--sienna); }
+.tt-legal-doc-page table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.tt-legal-doc-page th,
+.tt-legal-doc-page td {
+  border: 1px solid rgba(139, 98, 25, 0.35);
+  padding: 0.5rem 0.7rem;
+  font-size: var(--size-fine);
+  text-align: left;
+}
+
+.tt-legal-back { margin-top: 3rem; }
+.tt-legal-back a { color: var(--sienna); font-size: var(--size-small); text-decoration: none; }
+.tt-legal-back a:hover { text-decoration: underline; }
+
+/* ══════════════════════════════════════════════
+   BLOG
+════════════════════════════════════════════════ */
+.tt-blog-wrap { max-width: 780px; margin: 0 auto; padding: 3.5rem 1.5rem 4.5rem; }
+.tt-blog-wrap > h1 { text-align: left; margin-bottom: 0.6rem; }
+.tt-blog-intro { color: var(--ink-mid); margin-bottom: 2.5rem; }
+
+.tt-post-list { list-style: none; padding: 0; }
+.tt-post-item { border-top: 1px solid rgba(139, 98, 25, 0.35); padding: 1.6rem 0; }
+.tt-post-item:last-child { border-bottom: 1px solid rgba(139, 98, 25, 0.35); }
+.tt-post-item h2 { font-size: 1.55rem; margin-bottom: 0.35rem; }
+.tt-post-item h2 a { color: var(--ink); text-decoration: none; }
+.tt-post-item h2 a:hover { color: var(--sienna); }
+.tt-post-date { font-size: var(--size-fine); color: var(--gold); letter-spacing: 0.06em; }
+.tt-post-excerpt { margin-top: 0.5rem; color: var(--ink-soft); }
+
+.tt-post { max-width: 720px; margin: 0 auto; padding: 3.5rem 1.5rem 4.5rem; }
+.tt-post-header { margin-bottom: 2.2rem; }
+.tt-post-header h1 { text-align: left; margin-bottom: 0.5rem; }
+.tt-post-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  margin: 2.4rem 0 0.8rem;
+  color: var(--ink);
+}
+.tt-post-body h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 1.8rem 0 0.5rem;
+  text-transform: none;
+}
+.tt-post-body p { margin-bottom: 1.1rem; }
+.tt-post-body ul, .tt-post-body ol { padding-left: 1.4rem; margin-bottom: 1.1rem; }
+.tt-post-body li { margin-bottom: 0.5rem; }
+.tt-post-body a { color: var(--sienna); }
+.tt-post-body blockquote {
+  border-left: 3px solid var(--gold);
+  padding-left: 1.1rem;
+  margin: 1.4rem 0;
+  font-family: var(--font-accent);
+  font-style: italic;
+  color: var(--ink-mid);
+}
+.tt-post-cta {
+  margin-top: 3rem;
+  padding: 1.8rem;
+  border: 1px solid var(--gold);
+  background: rgba(247, 240, 226, 0.6);
+  text-align: center;
+}
+.tt-post-cta h3 { margin-bottom: 0.6rem; }
+
+/* ══════════════════════════════════════════════
+   SPECIFICITY CORRECTIONS
+   The original stylesheet targets .tt-root h1 / .tt-root p, which outrank the
+   single-class rules above. These restore the intended three-family system.
+════════════════════════════════════════════════ */
+
+/* Form controls do not inherit font by default — this is where Arial and
+   Times were leaking into an otherwise three-family page. */
+.tt-root button,
+.tt-root input,
+.tt-root select,
+.tt-root textarea { font: inherit; }
+
+/* The tagline is the H1 and carries the keywords. It is set in IM Fell italic
+   face — unreadable for a full sentence. IM Fell italic, as originally designed. */
+.tt-root h1.tt-tagline {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  letter-spacing: 0;
+}
+
+/* Section decks sit between heading and body, so they need their own size. */
+.tt-root p.tt-sec-sub {
+  font-size: var(--size-subheading);
+  font-family: var(--font-body);
+  font-style: normal;
+  color: var(--ink-soft);
+}
+.tt-root .tt-panel-dark p.tt-sec-sub,
+.tt-root .tt-testimonials p.tt-sec-sub { color: rgba(245, 236, 218, 0.92); }
+
+/* Testimonial quotes keep the literary face at readable size. */
+.tt-root p.tt-testi-body {
+  font-family: var(--font-accent);
+  font-size: var(--size-body);
+}
+
+/* Wordmark in IM Fell. Two-tone colour comes from .tt-site-title .tt-accent. */
+.tt-root .tt-site-title { font-family: var(--font-accent); letter-spacing: 0.01em; }
+
+/* ══════════════════════════════════════════════
+   HERO LAYOUT — logo left, wordmark right, trust block underneath
+   The editorial variant previously collapsed the hero to one centred
+   column with a 520px logo, which pushed the trust block onto the
+   second screen. Restores the two-column grid and shrinks the logo 30%.
+════════════════════════════════════════════════ */
+.tt-root[data-variant="editorial"] .tt-hero {
+  grid-template-columns: 360px 1fr;
+  text-align: left;
+  align-items: center;
+  gap: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+.tt-root[data-variant="editorial"] .tt-hero-text {
+  max-width: none;
+  margin: 0;
+}
+.tt-root[data-variant="editorial"] .tt-hero-logo-wrap img {
+  max-width: 364px;
+  margin: 0;
+}
+.tt-root[data-variant="editorial"] .tt-eyebrow {
+  justify-content: flex-start;
+}
+/* Close the last 52px so the whole trust block, ProvenExpert badge included,
+   clears the fold on a standard laptop viewport (~740px of content height). */
+.tt-root[data-variant="editorial"] .tt-hero {
+  padding-top: 2rem;
+  padding-bottom: 0.75rem;
+}
+.tt-root[data-variant="editorial"] .tt-eyebrow { margin-bottom: 0.75rem; }
+.tt-root .tt-trustcard {
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.25rem;
+}
+.tt-root .tt-trustcard-hello { margin-bottom: 0.5rem !important; }
+.tt-root .tt-trustcard-what { margin-bottom: 0.85rem !important; }
+.tt-root .tt-trustcard-proof { padding-top: 0.8rem; }
+/* ══════════════════════════════════════════════
+   REVIEW ROUND 2
+   1. Breathing room between the sticky nav and the logo
+   2. ProvenExpert seal doubled - it was unreadable at 76px
+   3. Trust block set in a single typeface (Source Sans 3)
+════════════════════════════════════════════════ */
+.tt-root[data-variant="editorial"] .tt-hero {
+  padding-top: 3.5rem;
+}
+
+/* One font in the trust block. The greeting was the only IM Fell line;
+   it keeps its prominence through size and weight instead. */
+.tt-root .tt-trustcard-hello {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0;
+}
+
+/* Seal doubled from 76px. Stacked above the caption so the extra width
+   does not force the row taller than it needs to be. */
+.tt-root .tt-trustcard-proof {
+  align-items: center;
+  gap: 1.1rem;
+}
+.tt-root .tt-trustcard-proof img {
+  width: 152px;
+}
+/* Seal moved under the portrait, into the left column. The left column was
+   150px of portrait beside ~350px of text - that dead space now carries the
+   ProvenExpert proof instead of adding a row to the bottom of the card. */
+.tt-root .tt-trustcard-aside {
+  flex: 0 0 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.tt-root .tt-trustcard-proof {
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  border-top: none;
+  padding-top: 0;
+}
+.tt-root .tt-trustcard-proof img { width: 152px; }
+.tt-root .tt-trustcard-what { margin-bottom: 0 !important; }
+
+@media (max-width: 720px) {
+  .tt-root .tt-trustcard-aside { flex: 0 0 auto; }
+}
+/* ══════════════════════════════════════════════
+   REVIEW ROUND 3
+════════════════════════════════════════════════ */
+
+/* Playful two-word lead-in above the positioning paragraph.
+   Styled identically to the greeting, just spaced away from the text above. */
+.tt-root .tt-trustcard-lead { margin-top: 1.1rem !important; }
+
+/* Reach/language line, lifted out of the card to keep it above the fold. */
+.tt-root .tt-trustcard-reach {
+  max-width: 860px;
+  margin: 0 auto 1.25rem;
+  padding: 0 2rem;
+  text-align: center;
+  font-size: var(--size-small);
+  color: var(--ink-mid);
+}
+
+/* Single testimonial sitting between the trust block and the call to action. */
+.tt-root .tt-hero-testi {
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+.tt-root .tt-hero-testi blockquote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0 0 0.6rem;
+}
+.tt-root .tt-hero-testi figcaption {
+  font-size: var(--size-fine);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Link through to the full example interpretation. */
+.tt-root .tt-receive-cta {
+  margin-top: 1.8rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(139, 98, 25, 0.35);
+  font-size: var(--size-body);
+}
+.tt-root .tt-receive-cta a {
+  color: var(--sienna);
+  font-weight: 600;
+  text-decoration: none;
+}
+.tt-root .tt-receive-cta a:hover { text-decoration: underline; }
+
+.tt-root .tt-post-body hr {
+  border: none;
+  border-top: 1px solid rgba(139, 98, 25, 0.35);
+  margin: 2rem 0;
+}
+/* The doubled seal made the left column (371px) taller than the text column
+   (346px), so the portrait now sets the pace rather than the card height.
+   Trimming it hands the constraint back to the text. */
+.tt-root .tt-trustcard-portrait { width: 118px; height: 118px; }
+.tt-root .tt-trustcard { padding: 1.35rem 1.9rem; }
+.tt-root .tt-trustcard-aside { gap: 0.8rem; }
+/* ══════════════════════════════════════════════
+   REVIEW ROUND 4
+════════════════════════════════════════════════ */
+
+/* Trust card sits directly on the parchment - no panel, no frame. */
+.tt-root .tt-trustcard {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0.5rem 2rem 1rem;
+}
+
+/* Testimonial carousel.
+   Slides share one grid cell, so the container takes the height of the
+   longest quote and nothing shifts as it rotates. No truncation, no
+   character limit, no editing of a client's words. */
+.tt-root .tt-hero-testi {
+  max-width: 820px;
+  margin: 0 auto 1.75rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+.tt-root .tt-hero-testi-track {
+  display: grid;
+}
+.tt-root .tt-hero-testi-slide {
+  grid-area: 1 / 1;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+  align-self: center;
+}
+.tt-root .tt-hero-testi-slide[data-active='true'] {
+  opacity: 1;
+  visibility: visible;
+}
+.tt-root .tt-hero-testi-slide blockquote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0 0 0.9rem;
+}
+.tt-root .tt-hero-testi-slide figcaption {
+  font-family: var(--font-body);
+  font-size: var(--size-small);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.tt-root .tt-hero-testi-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.1rem;
+}
+.tt-root .tt-hero-testi-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: none;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+.tt-root .tt-hero-testi-dot[data-active='true'] { background: var(--gold); }
+.tt-root .tt-hero-testi-dot:hover { background: var(--gold-pale); }
+
+@media (max-width: 720px) {
+  .tt-root .tt-hero-testi-slide blockquote { font-size: 1.2rem; }
+  .tt-root .tt-trustcard { padding: 0.5rem 1rem 1rem; }
+}
+/* ══════════════════════════════════════════════
+   NAV BREAKPOINT
+   Nav links are 16px now (readability pass) rather than the original 11px,
+   so eight items no longer fit on one row below ~1150px - the bar silently
+   wrapped to two rows. Rather than shrink the text back down, hand over to
+   the hamburger earlier. Only nav rules here; the 720px block still owns
+   the rest of the mobile layout.
+════════════════════════════════════════════════ */
+@media (max-width: 1150px) {
+  .tt-root .tt-nav { flex-wrap: wrap; }
+  .tt-root .tt-nav-toggle { display: flex; }
+  .tt-root .tt-nav-links {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(139, 98, 25, 0.25);
+    margin-top: 0.7rem;
+  }
+  .tt-root .tt-nav[data-open='true'] .tt-nav-links { display: flex; }
+  .tt-root .tt-nav-links a {
+    padding: 0.8rem 0.2rem;
+    border-bottom: 1px solid rgba(139, 98, 25, 0.15);
+  }
+  .tt-root .tt-nav-links a:last-child { border-bottom: none; }
+  .tt-root .tt-nav-cta { text-align: center; margin-top: 0.4rem; }
+}
+/* ══════════════════════════════════════════════
+   EXAMPLE INTERPRETATION PAGE
+   Reads as a document, visibly distinct from marketing copy.
+════════════════════════════════════════════════ */
+.tt-example { max-width: 760px; margin: 0 auto; padding: 3.5rem 1.5rem 4.5rem; }
+.tt-example-header { margin-bottom: 2.5rem; }
+.tt-example-header h1 { text-align: left; margin-bottom: 0.6rem; }
+.tt-example-header .tt-sec-sub { text-align: left; }
+
+.tt-example-note {
+  margin-top: 1.2rem;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--gold);
+  background: rgba(247, 240, 226, 0.55);
+  font-size: var(--size-fine);
+  color: var(--ink-mid);
+}
+
+.tt-example-doc {
+  border-top: 1px solid rgba(139, 98, 25, 0.35);
+  padding-top: 2rem;
+}
+.tt-example-meta {
+  font-size: var(--size-fine);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem !important;
+}
+.tt-example-doc h2 {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  color: var(--ink);
+  margin: 2.8rem 0 1rem;
+}
+.tt-example-doc p { margin-bottom: 1.05rem; }
+
+.tt-example-dreamtitle {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--sienna);
+  margin-bottom: 0.8rem !important;
+}
+.tt-example-dream {
+  border-left: 3px solid var(--gold);
+  padding: 0.2rem 0 0.2rem 1.3rem;
+  margin: 0 0 1.5rem;
+  font-family: var(--font-accent);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.tt-example-formula {
+  border: 1px solid rgba(139, 98, 25, 0.4);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.2rem;
+  background: rgba(247, 240, 226, 0.45);
+}
+.tt-example-formula-label {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: var(--size-small);
+  color: var(--sienna);
+  margin-bottom: 0.5rem !important;
+}
+.tt-example-formula p:last-child { margin-bottom: 0 !important; }
+
+.tt-example-line { margin-bottom: 2rem; }
+.tt-example-quote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--sienna);
+  border-left: 2px solid var(--gold-pale);
+  padding-left: 1rem;
+  margin-bottom: 0.9rem !important;
+}
+
+.tt-example-symbols { margin: 1.2rem 0 1.5rem; }
+.tt-example-symbols dt {
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 1rem;
+}
+.tt-example-symbols dd {
+  margin: 0.2rem 0 0;
+  color: var(--ink-soft);
+}
+
+.tt-example-actions { padding-left: 1.3rem; margin-bottom: 1.2rem; }
+.tt-example-actions li { margin-bottom: 0.75rem; }
+
+.tt-example-sign {
+  font-family: var(--font-accent);
+  font-size: 1.25rem;
+  color: var(--ink);
+  margin-top: 2.5rem !important;
+}
+.tt-example-footnote {
+  font-size: var(--size-fine);
+  color: var(--ink-mid);
+  border-top: 1px solid rgba(139, 98, 25, 0.3);
+  padding-top: 1rem;
+  margin-top: 1.5rem !important;
 }

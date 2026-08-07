@@ -1,0 +1,168 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  /** Path only, e.g. "/impressum". Canonical is built from astro.config `site`. */
+  path?: string;
+  /** Extra JSON-LD blocks to inject into <head>. */
+  jsonLd?: unknown[];
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  path = '/',
+  jsonLd = [],
+  noindex = false,
+} = Astro.props;
+
+const site = 'https://traum-theater.de';
+const canonical = new URL(path, site).href;
+const ogImage = `${site}/assets/logo.png`;
+
+const navLinks = [
+  { href: '/#methode', label: 'Die Methode' },
+  { href: '/#symbole', label: 'Symbole' },
+  { href: '/beispiel-deutung', label: 'Beispiel' },
+  { href: '/#angebot', label: 'Angebot' },
+  { href: '/#stimmen', label: 'Stimmen' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/#about', label: 'Über mich' },
+];
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#1a0e04" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Traumtheater" />
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="Traumtheater" />
+    <meta property="og:title" content={ogTitle ?? title} />
+    <meta property="og:description" content={ogDescription ?? description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle ?? title} />
+    <meta name="twitter:description" content={ogDescription ?? description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="apple-touch-icon" href="/assets/logo.png" />
+
+    <!-- Self-hosted; no third-party font request. -->
+    <link rel="preload" href="/assets/fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/assets/fonts/fonts.css" />
+
+    {jsonLd.map((block) => (
+      <script type="application/ld+json" set:html={JSON.stringify(block)} />
+    ))}
+
+    <style is:global>
+      html, body { margin: 0; padding: 0; background: #e8d5a8; }
+    </style>
+  </head>
+
+  <body>
+    <div class="tt-root" data-variant="editorial">
+      <nav class="tt-nav" data-open="false" id="tt-nav">
+        <a href="/" class="tt-nav-brand">Traumtheater</a>
+        <button class="tt-nav-toggle" aria-label="Menü öffnen" aria-expanded="false" id="tt-nav-toggle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" />
+          </svg>
+        </button>
+        <div class="tt-nav-links" id="tt-nav-links">
+          {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+          <a href="/#kontakt" class="tt-nav-cta">Kontakt ✦</a>
+        </div>
+      </nav>
+
+      <slot />
+
+      <footer class="tt-footer">
+        <nav class="tt-footer-links">
+          <a href="/impressum">Impressum</a>
+          <a href="/datenschutz">Datenschutz</a>
+          <a href="/agb">AGB</a>
+          <a href="/widerruf">Widerruf</a>
+          <a href="/blog">Blog</a>
+        </nav>
+        <p>
+          © Traumtheater &nbsp;·&nbsp; Persönliche Traumdeutung nach der Aisling-Methode
+          &nbsp;·&nbsp; Für Deutschland, Österreich und die Schweiz &nbsp;·&nbsp; Alle Inhalte vertraulich
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // Progressive enhancement only — all content above is already in the HTML.
+      const nav = document.getElementById('tt-nav');
+      const toggle = document.getElementById('tt-nav-toggle');
+      const links = document.getElementById('tt-nav-links');
+
+      toggle?.addEventListener('click', () => {
+        const open = nav?.getAttribute('data-open') === 'true';
+        nav?.setAttribute('data-open', open ? 'false' : 'true');
+        toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+        toggle.setAttribute('aria-label', open ? 'Menü öffnen' : 'Menü schließen');
+      });
+      links?.addEventListener('click', () => {
+        nav?.setAttribute('data-open', 'false');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
+
+      // Testimonial carousel. All quotes are already in the HTML — this only
+      // controls which one is shown, so nothing is hidden from crawlers.
+      const testi = document.querySelector('[data-testi]');
+      if (testi) {
+        const slides = [...testi.querySelectorAll('[data-testi-slide]')];
+        const dots = [...testi.querySelectorAll('[data-testi-dot]')];
+        let current = 0;
+        let timer = null;
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        const show = (n) => {
+          current = (n + slides.length) % slides.length;
+          slides.forEach((s, i) => s.setAttribute('data-active', i === current ? 'true' : 'false'));
+          dots.forEach((d, i) => d.setAttribute('data-active', i === current ? 'true' : 'false'));
+        };
+
+        const start = () => {
+          if (reduced || slides.length < 2) return;
+          stop();
+          timer = window.setInterval(() => show(current + 1), 7000);
+        };
+        const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+
+        dots.forEach((dot, i) =>
+          dot.addEventListener('click', () => { show(i); start(); })
+        );
+
+        testi.addEventListener('mouseenter', stop);
+        testi.addEventListener('mouseleave', start);
+        testi.addEventListener('focusin', stop);
+        testi.addEventListener('focusout', start);
+
+        start();
+      }
+    </script>
+  </body>
+</html>
