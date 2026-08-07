@@ -2,10 +2,9 @@
 import Base from '../layouts/Base.astro';
 import CtaButtons from '../components/CtaButtons.astro';
 
-// Still noindex until Mark confirms the consent/provenance question — see the
-// note in CLAUDE.md. Flip to false and remove the sitemap filter in
-// astro.config.mjs to publish.
-const noindex = true;
+// Mark's own dream, interpreted in the same format a client receives — so
+// there is no client-confidentiality question here. Safe to index.
+const noindex = false;
 
 const symbols: [string, string][] = [
   ['Haus, das renoviert wird', 'Der Körper und der eigene Zustand. Reparaturarbeiten zeigen an, dass etwas geheilt wird oder geheilt werden möchte.'],
@@ -81,7 +80,7 @@ const lines: [string, string[]][] = [
 
 <Base
   title="Eine Deutung im Original — Beispiel einer Traumdeutung | Traumtheater"
-  description="Eine vollständige Traumdeutung nach der Aisling-Methode, von der Traumschilderung bis zu den Handlungsschritten. Anonymisiert und mit Einverständnis veröffentlicht — damit du vorher weißt, was du bekommst."
+  description="Eine vollständige Traumdeutung nach der Aisling-Methode — von der Traumschilderung über die Deutung Zeile für Zeile bis zu den Handlungsschritten. Damit du vorher weißt, was du bekommst."
   path="/beispiel-deutung"
   noindex={noindex}>
   <article class="tt-example">
@@ -94,9 +93,15 @@ const lines: [string, string[]][] = [
         Traumschilderung bis zu den Handlungsschritten.
       </p>
       <p class="tt-example-note">
-        Anonymisiert und mit ausdrücklichem Einverständnis veröffentlicht. Name,
-        Orte und persönliche Details wurden verändert; der Traum und die Deutung
-        selbst sind unverändert.
+        Dies ist mein eigener Traum — gedeutet nach derselben Methode und im selben
+        Format, das du als Klientin oder Klient bekommst. Kein Klientendokument:
+        was mir Menschen anvertrauen, bleibt zwischen uns. Einzelne Namen habe ich
+        verändert.
+      </p>
+      <p class="tt-example-note">
+        Warum hier <em>Sie</em> steht: In der Deutung übernehme ich die Anrede, die
+        du selbst wählst. Wer mir per <em>du</em> schreibt, bekommt seine Deutung
+        auch im <em>du</em>.
       </p>
     </header>
 
