@@ -1787,3 +1787,110 @@
   .tt-root .tt-nav-links a:last-child { border-bottom: none; }
   .tt-root .tt-nav-cta { text-align: center; margin-top: 0.4rem; }
 }
+/* ══════════════════════════════════════════════
+   EXAMPLE INTERPRETATION PAGE
+   Reads as a document, visibly distinct from marketing copy.
+════════════════════════════════════════════════ */
+.tt-example { max-width: 760px; margin: 0 auto; padding: 3.5rem 1.5rem 4.5rem; }
+.tt-example-header { margin-bottom: 2.5rem; }
+.tt-example-header h1 { text-align: left; margin-bottom: 0.6rem; }
+.tt-example-header .tt-sec-sub { text-align: left; }
+
+.tt-example-note {
+  margin-top: 1.2rem;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--gold);
+  background: rgba(247, 240, 226, 0.55);
+  font-size: var(--size-fine);
+  color: var(--ink-mid);
+}
+
+.tt-example-doc {
+  border-top: 1px solid rgba(139, 98, 25, 0.35);
+  padding-top: 2rem;
+}
+.tt-example-meta {
+  font-size: var(--size-fine);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2rem !important;
+}
+.tt-example-doc h2 {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  color: var(--ink);
+  margin: 2.8rem 0 1rem;
+}
+.tt-example-doc p { margin-bottom: 1.05rem; }
+
+.tt-example-dreamtitle {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--sienna);
+  margin-bottom: 0.8rem !important;
+}
+.tt-example-dream {
+  border-left: 3px solid var(--gold);
+  padding: 0.2rem 0 0.2rem 1.3rem;
+  margin: 0 0 1.5rem;
+  font-family: var(--font-accent);
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.tt-example-formula {
+  border: 1px solid rgba(139, 98, 25, 0.4);
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.2rem;
+  background: rgba(247, 240, 226, 0.45);
+}
+.tt-example-formula-label {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: var(--size-small);
+  color: var(--sienna);
+  margin-bottom: 0.5rem !important;
+}
+.tt-example-formula p:last-child { margin-bottom: 0 !important; }
+
+.tt-example-line { margin-bottom: 2rem; }
+.tt-example-quote {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--sienna);
+  border-left: 2px solid var(--gold-pale);
+  padding-left: 1rem;
+  margin-bottom: 0.9rem !important;
+}
+
+.tt-example-symbols { margin: 1.2rem 0 1.5rem; }
+.tt-example-symbols dt {
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 1rem;
+}
+.tt-example-symbols dd {
+  margin: 0.2rem 0 0;
+  color: var(--ink-soft);
+}
+
+.tt-example-actions { padding-left: 1.3rem; margin-bottom: 1.2rem; }
+.tt-example-actions li { margin-bottom: 0.75rem; }
+
+.tt-example-sign {
+  font-family: var(--font-accent);
+  font-size: 1.25rem;
+  color: var(--ink);
+  margin-top: 2.5rem !important;
+}
+.tt-example-footnote {
+  font-size: var(--size-fine);
+  color: var(--ink-mid);
+  border-top: 1px solid rgba(139, 98, 25, 0.3);
+  padding-top: 1rem;
+  margin-top: 1.5rem !important;
+}
