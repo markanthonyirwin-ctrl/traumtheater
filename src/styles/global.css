@@ -1894,3 +1894,51 @@
   padding-top: 1rem;
   margin-top: 1.5rem !important;
 }
+/* ══════════════════════════════════════════════
+   REVIEW ROUND 5
+════════════════════════════════════════════════ */
+
+/* 1. Portrait square with rounded corners, matched to the seal width. */
+.tt-root .tt-trustcard-portrait {
+  width: 152px;
+  height: 152px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.tt-root .tt-trustcard-aside { flex: 0 0 190px; }
+
+/* 2. Trust block: one colour, no bold. Hierarchy by size alone. */
+.tt-root .tt-trustcard-hello,
+.tt-root .tt-trustcard-cred,
+.tt-root .tt-trustcard-what {
+  color: var(--ink);
+  font-weight: 400;
+}
+.tt-root .tt-trustcard-hello { font-size: 1.35rem; }
+.tt-root .tt-trustcard-lead { margin-top: 1.4rem; }
+
+/* 3. Hero quotes a few points smaller. */
+.tt-root .tt-hero-testi-slide blockquote { font-size: 1.25rem; }
+
+/* 4. Dark carousel variant for the Stimmen section. */
+.tt-root .tt-hero-testi--dark { max-width: 900px; margin-top: 1.5rem; }
+.tt-root .tt-hero-testi--dark .tt-hero-testi-slide blockquote { color: var(--cream); }
+.tt-root .tt-hero-testi--dark .tt-hero-testi-slide figcaption { color: var(--gold-pale); }
+.tt-root .tt-hero-testi--dark .tt-hero-testi-dot { border-color: var(--gold-pale); }
+.tt-root .tt-hero-testi--dark .tt-hero-testi-dot[data-active='true'] { background: var(--gold-pale); }
+
+/* 7. Example page: dream text and quoted snippets in the body face. */
+.tt-root .tt-example-dream,
+.tt-root .tt-example-quote,
+.tt-root .tt-example-dreamtitle {
+  font-family: var(--font-body);
+  font-style: normal;
+}
+.tt-root .tt-example-dreamtitle { font-weight: 600; }
+.tt-root .tt-example-quote { font-size: 1.1rem; }
+
+@media (max-width: 720px) {
+  .tt-root .tt-hero-testi-slide blockquote { font-size: 1.1rem; }
+  .tt-root .tt-trustcard-portrait { width: 128px; height: 128px; }
+  .tt-root .tt-trustcard-aside { flex: 0 0 auto; }
+}

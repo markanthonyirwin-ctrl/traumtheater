@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import CtaButtons from '../components/CtaButtons.astro';
+import TestimonialCarousel from '../components/TestimonialCarousel.astro';
 
 const title = 'Traumtheater — Persönliche Traumdeutung nach der Aisling-Methode';
 const description =
@@ -185,7 +186,7 @@ const jsonLd = [
         weltweit von mehreren hundert zertifizierten Praktikern angewendet wird.
         Seit 2011 arbeite ich mit Träumen.
       </p>
-      <p class="tt-trustcard-hello tt-trustcard-lead">Kein Kaffeesatz.</p>
+      <p class="tt-trustcard-hello tt-trustcard-lead">Was ich anbiete</p>
       <p class="tt-trustcard-what">
         Fundiert und spirituell zugleich, ohne esoterische Überfrachtung. Du
         bekommst keine allgemeinen Sätze, die auf jeden passen, sondern eine
@@ -200,31 +201,8 @@ const jsonLd = [
     Österreich und der Schweiz.
   </p>
 
-  {/* Social proof immediately before the call to action.
-      Every quote ships in the HTML; the script only decides which is visible,
-      so crawlers and no-JS visitors still get all of them. */}
-  <section class="tt-hero-testi" aria-label="Stimmen von Klientinnen und Klienten" data-testi>
-    <div class="tt-hero-testi-track">
-      {testimonials.map(([name, body], i) => (
-        <figure class="tt-hero-testi-slide" data-testi-slide={i} data-active={i === 0 ? 'true' : 'false'}>
-          <blockquote>{body}</blockquote>
-          <figcaption>{name}</figcaption>
-        </figure>
-      ))}
-    </div>
-    <div class="tt-hero-testi-dots" role="tablist" aria-label="Stimme auswählen">
-      {testimonials.map(([name], i) => (
-        <button
-          type="button"
-          class="tt-hero-testi-dot"
-          data-testi-dot={i}
-          data-active={i === 0 ? 'true' : 'false'}
-          role="tab"
-          aria-label={`Stimme von ${name}`}
-        />
-      ))}
-    </div>
-  </section>
+  {/* Social proof immediately before the call to action. */}
+  <TestimonialCarousel testimonials={testimonials} tone="light" />
 
   <div class="tt-hero-cta-wrap">
     <CtaButtons center={true} />
@@ -470,17 +448,7 @@ const jsonLd = [
       <img class="tt-verified-seal" src="/assets/ProvenExpert-Bewertungssiegel.png" alt="ProvenExpert Kundenbewertungen — SEHR GUT, 100% Empfehlungen" />
       <span class="tt-verified-note">12 Fünf-Sterne-Bewertungen — unabhängig geprüft auf ProvenExpert ↗</span>
     </a>
-    <div class="tt-testi-grid">
-      {testimonials.map(([name, body], i) => (
-        <div class={i === 4 ? 'tt-testi tt-testi--featured' : 'tt-testi'}>
-          <p class="tt-testi-body">{body}</p>
-          <div class="tt-testi-attr">
-            <span class="tt-testi-mark"></span>
-            <span class="tt-testi-name">{name}</span>
-          </div>
-        </div>
-      ))}
-    </div>
+    <TestimonialCarousel testimonials={testimonials} tone="dark" />
   </section>
 
   {/* ══════════ KONTAKT ══════════ */}

@@ -1,0 +1,36 @@
+---
+// Shared testimonial carousel. Used in the hero and again in the Stimmen
+// section. Every quote ships in the raw HTML; the script in Base.astro only
+// toggles which is visible, so crawlers and no-JS visitors get all of them.
+export interface Props {
+  testimonials: [string, string][];
+  tone?: 'light' | 'dark';
+}
+const { testimonials, tone = 'light' } = Astro.props;
+---
+
+<section
+  class={`tt-hero-testi tt-hero-testi--${tone}`}
+  aria-label="Stimmen von Klientinnen und Klienten"
+  data-testi>
+  <div class="tt-hero-testi-track">
+    {testimonials.map(([name, body], i) => (
+      <figure class="tt-hero-testi-slide" data-testi-slide={i} data-active={i === 0 ? 'true' : 'false'}>
+        <blockquote>{body}</blockquote>
+        <figcaption>{name}</figcaption>
+      </figure>
+    ))}
+  </div>
+  <div class="tt-hero-testi-dots" role="tablist" aria-label="Stimme auswählen">
+    {testimonials.map(([name], i) => (
+      <button
+        type="button"
+        class="tt-hero-testi-dot"
+        data-testi-dot={i}
+        data-active={i === 0 ? 'true' : 'false'}
+        role="tab"
+        aria-label={`Stimme von ${name}`}
+      />
+    ))}
+  </div>
+</section>
