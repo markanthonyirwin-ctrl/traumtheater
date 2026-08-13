@@ -1,14 +1,34 @@
 ---
 import ServicePage from '../layouts/ServicePage.astro';
+
+const faq = [
+  {
+    q: 'Muss ich meinen Traum vollständig erinnern?',
+    a: 'Nein. Bruchstücke reichen oft. Wichtiger als Vollständigkeit ist das Gefühl, mit dem du aufgewacht bist.',
+  },
+  {
+    q: 'Wie lange dauert es?',
+    a: 'Ich nehme mir Zeit für jede Deutung. Wann du mit deiner rechnen kannst, sage ich dir, sobald dein Traum bei mir ist.',
+  },
+  {
+    q: 'Ist das eine Therapie?',
+    a: 'Nein. Die Traumdeutung ist eine reflektierende Dienstleistung und keine medizinische, psychotherapeutische oder psychologische Beratung. Details stehen in den <a href="/agb">AGB § 2a</a>.',
+  },
+  {
+    q: 'Was passiert mit meinem Traum?',
+    a: 'Er bleibt zwischen uns. Was mir Menschen anvertrauen, veröffentliche ich nicht. Das Beispiel auf dieser Seite ist mein eigener Traum.',
+  },
+];
 ---
 
 <ServicePage
-  title="Persönliche Traumdeutung: deine Deutung, nicht die aus dem Lexikon"
-  description="Persönliche Traumdeutung nach der Aisling-Methode. Kein Nachschlagewerk, sondern eine ausführliche schriftliche Deutung deines Traums, bezogen auf deine Lebenssituation. Einführungsangebot 29 € statt 69 €."
+  title="Persönliche Traumdeutung nach der Aisling-Methode"
+  description="Persönliche Traumdeutung nach der Aisling-Methode. Eine ausführliche schriftliche Deutung deines Traums, bezogen auf deine Lebenssituation. 29 € statt 69 €."
   path="/persoenliche-traumdeutung"
   h1="Persönliche Traumdeutung"
   lead="Dein Traum, gelesen im Zusammenhang mit deinem Leben. Nicht nachgeschlagen, sondern für dich geschrieben."
-  serviceName="Persönliche Traumdeutung nach der Aisling-Methode">
+  serviceName="Persönliche Traumdeutung nach der Aisling-Methode"
+  faq={faq}>
 
   <h2>Was „persönlich" hier bedeutet</h2>
   <p>
@@ -77,21 +97,4 @@ import ServicePage from '../layouts/ServicePage.astro';
     einfach. Diese Arbeit soll an niemandem am Geld scheitern.
   </p>
 
-  <h2>Häufige Fragen</h2>
-  <p><strong>Muss ich meinen Traum vollständig erinnern?</strong><br />
-  Nein. Bruchstücke reichen oft. Wichtiger als Vollständigkeit ist das Gefühl,
-  mit dem du aufgewacht bist.</p>
-
-  <p><strong>Wie lange dauert es?</strong><br />
-  Ich nehme mir Zeit für jede Deutung. Wann du mit deiner rechnen kannst, sage
-  ich dir, sobald dein Traum bei mir ist.</p>
-
-  <p><strong>Ist das eine Therapie?</strong><br />
-  Nein. Die Traumdeutung ist eine reflektierende Dienstleistung und keine
-  medizinische, psychotherapeutische oder psychologische Beratung. Details
-  stehen in den <a href="/agb">AGB § 2a</a>.</p>
-
-  <p><strong>Was passiert mit meinem Traum?</strong><br />
-  Er bleibt zwischen uns. Was mir Menschen anvertrauen, veröffentliche ich nicht.
-  Das Beispiel auf dieser Seite ist mein eigener Traum.</p>
 </ServicePage>

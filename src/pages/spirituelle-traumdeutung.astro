@@ -1,14 +1,34 @@
 ---
 import ServicePage from '../layouts/ServicePage.astro';
+
+const faq = [
+  {
+    q: 'Muss ich spirituell sein, damit das funktioniert?',
+    a: 'Nein. Die Deutung funktioniert genauso, wenn du Träume als Arbeit deines Unterbewusstseins verstehst. Ich passe die Sprache an das an, was für dich stimmig ist.',
+  },
+  {
+    q: 'Was unterscheidet das von einer psychologischen Deutung?',
+    a: 'Ich arbeite nicht klinisch und diagnostiziere nicht. Die Aisling-Methode fragt weniger, was in deiner Vergangenheit schiefgelaufen ist, und mehr, worauf dein Traum dich gerade hinweist und wozu er dich einlädt.',
+  },
+  {
+    q: 'Ist das Wahrsagen?',
+    a: 'Nein. Ich sage dir nicht die Zukunft voraus. Manchmal bereiten Träume auf Kommendes vor, aber als Einladung, aufmerksam zu sein, nicht als Prophezeiung.',
+  },
+  {
+    q: 'In welchen Ländern arbeitest du?',
+    a: 'Deutschland, Österreich und die Schweiz, auf Deutsch oder Englisch. Alles läuft schriftlich, der Ort spielt also keine Rolle.',
+  },
+];
 ---
 
 <ServicePage
   title="Spirituelle Traumdeutung: fundiert und spirituell zugleich"
-  description="Spirituelle und ganzheitliche Traumdeutung nach der Aisling-Methode. Fundiert und spirituell zugleich, ohne esoterische Überfrachtung. Eine ausführliche schriftliche Deutung für Deutschland, Österreich und die Schweiz."
+  description="Spirituelle und ganzheitliche Traumdeutung nach der Aisling-Methode. Fundiert und spirituell zugleich, ohne esoterische Überfrachtung. 29 € statt 69 €."
   path="/spirituelle-traumdeutung"
   h1="Spirituelle Traumdeutung"
   lead="Fundiert und spirituell zugleich, ohne esoterische Überfrachtung. Für Menschen, die ihre Träume ernst nehmen und trotzdem nachvollziehen möchten, wie eine Deutung zustande kommt."
-  serviceName="Spirituelle und ganzheitliche Traumdeutung nach der Aisling-Methode">
+  serviceName="Spirituelle und ganzheitliche Traumdeutung nach der Aisling-Methode"
+  faq={faq}>
 
   <h2>Zwischen Lexikon und Kaffeesatz</h2>
   <p>
@@ -80,22 +100,4 @@ import ServicePage from '../layouts/ServicePage.astro';
     lass liegen, was sich fremd anfühlt.
   </p>
 
-  <h2>Häufige Fragen</h2>
-  <p><strong>Muss ich spirituell sein, damit das funktioniert?</strong><br />
-  Nein. Die Deutung funktioniert genauso, wenn du Träume als Arbeit deines
-  Unterbewusstseins verstehst. Ich passe die Sprache an das an, was für dich
-  stimmig ist.</p>
-
-  <p><strong>Was unterscheidet das von einer psychologischen Deutung?</strong><br />
-  Ich arbeite nicht klinisch und diagnostiziere nicht. Die Aisling-Methode fragt
-  weniger, was in deiner Vergangenheit schiefgelaufen ist, und mehr, worauf dein
-  Traum dich gerade hinweist und wozu er dich einlädt.</p>
-
-  <p><strong>Ist das Wahrsagen?</strong><br />
-  Nein. Ich sage dir nicht die Zukunft voraus. Manchmal bereiten Träume auf
-  Kommendes vor, aber als Einladung, aufmerksam zu sein, nicht als Prophezeiung.</p>
-
-  <p><strong>In welchen Ländern arbeitest du?</strong><br />
-  Deutschland, Österreich und die Schweiz, auf Deutsch oder Englisch. Alles läuft
-  schriftlich, der Ort spielt also keine Rolle.</p>
 </ServicePage>

@@ -2015,3 +2015,36 @@
   .tt-service { padding: 2.5rem 1.2rem 3rem; }
   .tt-service-lead { font-size: 1.1rem; }
 }
+/* Clickable variant of the archetype card, used for the service-page block. */
+.tt-root .tt-card--link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.tt-root .tt-card--link:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.tt-root .tt-card--link h3 { color: var(--sienna); }
+.tt-root .tt-card-more {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  font-size: var(--size-small);
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* FAQ blocks on the service pages. Rendered from the same data as the
+   FAQPage schema, so the visible text and the markup cannot drift. */
+.tt-root .tt-faq { margin-top: 2.5rem; }
+.tt-root .tt-faq-item { margin-bottom: 1.4rem; }
+.tt-root .tt-faq-item h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+}
+.tt-root .tt-faq-item p { margin-bottom: 0 !important; }

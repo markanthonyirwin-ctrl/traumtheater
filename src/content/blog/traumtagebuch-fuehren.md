@@ -1,6 +1,6 @@
 ---
-title: 'Ein Traumtagebuch führen: die einfache Gewohnheit, die Träume lesbar macht'
-description: 'Die meisten Menschen träumen jede Nacht und erinnern sich an fast nichts. Ein Traumtagebuch ändert das in etwa zwei Wochen. So fängst du an, ohne Aufwand und ohne Regeln, die dich abschrecken.'
+title: 'Traumtagebuch führen: so werden deine Träume lesbar'
+description: 'Die meisten träumen jede Nacht und erinnern sich an fast nichts. Ein Traumtagebuch ändert das in zwei Wochen. So fängst du an, ohne Aufwand.'
 pubDate: 2026-08-04
 draft: false
 ---

@@ -1,14 +1,34 @@
 ---
 import ServicePage from '../layouts/ServicePage.astro';
+
+const faq = [
+  {
+    q: 'Warum bietest du keine Gespräche an?',
+    a: 'Weil die schriftliche Form für diese Arbeit mehr trägt. Du bekommst etwas in die Hand, das bleibt, und ich kann sorgfältiger arbeiten, als ein Termin es erlaubt.',
+  },
+  {
+    q: 'In welcher Sprache bekomme ich die Deutung?',
+    a: 'In der Sprache, in der du mir schreibst. Deutsch oder Englisch. Auch die Anrede übernehme ich von dir: Wer mir per du schreibt, bekommt seine Deutung im du.',
+  },
+  {
+    q: 'Kann ich mehrere Träume schicken?',
+    a: 'Ja, und ab dem zweiten wird es interessanter. Träume arbeiten in Serien. Sobald mir zwei oder drei von dir vorliegen, entsteht ein Bild, das ein einzelner Traum noch nicht zeigen kann.',
+  },
+  {
+    q: 'Was passiert mit meinem Traum?',
+    a: 'Er bleibt zwischen uns. Was mir Menschen anvertrauen, veröffentliche ich nicht.',
+  },
+];
 ---
 
 <ServicePage
-  title="Schriftliche Traumdeutung: warum ein Dokument mehr trägt als ein Gespräch"
-  description="Schriftliche Traumdeutung nach der Aisling-Methode. Fünf bis zehn Seiten als fertige PDF, zum Aufbewahren und immer wieder Nachlesen. Kein Termin, kein Zeitdruck. 29 € statt 69 €."
+  title="Schriftliche Traumdeutung: dein Traum als Dokument"
+  description="Schriftliche Traumdeutung nach der Aisling-Methode. Fünf bis zehn Seiten als fertige PDF, zum Nachlesen. Kein Termin, kein Zeitdruck. 29 € statt 69 €."
   path="/schriftliche-traumdeutung"
   h1="Schriftliche Traumdeutung"
   lead="Deine Deutung als Dokument, nicht als Termin. Zum Nachlesen, zum Liegenlassen, zum Wiederfinden in einem halben Jahr."
-  serviceName="Schriftliche Traumdeutung nach der Aisling-Methode">
+  serviceName="Schriftliche Traumdeutung nach der Aisling-Methode"
+  faq={faq}>
 
   <h2>Warum schriftlich</h2>
   <p>
@@ -74,21 +94,4 @@ import ServicePage from '../layouts/ServicePage.astro';
     Zahlungslink, unkompliziert auch aus Österreich und der Schweiz.
   </p>
 
-  <h2>Häufige Fragen</h2>
-  <p><strong>Warum bietest du keine Gespräche an?</strong><br />
-  Weil die schriftliche Form für diese Arbeit mehr trägt. Du bekommst etwas in
-  die Hand, das bleibt, und ich kann sorgfältiger arbeiten, als ein Termin es
-  erlaubt.</p>
-
-  <p><strong>In welcher Sprache bekomme ich die Deutung?</strong><br />
-  In der Sprache, in der du mir schreibst. Deutsch oder Englisch. Auch die Anrede
-  übernehme ich von dir: Wer mir per du schreibt, bekommt seine Deutung im du.</p>
-
-  <p><strong>Kann ich mehrere Träume schicken?</strong><br />
-  Ja, und ab dem zweiten wird es interessanter. Träume arbeiten in Serien. Sobald
-  mir zwei oder drei von dir vorliegen, entsteht ein Bild, das ein einzelner Traum
-  noch nicht zeigen kann.</p>
-
-  <p><strong>Was passiert mit meinem Traum?</strong><br />
-  Er bleibt zwischen uns. Was mir Menschen anvertrauen, veröffentliche ich nicht.</p>
 </ServicePage>

@@ -3,9 +3,11 @@ import Base from '../layouts/Base.astro';
 import CtaButtons from '../components/CtaButtons.astro';
 import TestimonialCarousel from '../components/TestimonialCarousel.astro';
 
-const title = 'Traumtheater — Persönliche Traumdeutung nach der Aisling-Methode';
+// Titles stay under ~60 characters and descriptions under ~155, otherwise
+// Google truncates them mid-sentence in the results page.
+const title = 'Persönliche, schriftliche Traumdeutung | Traumtheater';
 const description =
-  'Persönliche, schriftliche Traumdeutung nach der Aisling-Methode: fundiert und spirituell, ohne esoterische Überfrachtung. Ausführlich und nachvollziehbar, auf Deutsch oder Englisch, für Deutschland, Österreich und die Schweiz.';
+  'Persönliche, schriftliche Traumdeutung nach der Aisling-Methode. Fundiert und spirituell, ohne esoterische Überfrachtung. 29 € statt 69 €.';
 
 const benefits = [
   ['♥', 'Gesundheit', 'Träume zeigen den Zustand deines Körpers oft Jahre vor dem Auftreten von Symptomen. Frühwarnsystem und Heilungshinweis in einem.'],
@@ -266,11 +268,39 @@ const jsonLd = [
       <p class="tt-receive-cta">
         <a href="/beispiel-deutung">Lies eine vollständige Deutung, von Anfang bis Ende →</a>
       </p>
-      <p class="tt-receive-links">
-        Mehr dazu: <a href="/persoenliche-traumdeutung">persönliche Traumdeutung</a>,
-        <a href="/schriftliche-traumdeutung">schriftliche Traumdeutung</a> und
-        <a href="/spirituelle-traumdeutung">spirituelle Traumdeutung</a>.
-      </p>
+    </div>
+  </section>
+
+  {/* ══════════ SERVICE PAGES ══════════
+      These carry the money keywords and each has its own page. Linked
+      prominently rather than buried: internal links are how Google judges
+      which pages matter, and a page reachable only from the footer barely
+      counts. */}
+  <section class="tt-panel-aged" id="angebote">
+    <div style="max-width: 1140px; margin: 0 auto;">
+      <p class="tt-sec-label">Im Detail</p>
+      <h2 class="tt-sec-heading">Was dich interessieren könnte</h2>
+      <p class="tt-sec-sub">Drei Wege in dieselbe Arbeit</p>
+      <div class="tt-grid-3">
+        <a class="tt-card tt-card--link" href="/persoenliche-traumdeutung">
+          <span class="tt-card-symbol">✦</span>
+          <h3>Persönliche Traumdeutung</h3>
+          <p>Was „persönlich" hier wirklich heißt, was im Dokument steht und wie der Ablauf aussieht.</p>
+          <span class="tt-card-more">Mehr lesen →</span>
+        </a>
+        <a class="tt-card tt-card--link" href="/schriftliche-traumdeutung">
+          <span class="tt-card-symbol">◈</span>
+          <h3>Schriftliche Traumdeutung</h3>
+          <p>Warum ein Dokument mehr trägt als ein Gespräch, und was das für dich bedeutet.</p>
+          <span class="tt-card-more">Mehr lesen →</span>
+        </a>
+        <a class="tt-card tt-card--link" href="/spirituelle-traumdeutung">
+          <span class="tt-card-symbol">☽</span>
+          <h3>Spirituelle Traumdeutung</h3>
+          <p>Fundiert und spirituell zugleich, ohne esoterische Überfrachtung. Was ganzheitlich hier bedeutet.</p>
+          <span class="tt-card-more">Mehr lesen →</span>
+        </a>
+      </div>
     </div>
   </section>
 

@@ -1,6 +1,6 @@
 ---
-title: 'Was bedeutet mein Traum? Warum dir das Traumlexikon nicht weiterhilft'
-description: 'Du schlägst ein Symbol nach, liest die Bedeutung und denkst: hm. Fünf Gründe, warum ein Traumlexikon allein deinen Traum nicht auflöst, und was stattdessen funktioniert.'
+title: 'Was bedeutet mein Traum? Warum das Traumlexikon nicht reicht'
+description: 'Du schlägst ein Symbol nach und denkst: hm. Fünf Gründe, warum ein Traumlexikon deinen Traum nicht auflöst, und was stattdessen funktioniert.'
 pubDate: 2026-08-11
 draft: false
 ---
@@ -105,4 +105,4 @@ Deine Träume sind keine Zufallsbilder. Sie sagen ziemlich genau etwas darüber,
 
 Ein Lexikon bringt dich ein Stück weit. Es gibt dir Vokabeln. Nur bleibt es dort stehen, und der Teil, in dem aus Vokabeln eine Botschaft wird, fängt genau da erst an.
 
-Wenn du bei einem Traum nicht weiterkommst, besonders bei einem, der wiederkommt oder der dich beim Aufwachen nicht losgelassen hat, dann schick ihn mir. Du bekommst eine ausführliche schriftliche Deutung, bei der du Schritt für Schritt sehen kannst, wie ich darauf komme.
+Wenn du bei einem Traum nicht weiterkommst, besonders bei einem, der wiederkommt oder der dich beim Aufwachen nicht losgelassen hat, dann schick ihn mir. Du bekommst eine [persönliche Traumdeutung](/persoenliche-traumdeutung), ausführlich und [schriftlich](/schriftliche-traumdeutung), bei der du Schritt für Schritt sehen kannst, wie ich darauf komme.

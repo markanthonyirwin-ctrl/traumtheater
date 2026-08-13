@@ -43,7 +43,9 @@ const jsonLd = [
 ---
 
 <Base
-  title={`${post.data.title} — Traumtheater`}
+  {/* No brand suffix: post titles are long enough that appending one pushes
+      them past the ~60 characters Google shows before truncating. */}
+  title={post.data.title}
   description={post.data.description}
   path={path}
   jsonLd={jsonLd}>

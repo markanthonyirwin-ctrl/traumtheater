@@ -10,9 +10,15 @@ export interface Props {
   lead: string;
   /** Service name used in the JSON-LD for this page. */
   serviceName: string;
+  /** Rendered as the visible FAQ *and* as FAQPage schema, from one source, so
+   *  the two can never drift. Google requires the marked-up answer to be
+   *  visible on the page. `a` may contain inline HTML. */
+  faq?: { q: string; a: string }[];
 }
 
-const { title, description, path, h1, lead, serviceName } = Astro.props;
+const { title, description, path, h1, lead, serviceName, faq = [] } = Astro.props;
+
+const stripTags = (s: string) => s.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 
 const site = 'https://traum-theater.de';
 
@@ -50,6 +56,18 @@ const jsonLd = [
     },
   },
 ];
+
+if (faq.length) {
+  jsonLd.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: stripTags(item.a) },
+    })),
+  } as never);
+}
 ---
 
 <Base title={title} description={description} path={path} jsonLd={jsonLd}>
@@ -62,6 +80,18 @@ const jsonLd = [
 
     <div class="tt-service-body">
       <slot />
+
+      {faq.length > 0 && (
+        <section class="tt-faq">
+          <h2>Häufige Fragen</h2>
+          {faq.map((item) => (
+            <div class="tt-faq-item">
+              <h3>{item.q}</h3>
+              <p set:html={item.a} />
+            </div>
+          ))}
+        </section>
+      )}
     </div>
 
     <aside class="tt-service-cta">
