@@ -1942,3 +1942,76 @@
   .tt-root .tt-trustcard-portrait { width: 128px; height: 128px; }
   .tt-root .tt-trustcard-aside { flex: 0 0 auto; }
 }
+/* ══════════════════════════════════════════════
+   SERVICE / MONEY PAGES
+   /persoenliche-traumdeutung, /schriftliche-traumdeutung,
+   /spirituelle-traumdeutung. One target keyword each; the homepage keeps
+   brand and trust and does not try to rank for all of them at once.
+════════════════════════════════════════════════ */
+.tt-service { max-width: 760px; margin: 0 auto; padding: 3.5rem 1.5rem 4rem; }
+.tt-service-header { margin-bottom: 2rem; }
+.tt-service-header h1 { text-align: left; margin-bottom: 0.7rem; }
+.tt-service-lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.tt-service-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--ink);
+  margin: 2.5rem 0 0.9rem;
+}
+.tt-service-body p { margin-bottom: 1.05rem; }
+.tt-service-body ul,
+.tt-service-body ol { padding-left: 1.3rem; margin-bottom: 1.2rem; }
+.tt-service-body li { margin-bottom: 0.6rem; }
+.tt-service-body a { color: var(--sienna); text-decoration: underline; }
+.tt-service-body a:hover { color: var(--gold); }
+
+.tt-service-cta {
+  margin-top: 3rem;
+  padding: 1.8rem 1.6rem 1.4rem;
+  border: 1px solid var(--gold);
+  background: rgba(247, 240, 226, 0.5);
+  text-align: center;
+}
+.tt-service-cta h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: var(--ink);
+}
+.tt-service-cta p { margin-bottom: 1.2rem; }
+
+.tt-service-related { margin-top: 2.5rem; }
+.tt-service-related ul { list-style: none; padding: 0; margin: 0.8rem 0 0; }
+.tt-service-related li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(139, 98, 25, 0.2);
+}
+.tt-service-related li:last-child { border-bottom: none; }
+.tt-service-related a {
+  display: block;
+  color: var(--sienna);
+  text-decoration: none;
+  font-weight: 600;
+}
+.tt-service-related a:hover { color: var(--gold); }
+.tt-service-related span {
+  display: block;
+  font-size: var(--size-small);
+  color: var(--ink-mid);
+}
+
+.tt-receive-links { font-size: var(--size-small); color: var(--ink-mid); margin-top: 0.6rem; }
+.tt-receive-links a { color: var(--sienna); }
+
+/* Two footer rows: service links first, legal underneath. */
+.tt-footer-links--service { margin-bottom: 0.6rem; }
+.tt-footer-links--service a { color: var(--gold-pale); }
+
+@media (max-width: 720px) {
+  .tt-service { padding: 2.5rem 1.2rem 3rem; }
+  .tt-service-lead { font-size: 1.1rem; }
+}

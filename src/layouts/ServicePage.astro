@@ -1,0 +1,96 @@
+---
+import Base from './Base.astro';
+import CtaButtons from '../components/CtaButtons.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  path: string;
+  h1: string;
+  lead: string;
+  /** Service name used in the JSON-LD for this page. */
+  serviceName: string;
+}
+
+const { title, description, path, h1, lead, serviceName } = Astro.props;
+
+const site = 'https://traum-theater.de';
+
+// The three money pages cross-link to each other. Whichever page is rendering
+// drops itself from the list.
+const services = [
+  { href: '/persoenliche-traumdeutung', label: 'Persönliche Traumdeutung', blurb: 'Deine Deutung, auf deine Lebenssituation bezogen.' },
+  { href: '/schriftliche-traumdeutung', label: 'Schriftliche Traumdeutung', blurb: 'Warum ein Dokument mehr trägt als ein Gespräch.' },
+  { href: '/spirituelle-traumdeutung', label: 'Spirituelle Traumdeutung', blurb: 'Fundiert und spirituell, ohne esoterische Überfrachtung.' },
+];
+const others = services.filter((s) => s.href !== path);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: serviceName,
+    description,
+    serviceType: 'Traumdeutung',
+    url: `${site}${path}`,
+    provider: { '@type': 'Person', '@id': `${site}/#person`, name: 'Mark Anthony Irwin' },
+    areaServed: [
+      { '@type': 'Country', name: 'Germany' },
+      { '@type': 'Country', name: 'Austria' },
+      { '@type': 'Country', name: 'Switzerland' },
+    ],
+    availableLanguage: ['de', 'en'],
+    offers: {
+      '@type': 'Offer',
+      price: '29.00',
+      priceCurrency: 'EUR',
+      description: 'Einführungsangebot, regulärer Preis 69 €. §19 UStG, keine Umsatzsteuer.',
+      availability: 'https://schema.org/InStock',
+      url: `${site}${path}`,
+    },
+  },
+];
+---
+
+<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+  <article class="tt-service">
+    <header class="tt-service-header">
+      <p class="tt-sec-label">Angebot</p>
+      <h1 class="tt-sec-heading">{h1}</h1>
+      <p class="tt-service-lead">{lead}</p>
+    </header>
+
+    <div class="tt-service-body">
+      <slot />
+    </div>
+
+    <aside class="tt-service-cta">
+      <h2>Schick mir deinen Traum</h2>
+      <p>
+        Den Traum, so genau du ihn erinnerst, und ein paar Sätze zu deiner
+        aktuellen Lebenssituation. Mehr brauche ich nicht. Einführungsangebot
+        29 € statt 69 €.
+      </p>
+      <CtaButtons center={true} />
+      <p class="tt-cta-subline">Vertraulich · Persönlich · Schriftlich</p>
+    </aside>
+
+    <nav class="tt-service-related" aria-label="Weitere Seiten">
+      <p class="tt-sec-label">Auch interessant</p>
+      <ul>
+        {others.map((s) => (
+          <li>
+            <a href={s.href}>{s.label}</a>
+            <span>{s.blurb}</span>
+          </li>
+        ))}
+        <li>
+          <a href="/beispiel-deutung">Eine Deutung im Original</a>
+          <span>Eine vollständige Deutung, von Anfang bis Ende.</span>
+        </li>
+      </ul>
+    </nav>
+
+    <p class="tt-legal-back"><a href="/">← Zurück zur Startseite</a></p>
+  </article>
+</Base>
