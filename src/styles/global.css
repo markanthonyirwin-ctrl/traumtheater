@@ -2048,3 +2048,56 @@
   margin-bottom: 0.35rem;
 }
 .tt-root .tt-faq-item p { margin-bottom: 0 !important; }
+/* ══════════════════════════════════════════════
+   MOBILE FIXES
+   Two real bugs found on a 412px Android viewport.
+
+   1. Horizontal overflow. The footer service row is a nowrap flex row, and
+      five long German labels cannot fit a phone, so the last one sat 33px
+      past the viewport and the whole page could be dragged sideways. Both
+      footer rows now wrap and centre.
+
+   2. The hero kept its desktop left alignment on phones. The editorial
+      overrides use .tt-root[data-variant="editorial"] .tt-hero, which
+      outranks the plain .tt-hero rules inside the 720px media query, so
+      text-align:left, justify-content:flex-start and the logo margin:0 all
+      leaked through. Restated below at matching specificity.
+════════════════════════════════════════════════ */
+.tt-root .tt-footer-links {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 720px) {
+  .tt-root[data-variant="editorial"] .tt-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem 1.2rem 1.25rem;
+    gap: 1.2rem;
+  }
+  .tt-root[data-variant="editorial"] .tt-hero-text {
+    max-width: none;
+    margin: 0 auto;
+  }
+  .tt-root[data-variant="editorial"] .tt-hero-logo-wrap img {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  .tt-root[data-variant="editorial"] .tt-eyebrow {
+    justify-content: center;
+  }
+
+  /* Trust card: the later .tt-root rules outrank the media-query padding. */
+  .tt-root .tt-trustcard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    gap: 1.1rem;
+  }
+  .tt-root .tt-trustcard-aside { flex: 0 0 auto; }
+  .tt-root .tt-trustcard-lead { margin-top: 1rem; }
+
+  /* Service cards stack rather than squeeze. */
+  .tt-root .tt-grid-3 { grid-template-columns: 1fr; }
+}
