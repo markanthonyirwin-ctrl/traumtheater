@@ -15,7 +15,7 @@ in as a **Knowledge file** in the same Project.
 - **Preis:** Einführungspreis **29 €** (Normalpreis 69 €). §19 UStG
   Kleinunternehmer — keine Umsatzsteuer.
 - **Bearbeitungszeit:** in der Regel 2–3 Werktage nach Eingang von Traum + JA + Zahlung
-- **Sprachen:** Deutsch, Niederländisch, Englisch
+- **Sprachen:** Deutsch, Englisch
 - **Zahlung:** Mollie (Vorkasse, gehostete Zahlungsseite)
   - Regulärer Link (€29, wiederverwendbar): https://payment-links.mollie.com/payment/Y5A8qebc8fWVrWDhnjNyv
   - Pay-what-you-can: für abweichende Beträge im Mollie-Dashboard einen
@@ -30,10 +30,10 @@ in as a **Knowledge file** in the same Project.
 
 ## Legal URLs (in Stage-4 Template referenzieren)
 
-- **AGB:** https://traum-theater.de/#agb
-- **Widerrufsbelehrung + Muster-Widerrufsformular:** https://traum-theater.de/#widerruf
-- **Datenschutz:** https://traum-theater.de/#datenschutz
-- **Impressum:** https://traum-theater.de/#impressum
+- **AGB:** https://traum-theater.de/agb
+- **Widerrufsbelehrung + Muster-Widerrufsformular:** https://traum-theater.de/widerruf
+- **Datenschutz:** https://traum-theater.de/datenschutz
+- **Impressum:** https://traum-theater.de/impressum
 
 ---
 
@@ -75,7 +75,7 @@ onwards is verbatim.
 > asked for the practical details.]
 >
 > Du erhältst eine persönliche, schriftliche Traumdeutung nach der
-> Aisling-Methode (in der Regel drei bis fünf Seiten). Einführungspreis:
+> Aisling-Methode (in der Regel fünf bis zehn Seiten). Einführungspreis:
 > 29 €.
 >
 > Zur Erstellung arbeite ich mit dem KI-Werkzeug Claude (Anthropic, USA) —
@@ -119,9 +119,9 @@ onwards is verbatim.
 > wir finden eine Lösung.
 >
 > Weitere Informationen:
-> AGB: https://traum-theater.de/#agb
-> Widerrufsbelehrung + Muster-Widerrufsformular: https://traum-theater.de/#widerruf
-> Datenschutz: https://traum-theater.de/#datenschutz
+> AGB: https://traum-theater.de/agb
+> Widerrufsbelehrung + Muster-Widerrufsformular: https://traum-theater.de/widerruf
+> Datenschutz: https://traum-theater.de/datenschutz
 >
 > Liebe Grüße
 > Mark
@@ -244,7 +244,7 @@ asking permission to send the details. Still no template.*
 > eigentlich zeigt.
 >
 > Zur Praxis kurz: der Einführungspreis liegt bei 29 €, die schriftliche
-> Deutung umfasst in der Regel drei bis fünf Seiten, und ich brauche
+> Deutung umfasst in der Regel fünf bis zehn Seiten, und ich brauche
 > im Schnitt zwei bis drei Werktage nach Eingang deines Traums.
 >
 > Wenn du magst, schicke ich dir kurz eine Nachricht, wie es praktisch
