@@ -30,6 +30,27 @@ So:
 
 If a proposal is built around local pack rankings, push back before spending.
 
+## 0b. Scope: links only
+
+**This engagement is off-page only.** On-page and technical SEO are already
+done and are not part of the brief.
+
+- **In scope:** backlinks, guest placements, directory and citation listings,
+  outreach, digital PR
+- **Not in scope:** on-page copy, meta tags, schema, site structure, page
+  speed, analytics setup
+
+If you spot an on-page problem, **send it to Mark rather than fixing it.** He
+has a developer workflow and a strict tone-of-voice kit; unbriefed copy edits
+will breach it.
+
+### Sequencing warning
+
+**Do not start citation building until the Google Business Profile exists.**
+GBP is the canonical NAP anchor. Building listings first and then correcting
+details later is rework, and inconsistent NAP across listings is the exact
+problem citations are meant to solve. GBP is currently unclaimed. See section 3.
+
 ---
 
 ## 1. The business
@@ -110,18 +131,29 @@ Push to `main` triggers a rebuild.
 
 ---
 
-## 3. Gaps that are genuinely yours to fix
+## 3. Gaps
 
-1. **Google Business Profile is not claimed** (confirm with Mark). Service-area
-   business, no public pin. Main value is brand-name search and a second review
-   surface
-2. **Bing Webmaster Tools not set up.** Free, ten minutes
-3. **No backlinks to speak of.** This is the single biggest constraint. New
-   domain, soft-authority niche
-4. **Directory listings not done.** See section 5
-5. **og:image is still the logo**, not a 1200x630 share card. Hurts click-through
-   when the site is shared
-6. Analytics, if wanted, per the note above
+### Yours (links only)
+
+1. **No backlinks to speak of.** The single biggest constraint on this site.
+   New domain, soft-authority niche, strong on-page and almost nothing pointing
+   at it
+2. **No directory or citation listings**, beyond ProvenExpert. See section 5
+
+That is the whole brief. Everything else below stays with Mark.
+
+### Mark's, not yours
+
+- **Google Business Profile is unclaimed.** This one is **blocking for
+  citations** and Mark has to do it himself: Google verifies the business
+  owner by video call or by post to the address, and a third party cannot
+  complete that step. Set up as a **service-area business with no public pin**,
+  since clients never visit. Confirm it is live before building any listings
+- **Bing Webmaster Tools** not set up. Free, ten minutes
+- **og:image is still the logo**, not a 1200x630 share card. Costs click-through
+  whenever the site is shared. Needs a designed graphic
+- **Analytics:** none installed, deliberately. Not to be added without a GDPR
+  discussion first
 
 ---
 
@@ -179,33 +211,64 @@ Nobody holds the middle.
 
 ---
 
-## 5. Link and citation targets already identified
+## 5. Link plan, in priority order
 
-**Niche directories that already rank for these terms**
-- therapeutenfinder.com
-- heil-verzeichnis.de
-- Comparable DE/AT/CH Esoterik and Lebensberatung directories
+For a new domain in a soft-authority niche, **three to five genuine, topically
+relevant links will do more than thirty directory submissions.** Relevance
+beats volume here by a wide margin. Please do not buy links or use PBNs; this
+is a trust-based personal practice and a manual action would be terminal.
 
-**Topically perfect and probably easy, not yet pursued**
-- **The Aisling School** (healingthroughdreams.com). Mark is a certified
-  practitioner. If they run a practitioner directory, that is a highly
-  relevant, low-effort link from the tradition's own site
-- **The Dream Interpretation Podcast** (Michael Sheridan, 365 episodes). Mark
-  studied under him. A guest appearance is a link plus a warm audience
+### Tier 1 — relationship links, highest value, no cost
 
-**German alternative and spirituality outlets, for guest pieces**
-- Sein.de · spirit-online.de · connection.de
+These are warm. Mark already has the relationship.
 
-**Expat channels, the least contested audience**
-- Toytown Germany, city expat Facebook groups, r/germany-adjacent communities.
-  Genuine presence, not link drops
+1. **The Aisling School** (healingthroughdreams.com). Mark is a certified
+   practitioner, certified 2024 and 2026. If they list practitioners, this is
+   the most topically relevant link available anywhere. Ask Mark to make the
+   introduction rather than cold-mailing them
+2. **The Dream Interpretation Podcast** (Michael Sheridan, 365 episodes). Mark
+   studied directly under him. A guest episode is a link plus a pre-warmed
+   audience of exactly the right people. Highest single-item value on this list
 
-**Already live:** ProvenExpert profile.
+### Tier 2 — niche directories that already rank for the target terms
 
-**Priority view:** for a new domain in a soft-authority niche, **three to five
-genuine, topically relevant links will move the needle faster than the tenth
-blog post.** The audit flagged that off-page work was being treated as
-optional when it is a top-three lever.
+3. **therapeutenfinder.com**
+4. **heil-verzeichnis.de**
+5. Comparable DE, AT and CH Esoterik / Lebensberatung directories
+
+Intent-matched referral traffic as well as link value. **Blocked until GBP
+exists** so the NAP is settled first.
+
+### Tier 3 — guest pieces on German alternative and spirituality outlets
+
+6. **Sein.de** · **spirit-online.de** · **connection.de**
+
+Note `spirit-online.de` currently ranks for spiritual Traumdeutung terms, so it
+is both a competitor and a placement opportunity. Pitch the differentiator: a
+named practitioner delivering written interpretations, not another symbol list.
+
+### Tier 4 — the English expat angle, least contested audience
+
+7. **Toytown Germany**, city expat Facebook groups, r/germany-adjacent
+   communities
+
+Mark is a native English speaker and the English-speaking-dream-interpreter
+niche in Germany is close to empty. **Genuine participation only, no link
+drops.** These communities punish promotion and the reputational downside is
+real. Note there are no English pages on the site yet, so this tier may be
+premature until there are.
+
+### Already live
+
+ProvenExpert profile. Nothing else.
+
+### Angles worth pitching
+
+- Irish practitioner of an Irish dream tradition living in Germany
+- Publishes a **complete worked interpretation** publicly, which almost nobody
+  in this field does: `/beispiel-deutung`
+- Written rather than live-session format, which is genuinely unusual
+- Sits between the free symbol-lexicon farms and clinical practitioners
 
 ---
 
@@ -235,21 +298,28 @@ optional when it is a top-three lever.
 
 ## 7. Access you will need from Mark
 
-- Google Search Console (sitemap already submitted)
-- Google Business Profile, once claimed
-- ProvenExpert login, if you are to manage review requests
-- GitHub repo, only if you need to make on-page changes. Otherwise send
-  changes to Mark
-- The tone-of-voice kit
+- **The tone-of-voice kit.** Mandatory before writing anything that will carry
+  his name, including outreach emails and guest pieces
+- **Google Search Console**, read access, to watch referring domains
+- **Google Business Profile**, once Mark has claimed and verified it
+- **ProvenExpert login**, only if you are managing review requests
 - The July 2026 SEO audit, if you want the full competitor teardown
 
-## 8. Confirm with Mark before starting
+**No repo access needed.** Scope is off-page only. Send any on-page
+observation to Mark.
 
-1. **Is Google Business Profile claimed yet?** Unverified at time of writing
-2. **Was the sitemap resubmission done after the count went from 9 to 12 URLs?**
-3. **Budget and scope:** is this link building only, or on-page too? On-page is
-   in reasonable shape; links are the gap
-4. **Does Mark want analytics installed?** There is currently none, by choice
+## 8. Status, confirmed 2026-08-14
+
+| | |
+|---|---|
+| Google Business Profile | **Not claimed.** Blocking for tier-2 citations. Mark must do this himself |
+| Sitemap | **Resubmitted** to Search Console with all 12 URLs |
+| Scope | **Links only.** No on-page, no technical, no analytics |
+| Analytics | None installed, deliberate. Not to be added |
+
+**First move:** tier 1. Those two relationship links need no GBP, cost nothing,
+and are the highest-value items on the list. Start there while the profile is
+being verified.
 
 ## 9. Related documents in this repo
 
