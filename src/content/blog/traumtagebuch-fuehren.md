@@ -3,6 +3,7 @@ title: 'Traumtagebuch führen: so werden deine Träume lesbar'
 description: 'Die meisten träumen jede Nacht und erinnern sich an fast nichts. Ein Traumtagebuch ändert das in zwei Wochen. So fängst du an, ohne Aufwand.'
 pubDate: 2026-08-04
 draft: false
+altSlug: 'how-to-keep-a-dream-journal'
 ---
 
 Die häufigste Nachricht, die ich bekomme, fängt so an: „Ich träume bestimmt viel, aber ich kann mich nie erinnern." Fast immer stimmt der erste Teil. Der zweite Teil lässt sich ändern, schneller als die meisten denken.

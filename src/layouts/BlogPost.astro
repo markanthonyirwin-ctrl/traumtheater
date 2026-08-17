@@ -1,0 +1,85 @@
+---
+// A single blog post, shared by /blog/[...slug] and /en/blog/[...slug].
+import Base from './Base.astro';
+import CtaButtons from '../components/CtaButtons.astro';
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import {
+  useTranslations,
+  dateLocale,
+  site,
+  type Lang,
+  type Alternates,
+} from '../i18n/ui';
+
+export interface Props {
+  lang: Lang;
+  post: CollectionEntry<'blog'> | CollectionEntry<'blogEn'>;
+}
+
+const { lang, post } = Astro.props;
+const t = useTranslations(lang);
+const { Content } = await render(post);
+
+const postBase = lang === 'de' ? '/blog' : '/en/blog';
+const otherBase = lang === 'de' ? '/en/blog' : '/blog';
+const path = `${postBase}/${post.id}`;
+
+// German and English posts have different slugs on purpose, each written for
+// keywords in its own language, so the pairing has to be declared per post
+// rather than derived from the URL. No altSlug means no counterpart, so no
+// hreflang is claimed.
+const alternates: Alternates | undefined = post.data.altSlug
+  ? lang === 'de'
+    ? { de: path, en: `${otherBase}/${post.data.altSlug}` }
+    : { de: `${otherBase}/${post.data.altSlug}`, en: path }
+  : undefined;
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString(dateLocale[lang], { day: 'numeric', month: 'long', year: 'numeric' });
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.data.title,
+    description: post.data.description,
+    datePublished: post.data.pubDate.toISOString(),
+    ...(post.data.updatedDate && { dateModified: post.data.updatedDate.toISOString() }),
+    inLanguage: lang,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${site}${path}` },
+    author: { '@type': 'Person', name: 'Mark Anthony Irwin', '@id': `${site}/#person` },
+    publisher: { '@id': `${site}/#business` },
+    image: `${site}/assets/logo.png`,
+  },
+];
+---
+
+<Base
+  {/* No brand suffix: post titles are long enough that appending one pushes
+      them past the ~60 characters Google shows before truncating. */}
+  title={post.data.title}
+  description={post.data.description}
+  path={path}
+  jsonLd={jsonLd}
+  lang={lang}
+  alternates={alternates}>
+  <article class="tt-post">
+    <header class="tt-post-header">
+      <p class="tt-post-date">{fmt(post.data.pubDate)}</p>
+      <h1 class="tt-sec-heading">{post.data.title}</h1>
+    </header>
+
+    <div class="tt-post-body">
+      <Content />
+    </div>
+
+    <aside class="tt-post-cta">
+      <h3>{t.postCtaHeading}</h3>
+      <p>{t.postCtaBody}</p>
+      <CtaButtons center={true} lang={lang} />
+    </aside>
+
+    <p class="tt-legal-back"><a href={postBase}>{t.blogBack}</a></p>
+  </article>
+</Base>

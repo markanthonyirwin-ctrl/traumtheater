@@ -1,0 +1,101 @@
+---
+import ServicePage from '../../layouts/ServicePage.astro';
+import { pairs } from '../../i18n/ui';
+
+const faq = [
+  {
+    q: 'Why do you not offer sessions?',
+    a: 'Because the written form carries more for this work. You get something you can hold on to, and I can work more carefully than an appointment allows.',
+  },
+  {
+    q: 'Which language will my interpretation be in?',
+    a: 'The language you write to me in. English or German. In German I also follow your lead on register: if you write to me with du, your interpretation comes back in du.',
+  },
+  {
+    q: 'Can I send more than one dream?',
+    a: 'Yes, and from the second one on it gets more interesting. Dreams work in series. Once I have two or three from you, a picture forms that a single dream cannot show yet.',
+  },
+  {
+    q: 'What happens to my dream?',
+    a: 'It stays between us. I do not publish what people entrust to me.',
+  },
+];
+---
+
+<ServicePage
+  title="Written Dream Interpretation as a Document"
+  description="Written dream interpretation with the Aisling Method. Five to ten pages as a finished PDF. No appointment, no time pressure. 29 € instead of 69 €."
+  path="/en/written-dream-interpretation"
+  alternates={pairs.written}
+  lang="en"
+  h1="Written dream interpretation"
+  lead="Your interpretation as a document, not an appointment. To read back, to put down, to find again in six months."
+  serviceName="Written dream interpretation with the Aisling Method"
+  faq={faq}>
+
+  <h2>Why in writing</h2>
+  <p>
+    Almost everyone who offers dream interpretation does it in conversation. An
+    appointment, an hour, and then it is over. I work differently on purpose,
+    and the reasons have to do with you.
+  </p>
+  <p>
+    <strong>You do not have to react on the spot.</strong> In a conversation you
+    are sitting there expected to place what you are hearing in the same moment.
+    Some of it does not land at all, because you are still on the previous
+    sentence. A text waits for you.
+  </p>
+  <p>
+    <strong>You can read it again.</strong> In my experience the part that fits
+    announces itself a few days later on its own, often at some everyday moment
+    you would never have connected it to. That is when you want to be able to
+    read it back. A conversation is gone.
+  </p>
+  <p>
+    <strong>I can work unhurried.</strong> A line by line interpretation takes
+    time. In a conversation it happens under time pressure, and the places where
+    I would want to go back over something fall by the wayside. Writing lets me
+    do that.
+  </p>
+  <p>
+    <strong>It is easier to write a dream down than to tell it.</strong>
+    Especially dreams that were unpleasant. Writing takes part of the hurdle
+    away.
+  </p>
+
+  <h2>What you get</h2>
+  <p>
+    Five to ten pages, as a professionally typeset, print-ready PDF. Built
+    according to the Aisling Method:
+  </p>
+  <ul>
+    <li>Your dream in your own words, with its context</li>
+    <li>The core theme of the dream</li>
+    <li>I AM and I SHOULD, from your own perspective</li>
+    <li>The line by line interpretation</li>
+    <li>Symbols, colours, places and numbers</li>
+    <li>A word of reassurance, where the dream was dark</li>
+    <li>A closing reflection and concrete next steps</li>
+  </ul>
+  <p>
+    You can see what that looks like before you decide:
+    <a href="/en/example-interpretation">a full interpretation, start to finish</a>.
+  </p>
+
+  <h2>And if I still have questions</h2>
+  <p>
+    Then write to me. After the interpretation I check in anyway to ask whether
+    it reached you. If something stays unclear, or you see it differently, that
+    matters and is part of the work. The text is not a verdict but an offer:
+    take what lands with you, and leave what feels foreign. You know your life,
+    I only know this one dream.
+  </p>
+
+  <h2>What it costs</h2>
+  <p>
+    <strong>29 € instead of 69 €</strong> as an introductory offer. As a small
+    business under §19 UStG, no VAT is charged. Payment runs through a secure
+    payment link, straightforward from Austria and Switzerland too.
+  </p>
+
+</ServicePage>

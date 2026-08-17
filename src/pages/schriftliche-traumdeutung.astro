@@ -1,5 +1,6 @@
 ---
 import ServicePage from '../layouts/ServicePage.astro';
+import { pairs } from '../i18n/ui';
 
 const faq = [
   {
@@ -25,6 +26,7 @@ const faq = [
   title="Schriftliche Traumdeutung: dein Traum als Dokument"
   description="Schriftliche Traumdeutung nach der Aisling-Methode. Fünf bis zehn Seiten als fertige PDF, zum Nachlesen. Kein Termin, kein Zeitdruck. 29 € statt 69 €."
   path="/schriftliche-traumdeutung"
+  alternates={pairs.written}
   h1="Schriftliche Traumdeutung"
   lead="Deine Deutung als Dokument, nicht als Termin. Zum Nachlesen, zum Liegenlassen, zum Wiederfinden in einem halben Jahr."
   serviceName="Schriftliche Traumdeutung nach der Aisling-Methode"

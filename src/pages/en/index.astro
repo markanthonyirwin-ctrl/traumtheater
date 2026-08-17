@@ -1,0 +1,620 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaButtons from '../../components/CtaButtons.astro';
+import TestimonialCarousel from '../../components/TestimonialCarousel.astro';
+import { pairs, site } from '../../i18n/ui';
+// Shared with the German homepage so the two can never drift. Client words are
+// evidence, not copy: never edited, never translated.
+import { testimonials } from '../../data/testimonials';
+
+// Titles stay under ~60 characters and descriptions under ~155, otherwise
+// Google truncates them mid-sentence in the results page.
+const title = 'Personal Dream Interpretation in English | Traumtheater';
+const description =
+  'Personal, written dream interpretation with the Aisling Method. Grounded and spiritual at once, without the esoteric overload. 29 € instead of 69 €.';
+
+const benefits = [
+  ['♥', 'Health', 'Dreams often show the state of your body years before any symptoms appear. An early warning system and a pointer towards healing in one.'],
+  ['◈', 'Direction', 'Where are you in your own development? Which next step would be right for you now? Your dream already knows.'],
+  ['⟳', 'Patterns', 'Recurring dreams show recurring blocks. What keeps coming back is looking for resolution.'],
+  ['✦', 'Relationships', 'Every person in your dream is an aspect of you. What you notice about them says more about you than about them.'],
+  ['◉', 'Hidden gifts', 'Dreams know your strengths better than you do. They show abilities and potential you are not using yet.'],
+  ['☽', 'Preparation', 'Sometimes dreams prepare you for what is coming, as an invitation to open up or to protect yourself in good time.'],
+];
+
+const symbols = [
+  ['Water', 'Your spiritual life. Clear water: connection. Cloudy water: interruption. The depth shows the depth of your soul.'],
+  ['Fire', 'Your emotions and your cardiovascular system. Uncontrolled fire: exhaustion. Steady fire: passion in balance.'],
+  ['House', 'Your body. Each room matches an area: cellar = the subconscious, roof = the mind, kitchen = digestion.'],
+  ['Flying', 'Rising above problems in spirit. You are moving above a situation, or you would like to. A very good sign.'],
+  ['Teacher', 'You are a spiritual teacher. A teacher in a dream shows your calling to guide others on their path.'],
+  ['Snake', 'Healing or temptation, the context decides. In the garden: old patterns. As a helper: the power to heal.'],
+  ['Bridge', 'A crossing between two phases. You are facing, or already in the middle of, an important change in your life.'],
+  ['Garden', 'The public expression of your gifts. What blooms: talents to share. What lies hidden: waiting to be tended.'],
+];
+
+const timeline = [
+  ['1990s', 'George Rhatigan develops the framework of the Aisling Method in Ireland. The first systematic collection of dream symbols grows out of lived counselling practice.'],
+  ['1997', 'Michael Sheridan publishes How to Interpret Your Dreams and Discover Your Life Purpose, the first documented work of the method.'],
+  ['2000s', 'Sheridan becomes a regular guest on Ireland AM, BBC and Seattle Radio KKNW. The method spreads internationally into several languages.'],
+  ['2015', 'Michael leaves his job as a software developer and gives himself fully to the Aisling School of Dream Interpretation, bringing it online. The radio show starts, and Sandy helps behind the scenes as the school grows.'],
+  ['2016', 'The Dream Interpretation Podcast with Michael Sheridan is a weekly half-hour show about how your dreams at night wake you up to the things that matter in your life. 365 episodes have been recorded so far.'],
+  ['Today', 'Hundreds of certified practitioners worldwide. A symbol book with over 3,000 verified entries. Clients who recognise themselves.'],
+];
+
+// Same entities as the German homepage, described in English. The @id values
+// are deliberately identical: this is one person and one business, not two.
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Person',
+        '@id': `${site}/#person`,
+        name: 'Mark Anthony Irwin',
+        givenName: 'Mark',
+        familyName: 'Irwin',
+        jobTitle: 'Dream interpreter',
+        description:
+          'Certified dream interpreter working with the Aisling Method. Has worked with dreams since 2011; personal, written dream interpretations in German and English.',
+        image: `${site}/assets/mark-portrait.png`,
+        url: site + '/',
+        email: 'mark@traum-theater.de',
+        telephone: '+4915150317725',
+        knowsLanguage: ['de', 'en'],
+        hasCredential: [
+          {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'certification',
+            name: 'Aisling School Channel',
+            dateCreated: '2024-12',
+            recognizedBy: { '@type': 'Organization', name: 'Aisling School' },
+          },
+          {
+            '@type': 'EducationalOccupationalCredential',
+            credentialCategory: 'certification',
+            name: 'Aisling-Method — Certified Dream Interpreter',
+            dateCreated: '2026-04',
+            recognizedBy: { '@type': 'Organization', name: 'Aisling School' },
+          },
+        ],
+        sameAs: ['https://www.provenexpert.com/mark-anthony-irwin/'],
+        worksFor: { '@id': `${site}/#business` },
+      },
+      {
+        '@type': 'ProfessionalService',
+        '@id': `${site}/#business`,
+        name: 'Traumtheater',
+        alternateName: 'Traumtheater — Personal Dream Interpretation',
+        description:
+          'Personal, written dream interpretation with the Aisling Method. Grounded and spiritual at once, without the esoteric overload: a detailed interpretation whose reasoning stays possible to follow, taking the dream, the context and the client’s situation seriously.',
+        image: `${site}/assets/logo.png`,
+        url: site + '/en',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Parkstraße 15',
+          addressLocality: 'Kempen',
+          postalCode: '47906',
+          addressCountry: 'DE',
+        },
+        // Business/legal contact. Client communication goes to mark@ (Person node).
+        email: 'kontakt@traum-theater.de',
+        telephone: '+4915150317725',
+        priceRange: '€29',
+        founder: { '@id': `${site}/#person` },
+        employee: { '@id': `${site}/#person` },
+        areaServed: [
+          { '@type': 'Country', name: 'Germany' },
+          { '@type': 'Country', name: 'Austria' },
+          { '@type': 'Country', name: 'Switzerland' },
+        ],
+        availableLanguage: ['de', 'en'],
+        makesOffer: {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Personal written dream interpretation',
+            serviceType: 'Dream interpretation',
+            provider: { '@id': `${site}/#person` },
+          },
+          price: '29.00',
+          priceCurrency: 'EUR',
+          description:
+            'Introductory offer (regular price 69 €). Small business under §19 UStG, so no VAT is charged.',
+          availability: 'https://schema.org/InStock',
+          url: `${site}/en#offer`,
+        },
+        review: testimonials.slice(0, 3).map(([name, body]) => ({
+          '@type': 'Review',
+          author: { '@type': 'Person', name },
+          reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+          reviewBody: body.replace(/[„“"]/g, ''),
+        })),
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5',
+          reviewCount: '12',
+          bestRating: '5',
+        },
+      },
+    ],
+  },
+];
+---
+
+<Base
+  title={title}
+  description={description}
+  path="/en"
+  jsonLd={jsonLd}
+  lang="en"
+  alternates={pairs.home}>
+  {/* ══════════ HERO ══════════ */}
+  <header class="tt-hero">
+    <div class="tt-hero-logo-wrap">
+      <img src="/assets/logo.png" alt="Traumtheater, personal dream interpretation (Celtic stone circle)" />
+    </div>
+    <div class="tt-hero-text">
+      <div class="tt-eyebrow">Personal dream interpretation</div>
+      <div class="tt-site-title">Traum<span class="tt-accent">theater</span></div>
+      <h1 class="tt-tagline">Your dreams, interpreted personally</h1>
+    </div>
+  </header>
+
+  {/* ══════════ TRUST BLOCK — a real, qualified human before any poetry ══════════ */}
+  <section class="tt-trustcard" aria-label="About the dream interpreter">
+    <div class="tt-trustcard-aside">
+      <img
+        class="tt-trustcard-portrait"
+        src="/assets/mark-portrait.png"
+        alt="Mark Anthony Irwin, certified dream interpreter working with the Aisling Method"
+        width="180"
+        height="180"
+      />
+      <a
+        class="tt-trustcard-proof"
+        href="https://www.provenexpert.com/mark-anthony-irwin/"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img src="/assets/ProvenExpert-Bewertungssiegel.png" alt="ProvenExpert rating seal" />
+        <span>
+          <strong>12 five-star reviews</strong><br />
+          Independently verified on ProvenExpert ↗
+        </span>
+      </a>
+    </div>
+    <div class="tt-trustcard-text">
+      <p class="tt-trustcard-hello">Hi, my name is Mark Irwin.</p>
+      <p class="tt-trustcard-cred">
+        I am 47 and a certified dream interpreter working with the Aisling
+        Method, an Irish tradition that has grown since the 1990s and is used
+        today by several hundred certified practitioners worldwide. I have
+        worked with dreams since 2011.
+      </p>
+      <p class="tt-trustcard-hello tt-trustcard-lead">What I offer</p>
+      <p class="tt-trustcard-what">
+        Grounded and spiritual at once, without the esoteric overload. You do
+        not get general sentences that would fit anyone. You get a detailed
+        written interpretation where you can see, step by step, how I arrive at
+        it.
+      </p>
+    </div>
+  </section>
+
+  <p class="tt-trustcard-reach">
+    In English and German, for clients in Germany, Austria and Switzerland.
+  </p>
+
+  {/* Social proof immediately before the call to action. Quotes stay in the
+      language each client wrote in. */}
+  <TestimonialCarousel testimonials={testimonials} tone="light" lang="en" />
+  <p class="tt-testi-lang-note">
+    My clients write to me in their own language, and I leave their words as
+    they sent them. I work and write in English just as readily.
+  </p>
+
+  <div class="tt-hero-cta-wrap">
+    <CtaButtons center={true} lang="en" />
+    <p class="tt-cta-subline">Confidential · Personal · In writing</p>
+  </div>
+
+  {/* ══════════ PROCESS ══════════ */}
+  <section class="tt-panel-aged">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <p class="tt-sec-label">How it works</p>
+      <h2 class="tt-sec-heading">Four steps</h2>
+      <p class="tt-sec-sub">Clear, personal, discreet</p>
+      <div class="tt-process-row">
+        <div class="tt-process-step">
+          <div class="tt-step-ring">i</div>
+          <h4>Get in touch</h4>
+          <p>Message me on WhatsApp or by email. Tell me briefly what this is about. Not the whole dream yet.</p>
+          <p class="tt-step-detail">No obligation, entirely at your pace.</p>
+        </div>
+        <div class="tt-process-step">
+          <div class="tt-step-ring">ii</div>
+          <h4>Process &amp; payment</h4>
+          <p>I explain how it works. You confirm your consent briefly and pay the introductory price securely through a payment link.</p>
+        </div>
+        <div class="tt-process-step">
+          <div class="tt-step-ring">iii</div>
+          <h4>Send your dream</h4>
+          <p>Now you send me your dream, with a title and as much context about your current situation as you can give.</p>
+        </div>
+        <div class="tt-process-step">
+          <div class="tt-step-ring">iv</div>
+          <h4>Receive your interpretation</h4>
+          <p>You receive your interpretation in writing. Considered, clear, tied to your own life. You read it and see for yourself whether it fits.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ══════════ WHAT YOU RECEIVE ══════════ */}
+  <section>
+    <div style="max-width: 900px; margin: 0 auto; padding: 4rem 1.5rem;">
+      <p class="tt-sec-label">The document</p>
+      <h2 class="tt-sec-heading">What you receive</h2>
+      <p class="tt-sec-sub">Five to ten pages, carefully structured</p>
+      <p class="tt-receive-body">
+        Your interpretation is a written document that I write for your dream.
+        Five to ten pages, in English, built according to the Aisling Method.
+        No chat output, no generic symbol table. A document you keep and can
+        come back to again and again.
+      </p>
+      <p class="tt-receive-body tt-receive-body-lead"><strong>Inside the document you will find:</strong></p>
+      <ol class="tt-receive-list">
+        <li><strong>Your dream with its context.</strong> The dream in your own words, and the situation it came out of.</li>
+        <li><strong>A short introduction to the method.</strong> The subject matter of your dream and the I AM / I NEED formula, so you understand how I read.</li>
+        <li><strong>A line by line interpretation.</strong> What your dream is saying to you: personal, exploratory, without jargon.</li>
+        <li><strong>Symbols, colours, places and numbers.</strong> What the Aisling tradition sees in the images of your dream.</li>
+        <li><strong>A closing reflection.</strong> The core of your dream in one image. Where a dream was dark, placed gently, with the focus on the message rather than the fear.</li>
+        <li><strong>Concrete suggestions.</strong> What your dream is inviting you to do, and the next steps.</li>
+        <li><strong>Connections to earlier dreams.</strong> If you have sent one before, I refer back to what your dream line is showing.</li>
+      </ol>
+      <p class="tt-receive-cta">
+        <a href="/en/example-interpretation">Read a full interpretation, from beginning to end →</a>
+      </p>
+    </div>
+  </section>
+
+  {/* ══════════ SERVICE PAGES ══════════
+      These carry the money keywords and each has its own page. Linked
+      prominently rather than buried: internal links are how Google judges
+      which pages matter, and a page reachable only from the footer barely
+      counts. */}
+  <section class="tt-panel-aged" id="services">
+    <div style="max-width: 1140px; margin: 0 auto;">
+      <p class="tt-sec-label">In detail</p>
+      <h2 class="tt-sec-heading">What might interest you</h2>
+      <p class="tt-sec-sub">Three ways into the same work</p>
+      <div class="tt-grid-3">
+        <a class="tt-card tt-card--link" href="/en/personal-dream-interpretation">
+          <span class="tt-card-symbol">✦</span>
+          <h3>Personal dream interpretation</h3>
+          <p>What "personal" actually means here, what goes into the document and how the process runs.</p>
+          <span class="tt-card-more">Read more →</span>
+        </a>
+        <a class="tt-card tt-card--link" href="/en/written-dream-interpretation">
+          <span class="tt-card-symbol">◈</span>
+          <h3>Written dream interpretation</h3>
+          <p>Why a document carries more than a conversation, and what that means for you.</p>
+          <span class="tt-card-more">Read more →</span>
+        </a>
+        <a class="tt-card tt-card--link" href="/en/spiritual-dream-interpretation">
+          <span class="tt-card-symbol">☽</span>
+          <h3>Spiritual dream interpretation</h3>
+          <p>Grounded and spiritual at once, without the esoteric overload. What holistic means here.</p>
+          <span class="tt-card-more">Read more →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="tt-rune-divider"><span class="tt-runes">᚛ ✦ ᚜</span></div>
+
+  {/* ══════════ OPENING ══════════
+      Stays in the neutral register the tone-of-voice kit recommends: never
+      push a worldview. */}
+  <div class="tt-content-block tt-narrow">
+    <p class="tt-opening-text">
+      <span class="tt-drop-cap">Y</span>our dream is not a random event. It
+      comments very precisely on where you are standing right now, and it does
+      that every night, whether you listen or not. The question is not
+      <em>whether</em> your dreams are trying to tell you something. The
+      question is whether you can read them.
+    </p>
+  </div>
+
+  {/* ══════════ ARCHETYPES ══════════ */}
+  <section class="tt-panel-aged">
+    <div style="max-width: 1140px; margin: 0 auto;">
+      <p class="tt-sec-label">Do you recognise yourself?</p>
+      <h2 class="tt-sec-heading">Three dreamers, one need</h2>
+      <p class="tt-sec-sub">Most of my clients arrive with one of these feelings</p>
+      <div class="tt-grid-3">
+        <div class="tt-card">
+          <span class="tt-card-symbol">🌒</span>
+          <h3>The recurring dream</h3>
+          <p>The same dream for years, sometimes decades. You know it means something. You have just never had an answer that felt genuinely right.</p>
+        </div>
+        <div class="tt-card">
+          <span class="tt-card-symbol">🔮</span>
+          <h3>The intense dream</h3>
+          <p>You woke up with the feeling that this was no ordinary dream. The images will not let you go. Something important was in there. But what?</p>
+        </div>
+        <div class="tt-card">
+          <span class="tt-card-symbol">🌿</span>
+          <h3>The seeker</h3>
+          <p>You believe your dreams know more than you do. You want to learn the language, not for a single dream, but as a key to your life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ══════════ PROMISE ══════════ */}
+  <section class="tt-panel-dark">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <p class="tt-sec-label">My promise</p>
+      <h2 class="tt-sec-heading">What an interpretation does</h2>
+      <p class="tt-sec-sub">Three things I can assure you of</p>
+      <div class="tt-promise-grid">
+        <div class="tt-promise-item">
+          <span class="tt-promise-numeral">I</span>
+          <h3>The message is real</h3>
+          <p>No general symbol tables. An interpretation that knows your story and answers you personally.</p>
+        </div>
+        <div class="tt-promise-item">
+          <span class="tt-promise-numeral">II</span>
+          <h3>The method is proven</h3>
+          <p>Three decades of lived practice within the Aisling School. Hundreds of certified practitioners worldwide have worked with it.</p>
+        </div>
+        <div class="tt-promise-item">
+          <span class="tt-promise-numeral">III</span>
+          <h3>The truth is yours</h3>
+          <p>You recognise your interpretation, or you do not. That is the only measure that counts. Never persuasion, only recognition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* ══════════ BENEFITS ══════════ */}
+  <section class="tt-panel-aged" id="method">
+    <div style="max-width: 1140px; margin: 0 auto;">
+      <p class="tt-sec-label">What dreams reveal</p>
+      <h2 class="tt-sec-heading">Six areas your dream comments on</h2>
+      <p class="tt-sec-sub">Your dreams are more precise than you think</p>
+      <div class="tt-grid-2x3">
+        {benefits.map(([icon, heading, body]) => (
+          <div class="tt-benefit">
+            <span class="tt-benefit-icon">{icon}</span>
+            <div><h4>{heading}</h4><p>{body}</p></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <div class="tt-rune-divider"><span class="tt-runes">᚛ ◆ ᚜</span></div>
+
+  {/* ══════════ SYMBOL DICTIONARY ══════════ */}
+  <div class="tt-content-block" id="symbols">
+    <p class="tt-sec-label">From the symbol book</p>
+    <h2 class="tt-sec-heading" style="text-align: center;">What symbols mean</h2>
+    <p class="tt-sec-sub">Eight symbols, and what the Aisling Method sees in them</p>
+    <div class="tt-dict-grid">
+      {symbols.map(([word, meaning]) => (
+        <div class="tt-dict-card">
+          <div class="tt-dict-word">{word}</div>
+          <div class="tt-dict-meaning">{meaning}</div>
+        </div>
+      ))}
+    </div>
+    <p style="text-align: center; margin-top: 1.5rem; font-style: italic; color: var(--ink-mid);">
+      The Aisling symbol book holds over 3,000 entries, grown out of three decades of lived practice.
+    </p>
+  </div>
+
+  {/* ══════════ TRUST STRIP ══════════ */}
+  <div class="tt-trust">
+    <div class="tt-trust-inner">
+      <span>✦ Certified Aisling practitioner</span>
+      <span>✦ Working with dreams since 2011</span>
+      <span>✦ Written personally</span>
+      <span>✦ Confidential</span>
+    </div>
+  </div>
+
+  {/* ══════════ OFFER ══════════ */}
+  <div class="tt-content-block" id="offer">
+    <div class="tt-rune-divider" style="max-width: 100%; margin: 0 0 2.5rem; padding: 0;">
+      <span class="tt-runes">᚛ ✦ ᚜</span>
+    </div>
+    <div class="tt-offer-wrap">
+      <div class="tt-offer-box">
+        <p class="tt-offer-title">Personal dream interpretation</p>
+        <p class="tt-offer-limited">✦ Introductory offer ✦</p>
+        <div class="tt-price-row">
+          <span class="tt-price-was">€69</span>
+          <span class="tt-price-now">€29</span>
+        </div>
+        <p class="tt-price-note">Regular price €69 · Introductory price for a short time</p>
+        <p class="tt-offer-desc">
+          One dream. Fully interpreted. Delivered in writing.<br />
+          Written personally, with the Aisling Method.
+        </p>
+        <ul class="tt-offer-features">
+          <li>A full analysis of every symbol and how they connect</li>
+          <li>A clear statement of the core theme of your dream</li>
+          <li>Pointers towards next steps or areas worth your attention</li>
+          <li>Delivered in writing, to keep and to think about</li>
+          <li>Treated confidentially. Your dream stays your dream</li>
+        </ul>
+        <div class="tt-pwyc">
+          <h4 class="tt-pwyc-title">If the price does not work right now</h4>
+          <p>
+            This work should never fail for anyone over money. If an
+            interpretation matters to you but the price is not possible at the
+            moment, just write to me. We will find something that works for
+            you, with no explanation needed and no fuss.
+          </p>
+        </div>
+        <p class="tt-offer-desc" style="margin-top: 1.5rem;">
+          Clients from Austria and Switzerland are expressly welcome. Payment
+          runs simply through a payment link, from Switzerland too, without you
+          having to think about the currency.
+        </p>
+        <p class="tt-offer-notice">
+          <strong>Important note:</strong> Dream interpretation is a reflective
+          service based on the Aisling Method. It is not medical,
+          psychotherapeutic or psychological advice, and it does not replace
+          any of those. Details in the <a href="/agb">AGB § 2a</a> (in German).
+        </p>
+        <CtaButtons center={true} lang="en" />
+        <p class="tt-cta-subline" style="text-align: center; margin-top: 1rem;">
+          Secure payment · Confidential · In a few steps
+        </p>
+        <p class="tt-price-vat">Small business under § 19 UStG, so no VAT is charged.</p>
+      </div>
+    </div>
+  </div>
+
+  {/* ══════════ TESTIMONIALS ══════════ */}
+  <section class="tt-testimonials" id="voices">
+    <p class="tt-sec-label">What clients write</p>
+    <h2 class="tt-sec-heading">Voices</h2>
+    <p class="tt-sec-sub">Real words. Real dreams. Real interpretations.</p>
+    <a
+      class="tt-verified tt-verified--dark"
+      href="https://www.provenexpert.com/mark-anthony-irwin/"
+      target="_blank"
+      rel="noopener noreferrer">
+      <img class="tt-verified-seal" src="/assets/ProvenExpert-Bewertungssiegel.png" alt="ProvenExpert customer reviews: very good, 100% recommendations" />
+      <span class="tt-verified-note">12 five-star reviews, independently verified on ProvenExpert ↗</span>
+    </a>
+    <TestimonialCarousel testimonials={testimonials} tone="dark" lang="en" />
+  </section>
+
+  {/* ══════════ CONTACT ══════════ */}
+  <section class="tt-panel-dark" id="contact">
+    <div class="tt-retention-wrap">
+      <p class="tt-sec-label">How to begin</p>
+      <h2 class="tt-sec-heading">What happens next</h2>
+      <p class="tt-sec-sub">Simple. Personal. Getting in touch commits you to nothing.</p>
+      <div class="tt-retention-steps">
+        <div class="tt-ret-step">
+          <span class="tt-ret-glyph">✦</span>
+          <h4>You get in touch</h4>
+          <p>On WhatsApp or by email, whichever you prefer. Tell me briefly what this is about, not the whole dream yet.</p>
+        </div>
+        <div class="tt-ret-step">
+          <span class="tt-ret-glyph">᚜</span>
+          <h4>We sort out process &amp; payment</h4>
+          <p>A brief consent, then the introductory price of 29 € securely through a payment link. After that you send me your dream.</p>
+        </div>
+        <div class="tt-ret-step">
+          <span class="tt-ret-glyph">◈</span>
+          <h4>You receive your interpretation</h4>
+          <p>In writing, personally, tied to your own life. Afterwards I check in once to ask whether it reached you.</p>
+        </div>
+      </div>
+      <div style="margin-top: 2.5rem;">
+        <CtaButtons center={true} lang="en" />
+      </div>
+      <p class="tt-privacy-note">
+        What you send me is used <span>only for your interpretation</span> ·
+        Never passed on · No newsletter without your agreement
+      </p>
+    </div>
+  </section>
+
+  {/* ══════════ TIMELINE ══════════ */}
+  <section class="tt-panel-aged">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <p class="tt-sec-label">The foundation</p>
+      <h2 class="tt-sec-heading">Three decades of method</h2>
+      <p class="tt-sec-sub">The Aisling Method in context</p>
+      <div class="tt-timeline">
+        {timeline.map(([year, text]) => (
+          <div class="tt-tl-entry">
+            <span class="tt-tl-year">{year}</span>
+            <span class="tt-tl-text">{text}</span>
+          </div>
+        ))}
+      </div>
+      <div class="tt-tl-media-row">
+        <a class="tt-tl-media" href="https://healingthroughdreams.com/about-aisling-dream-interpretation/" target="_blank" rel="noopener noreferrer">
+          <div class="tt-tl-media-frame">
+            <img src="/assets/Aisling-Dream-Interpretation-Logo-White-r35kx2zul84synncf5sakhwinm2y7ifo8j6lahyx6s.png" alt="Aisling Dream Interpretation" />
+          </div>
+          <span class="tt-tl-media-caption">Aisling Dream Interpretation</span>
+        </a>
+        <a class="tt-tl-media" href="https://podcasts.apple.com/gb/podcast/the-dream-interpretation-podcast/id1145722433" target="_blank" rel="noopener noreferrer">
+          <div class="tt-tl-media-frame">
+            <img src="/assets/DI%20Podcast%20image.png" alt="The Dream Interpretation Podcast" />
+          </div>
+          <span class="tt-tl-media-caption">Dream Interpretation Podcast</span>
+        </a>
+        <a class="tt-tl-media" href="https://www.amazon.de/-/en/How-Interpret-Your-Dreams-discover/dp/0955729505/" target="_blank" rel="noopener noreferrer">
+          <div class="tt-tl-media-frame">
+            <img src="/assets/HTID%20Book%20cover.png" alt="How to Interpret Your Dreams and Discover Your Life Purpose" />
+          </div>
+          <span class="tt-tl-media-caption">How to Interpret Your Dreams</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  {/* ══════════ ABOUT ══════════ */}
+  <section class="tt-panel-dark" id="about">
+    <div class="tt-about-inner">
+      <img class="tt-about-portrait" src="/assets/mark-portrait.png" alt="Mark Anthony Irwin, certified dream interpreter working with the Aisling Method" />
+      <p class="tt-sec-label">Personal</p>
+      <h2 class="tt-sec-heading">About me and the interpretations</h2>
+      <p class="tt-about-body">
+        My name is Mark Irwin. I am 47, originally from Cork in Ireland, and I
+        have lived in Kempen since 2015. My work with dreams began in 2011: I
+        came across the Aisling Method and started following my own dreams
+        systematically. Night after night, over years. What began as personal
+        curiosity became a daily practice. In 2023 I began learning the method
+        and the channelling formally from Michael Sheridan himself; the
+        certifications followed in 2024 and 2026.
+      </p>
+      <p class="tt-about-body">
+        <strong class="tt-about-lead">A method, not esoterica.</strong>
+        I work with the Aisling Method, one of the few dream interpretation
+        frameworks that has been applied and refined in practised use over
+        decades. No generic symbol lists. No spiritual projections. A method
+        that takes seriously what your soul is saying.
+      </p>
+      <p class="tt-about-body">
+        That is why I do this work: because dreams, when you really listen to
+        them, tell us the truth about ourselves. And that truth is almost
+        always more generous than we expect.
+      </p>
+
+      <p class="tt-sec-label" style="margin-top: 2.5rem;">Certificates</p>
+      <div class="tt-cert-row">
+        <a class="tt-cert" href="/assets/Scan%20Channeling%20cert.jpg" target="_blank" rel="noopener noreferrer">
+          <span class="tt-cert-caption">Aisling School Channel · 2024</span>
+          <img src="/assets/Scan%20Channeling%20cert.jpg" alt="Aisling School Channel, certificate December 2024" />
+        </a>
+        <a class="tt-cert" href="/assets/Scan%20Dream%20Interpretation%20cert.jpg" target="_blank" rel="noopener noreferrer">
+          <span class="tt-cert-caption">Aisling Dream Interpreter · 2026</span>
+          <img src="/assets/Scan%20Dream%20Interpretation%20cert.jpg" alt="Aisling Dream Interpreter, certificate April 2026" />
+        </a>
+      </div>
+
+      <div class="tt-badge-row">
+        <span class="tt-badge">Aisling Method</span>
+        <span class="tt-badge">Studied with Michael Sheridan</span>
+        <span class="tt-badge">Written interpretation</span>
+        <span class="tt-badge">3,000+ symbols</span>
+        <span class="tt-badge">Confidential</span>
+        <span class="tt-badge">English · German</span>
+        <span class="tt-badge">DE · AT · CH</span>
+      </div>
+      <CtaButtons center={true} lang="en" />
+    </div>
+  </section>
+</Base>

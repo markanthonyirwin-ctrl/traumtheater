@@ -1,0 +1,53 @@
+---
+// The blog listing, shared by /blog and /en/blog so the two stay structurally
+// identical. Only the strings and the post collection differ.
+import Base from './Base.astro';
+import type { CollectionEntry } from 'astro:content';
+import { useTranslations, dateLocale, type Lang, type Alternates } from '../i18n/ui';
+
+export interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  path: string;
+  heading: string;
+  intro: string;
+  posts: (CollectionEntry<'blog'> | CollectionEntry<'blogEn'>)[];
+  /** Root of the post URLs for this language, e.g. "/blog" or "/en/blog". */
+  postBase: string;
+  alternates?: Alternates;
+}
+
+const { lang, title, description, path, heading, intro, posts, postBase, alternates } =
+  Astro.props;
+
+const t = useTranslations(lang);
+const fmt = (d: Date) =>
+  d.toLocaleDateString(dateLocale[lang], { day: 'numeric', month: 'long', year: 'numeric' });
+---
+
+<Base
+  title={title}
+  description={description}
+  path={path}
+  lang={lang}
+  alternates={alternates}>
+  <div class="tt-blog-wrap">
+    <h1 class="tt-sec-heading">{heading}</h1>
+    <p class="tt-blog-intro">{intro}</p>
+
+    {posts.length === 0 ? (
+      <p>{t.blogEmpty}</p>
+    ) : (
+      <ul class="tt-post-list">
+        {posts.map((post) => (
+          <li class="tt-post-item">
+            <p class="tt-post-date">{fmt(post.data.pubDate)}</p>
+            <h2><a href={`${postBase}/${post.id}`}>{post.data.title}</a></h2>
+            <p class="tt-post-excerpt">{post.data.description}</p>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</Base>

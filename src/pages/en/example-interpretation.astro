@@ -1,0 +1,358 @@
+---
+import Base from '../../layouts/Base.astro';
+import CtaButtons from '../../components/CtaButtons.astro';
+import { pairs } from '../../i18n/ui';
+
+// Mark's own dream, interpreted in the same format a client receives — so
+// there is no client-confidentiality question here. Safe to index.
+const noindex = false;
+
+const symbols: [string, string][] = [
+  ['A house being renovated', 'The body and the condition you are in. Repair work indicates that something is being put right, or wants to be.'],
+  ['The friend, a tradesman', 'The part of you that builds and restores with its hands. He works while you stand beside him.'],
+  ['Partner, audible but not visible', 'The relationship is the subject of the dream. The image shows a connection that is there but is not currently being looked at.'],
+  ['Moving away from the house', 'Movement away from what wants your attention.'],
+  ['Staircase', 'The spine. Going down means coming from the head into the heart, and no longer settling something through the mind alone.'],
+  ['Old, broken, overgrown', 'Neglect. A path that has not been used for a long time.'],
+  ['Stone', 'For all that, the path holds. It is sound and lasting.'],
+  ['A sunny day', 'Healing energy. The conditions are good.'],
+  ['An almost running pace', 'Your underlying pattern in this dream. The path gets covered, but never actually walked.'],
+  ['Cheetah', 'The fastest animal in the world. In this dream, your own pace standing in front of you.'],
+  ['An animal that comes towards you and stops', 'A quality you already have and are afraid of.'],
+  ['Wanting to walk past', 'Avoiding exactly what you are meant to look at.'],
+  ['The left side', 'Feeling, the feminine side, and sometimes the past.'],
+  ['Waking at the moment of the leap', 'The dream ends where the encounter would have to happen.'],
+];
+
+const lines: [string, string[]][] = [
+  ['I was near a house that a friend of mine was renovating.', [
+    'Houses in dreams stand for the body and for the condition we are in. A renovation is repair work, so a sign that something is meant to be put right, or already is being.',
+    'Two details strike me here. First, it is not your house, and you are not the one renovating. Your friend is. Second, you are only near it, not inside and not involved.',
+    'People we know usually turn up in dreams because of a quality we carry ourselves. Your friend is a tradesman, someone who builds and restores with his hands. I read him as the part of you that can do exactly that. That part is working in this dream. You are standing beside it.',
+  ]],
+  ['My partner was there too, but only as a presence in the background. I could hear her voice but not see her, and I cannot remember what we talked about.', [
+    'This is the quietest line in the whole dream, and to me the most honest.',
+    'The connection is there. It has not broken, there is no argument, no absence. But it is running in the background, without a picture and without content.',
+    'The dream says nothing here about what your partner is like. It describes how you are perceiving her in this moment: audible but not visible, present but not in view.',
+    'That fits the phase you are in very closely. When someone sets something big in motion, the way you have with your new self-employment, a great deal else slides into the background, without them noticing and without them wanting it.',
+  ]],
+  ['I moved away from the house', [
+    'You are moving away from the place where the repair work is happening.',
+    'In the language of dreams, what we move away from is often exactly what wants our attention. This is the first time in this dream that you move away from something. It will not be the last.',
+  ]],
+  ['and began to walk down a long staircase of old, broken, overgrown stone steps.', [
+    'Staircases stand for the spine, and the way down is the way from the head into the heart.',
+    'That you are walking this path at all is good. You are on the right way, and the dream confirms it by showing the path as long and made of stone. It holds.',
+    'But look at the state of it: old, broken, overgrown. Only what has gone unused for a long time becomes overgrown.',
+    'I think your dream is telling you something very kindly here: the path from your head to your heart exists, it is even stable, but it has not been tended for a long time.',
+  ]],
+  ['It was a sunny day', [
+    'The sun is one of the most positive images there is in a dream. It stands for healing energy, and for that energy being available right now.',
+    'I want to underline this, because the dream ends unpleasantly. The whole scene plays out in sunlight. Your dream does not put you in darkness, or fog, or cold. What happens here happens under good conditions.',
+  ]],
+  ['and I was moving at an almost running pace.', [
+    'Here is the core of it.',
+    'You are not walking down, you are hurrying down. On old, broken steps. The dream does not show your pace as a strength, but as what you are doing on a damaged path.',
+    'If the way down is the way into feeling, then an almost running pace is precisely how a person never arrives on that path. You cover it without ever really setting foot on it.',
+  ]],
+  ['At the foot of the staircase a cheetah appeared.', [
+    'It appears where the path from the head to the heart ends. And it appears in front of you.',
+    'Dreams order time very simply: what lies behind us is the past, what stands directly in front of us is the present. This is not an old matter you are meant to work through. This is your now.',
+    'And then there is the choice of animal. A cheetah is the fastest land animal in the world. You told me that in the dream you thought your speed would save you.',
+    'If everything in a dream is a part of the dreamer, then this means: the fastest creature in the world is standing in your way while you are trying to save yourself through speed. Your pace is standing opposite you, looking at you.',
+  ]],
+  ['It walked calmly a little way up the steps towards me, then stopped and waited.', [
+    'This line changes the whole dream for me.',
+    'The animal does not attack. It does not lie in wait. It comes calmly a little way towards you, so it walks part of the way to meet you, and then it stops and waits.',
+    'An animal that comes towards a person and halts just short of them almost always shows an ability or a quality that person already has and is afraid of. The stopping and the waiting are the decisive part. It is an invitation, not a threat.',
+  ]],
+  ['When I tried to walk past it, the cheetah leapt at me from the left.', [
+    'The leap only comes after you have tried to walk past.',
+    'As long as you stand still, the animal stands still too. You set the movement off by avoiding it. That is not a reproach, it is important information: what frightened you was responding to your avoidance.',
+    'And it comes from the left. The left side stands for feeling, for the feminine side in us, and sometimes for the past. So what surprises you comes from exactly the direction this dream has been about from the beginning. You were on the way into the heart, you wanted to get past it, and the feeling caught up with you from the side.',
+    'I do not think your dream is showing an attack here. I think it is showing what happens when you walk past something that has patiently come to meet you.',
+  ]],
+  ['At the moment of the leap I woke up.', [
+    'The dream ends exactly at the moment of contact. You woke before the encounter happened.',
+    'That is not bad news, it is a marker. The dream was interrupted at precisely the point where the real work begins. In my experience dreams that end this way come back, and the next time the scene usually goes a little further.',
+  ]],
+];
+---
+
+<Base
+  title="A Full Dream Interpretation, Start to Finish"
+  description="A complete dream interpretation with the Aisling Method, from the dream itself through to the suggested next steps. So you know beforehand what you get."
+  path="/en/example-interpretation"
+  alternates={pairs.example}
+  lang="en"
+  noindex={noindex}>
+  <article class="tt-example">
+    <header class="tt-example-header">
+      <p class="tt-sec-label">The document</p>
+      <h1 class="tt-sec-heading">A full interpretation</h1>
+      <p class="tt-sec-sub">
+        Most people book a dream interpretation without ever having seen what
+        one looks like. This is a complete interpretation, from the dream
+        itself through to the suggested next steps. The final report is
+        delivered as a professionally formatted, print-ready PDF running to
+        five to ten pages.
+      </p>
+    </header>
+
+    <div class="tt-example-doc">
+      <p class="tt-example-meta">Dream interpretation · June 2026</p>
+
+      <h2>The dream</h2>
+      <p class="tt-example-dreamtitle">The cheetah on the staircase</p>
+      <blockquote class="tt-example-dream">
+        <p>
+          I was near a house that a friend of mine was renovating. My partner
+          was there too, but only as a presence in the background. I could hear
+          her voice but not see her, and I cannot remember what we talked
+          about.
+        </p>
+        <p>
+          I moved away from the house and began to walk down a long staircase
+          of old, broken, overgrown stone steps. It was a sunny day and I was
+          moving at an almost running pace.
+        </p>
+        <p>
+          At the foot of the staircase a cheetah appeared. It walked calmly a
+          little way up the steps towards me, then stopped and waited.
+        </p>
+        <p>
+          When I tried to walk past it, the cheetah leapt at me from the left.
+          At the moment of the leap I woke up.
+        </p>
+      </blockquote>
+
+      <h2>About this interpretation</h2>
+      <p>
+        I work with the Aisling Method. It takes the view that every element of
+        a dream represents a part of you: the places, the people, the animals,
+        the weather, even your own pace. Nothing in it is about anyone else.
+        That sounds strange at first, but it is the freeing part. If everything
+        in your dream is you, then everything that can be changed sits with you
+        as well.
+      </p>
+      <p>
+        I want to say how I understand what follows. I am offering you an
+        interpretation, not announcing a truth. Take what lands with you, and
+        leave what feels foreign. You know your life, I only know this one
+        dream.
+      </p>
+      <p>
+        Your dream is short, but it is unusually clearly built. I rarely have a
+        text in front of me that draws its central question so cleanly into a
+        single second. Everything runs towards the moment where you try to walk
+        past something.
+      </p>
+
+      <h2>The core theme</h2>
+      <p>
+        Your partner is present in this dream. When that happens it is almost
+        always about the relationship itself, and every other image gets read
+        in that light. One thing matters here: a dream like this never says
+        what your partner should change. It speaks only about your own part in
+        it.
+      </p>
+      <p>
+        The title sets two things side by side: a cheetah, the fastest animal
+        there is, and a staircase. Walking down a staircase means, in the
+        language of dreams, moving consciousness from the head down into the
+        heart. It is the way from thinking to feeling, and it shows up when
+        someone is settling a matter too much through the mind.
+      </p>
+      <p>
+        That marks the theme out very clearly for me. It is about your pace,
+        and about what your pace is doing to your access to your own feelings
+        and to your relationship.
+      </p>
+      <p>
+        You are on the way down. You really are taking that path, which is
+        good. But you are taking it at a run. And at the end of that path
+        something is waiting for you that you would rather get past.
+      </p>
+      <p>
+        What strikes me is this: you are in motion continuously throughout the
+        dream. You move away, you descend, you are almost running, you try to
+        walk past. The only creature in the dream that stops and waits is the
+        cheetah.
+      </p>
+
+      <h2>I am … I should …</h2>
+      <p>
+        In this work I like to gather a dream into two sentences spoken from
+        your own perspective. The first describes where you are standing at the
+        moment. The second shows the direction your dream is inviting you in.
+      </p>
+      <div class="tt-example-formula">
+        <p class="tt-example-formula-label">I am …</p>
+        <p>
+          When it comes to my relationship and my heart, <strong>I am</strong>
+          in motion and at pace. I move away from the place where the repair
+          work is happening. I hear my partner but do not see her, and
+          afterwards I no longer know what it was about. My path from the head
+          to the heart is old, broken and overgrown. When something comes
+          towards me and waits patiently, I try to walk past it.
+        </p>
+      </div>
+      <div class="tt-example-formula">
+        <p class="tt-example-formula-label">I should …</p>
+        <p>
+          When it comes to my relationship and my heart, <strong>I should</strong>
+          slow down. I should stand still where something is waiting for me,
+          instead of walking past it. I should look and not only listen. And I
+          should meet what comes from my left side, which is my feeling,
+          instead of avoiding it.
+        </p>
+      </div>
+
+      <h2>Your dream, line by line</h2>
+      <p>
+        I will go through the dream with you in order now. Some of this will
+        land straight away, some of it perhaps only in a few days.
+      </p>
+      {lines.map(([line, paras]) => (
+        <section class="tt-example-line">
+          <p class="tt-example-quote">“{line}”</p>
+          {paras.map((p) => <p>{p}</p>)}
+        </section>
+      ))}
+
+      <h2>Symbols, colours, places and numbers</h2>
+      <dl class="tt-example-symbols">
+        {symbols.map(([term, meaning]) => (
+          <>
+            <dt>{term}</dt>
+            <dd>{meaning}</dd>
+          </>
+        ))}
+      </dl>
+      <p>
+        Numbers and colours: no numbers are named in this dream and no colours
+        are given. Only the sunlight is there as a quality, and that is a good
+        sign.
+      </p>
+
+      <h2>A word of reassurance</h2>
+      <p>
+        A dream that ends with a big cat leaping feels threatening when you
+        wake from it. So I want to say plainly how I see it.
+      </p>
+      <p>
+        It is not a nightmare in the sense that something evil happens to you.
+        The dream plays out in sunshine. The animal behaves calmly almost the
+        entire time. It comes to meet you and waits for you. It only reacts
+        when you avoid it. That is not a sign of danger. That is a sign of
+        patience.
+      </p>
+      <p>
+        There is one point I still want to raise, because care requires it and
+        because I would rather be open.
+      </p>
+      <p>
+        Staircases stand for the spine, and your staircase is old and broken.
+        On top of that you are moving at a run on those damaged steps, and an
+        animal is coming towards you that you want to avoid. Taken together,
+        that is a quiet nudge to pay attention to your body.
+      </p>
+      <p>
+        I am not a doctor and I make no diagnosis. I do not read an emergency
+        here either. But if you are going flat out at work just now, an
+        ordinary check and an honest look at your back, your sleep and your
+        recovery would be a calm, sensible thing. Not out of fear. More the way
+        you look under the bonnet of a car that is covering a lot of miles.
+      </p>
+
+      <h2>Connections to earlier dreams</h2>
+      <p>
+        This is the first dream you have sent me, so there are no earlier
+        dreams yet to connect it to.
+      </p>
+      <p>
+        That is completely normal and no disadvantage. Dreams work in series.
+        They pick up a theme, check whether it has landed, and then move on or
+        repeat it more plainly. Once I have two or three dreams from you, a
+        picture forms that a single dream cannot show yet.
+      </p>
+      <p>
+        This one is a very good start. It is clear, it is short, and it has an
+        open ending. Dreams like that come back.
+      </p>
+
+      <h2>A closing reflection</h2>
+      <p>
+        If I had to draw this dream down to a single scene, it would be this
+        one: the animal comes part of the way towards you, stops and waits. And
+        you try to walk past it.
+      </p>
+      <p>That is the whole dream.</p>
+      <p>
+        Something comes to meet you halfway. It does nothing. It only waits.
+        And your first movement is to keep going.
+      </p>
+      <p>
+        I think your dream is saying something very kind to you and very direct
+        at the same time. Your pace has carried you a long way. You have just
+        started working for yourself, and that took drive, courage and speed.
+        That is a real strength, and the dream does not take it away from you.
+      </p>
+      <p>
+        But there is a place in your life where pace is no longer the solution
+        and has become the obstacle. That place is at the bottom of the
+        staircase. It is the place where your partner appears only as a voice
+        in the background.
+      </p>
+      <p>
+        In the dream you thought your speed would save you. I think your dream
+        is gently showing you the opposite: here, standing still is what saves
+        you.
+      </p>
+
+      <h2>Suggested steps</h2>
+      <p>
+        None of this is a must. They are suggestions you can work with, if
+        something here lands with you.
+      </p>
+      <ul class="tt-example-actions">
+        <li>Ask yourself once, deliberately, over the next few days: where in my life am I walking past something that is patiently waiting for me?</li>
+        <li>Take a moment with your partner this week where you do not only hear her but look at her. No occasion, no topic, no agenda.</li>
+        <li>Notice your actual pace in ordinary life for once, walking, eating, speaking. Not to judge it, only to notice it.</li>
+        <li>Give your back and your recovery a little more attention in this phase than the new business is currently suggesting you should.</li>
+        <li>And if the cheetah comes back: stand still in the dream, if you can. Look at it. It was waiting for you, not for you to run.</li>
+      </ul>
+
+      <h2>Next steps</h2>
+      <p>
+        Let this interpretation sit for a few days before you judge it. In my
+        experience whatever is true announces itself again on its own, often at
+        some everyday moment you would not have connected it to.
+      </p>
+      <p>
+        Note down what resonated immediately as you read, and what felt
+        foreign. Both are useful for the work that follows.
+      </p>
+      <p>
+        This dream has an open place in it, the moment of the leap. If it comes
+        back, write it down right after you wake, before the first coffee, and
+        send it to me.
+      </p>
+
+      <p class="tt-example-sign">Mark</p>
+      <p class="tt-example-footnote">Interpreted with the Aisling Method.</p>
+    </div>
+
+    <aside class="tt-post-cta">
+      <h3>And your dream?</h3>
+      <p>
+        Send me your dream with some context about your situation. You get an
+        interpretation back in exactly this form. Introductory offer 29 €
+        instead of 69 €.
+      </p>
+      <CtaButtons center={true} lang="en" />
+    </aside>
+
+    <p class="tt-legal-back"><a href="/en">← Back to the homepage</a></p>
+  </article>
+</Base>

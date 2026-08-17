@@ -1,5 +1,13 @@
 ---
 import '../styles/global.css';
+import {
+  useTranslations,
+  ogLocale,
+  homePath,
+  site,
+  type Lang,
+  type Alternates,
+} from '../i18n/ui';
 
 export interface Props {
   title: string;
@@ -11,6 +19,14 @@ export interface Props {
   /** Extra JSON-LD blocks to inject into <head>. */
   jsonLd?: unknown[];
   noindex?: boolean;
+  lang?: Lang;
+  /**
+   * Both language versions of this page. Emits reciprocal hreflang and points
+   * the language switcher at the counterpart. Omit for pages that exist in one
+   * language only (the legal pages) — then no hreflang is claimed, which is
+   * what we want, since Google drops hreflang that does not point back.
+   */
+  alternates?: Alternates;
 }
 
 const {
@@ -21,25 +37,22 @@ const {
   path = '/',
   jsonLd = [],
   noindex = false,
+  lang = 'de',
+  alternates,
 } = Astro.props;
 
-const site = 'https://traum-theater.de';
+const t = useTranslations(lang);
 const canonical = new URL(path, site).href;
 const ogImage = `${site}/assets/logo.png`;
 
-const navLinks = [
-  { href: '/#methode', label: 'Die Methode' },
-  { href: '/#symbole', label: 'Symbole' },
-  { href: '/beispiel-deutung', label: 'Beispiel' },
-  { href: '/#angebot', label: 'Angebot' },
-  { href: '/#stimmen', label: 'Stimmen' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/#about', label: 'Über mich' },
-];
+const otherLang: Lang = lang === 'de' ? 'en' : 'de';
+// With no counterpart, the switcher still works: it lands on the other
+// language's homepage rather than disappearing.
+const switchHref = alternates ? alternates[otherLang] : homePath[otherLang];
 ---
 
 <!doctype html>
-<html lang="de">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -51,8 +64,18 @@ const navLinks = [
     <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
     <link rel="canonical" href={canonical} />
 
+    {alternates && (
+      <>
+        <link rel="alternate" hreflang="de" href={new URL(alternates.de, site).href} />
+        <link rel="alternate" hreflang="en" href={new URL(alternates.en, site).href} />
+        {/* German is the primary market, so it takes x-default. */}
+        <link rel="alternate" hreflang="x-default" href={new URL(alternates.de, site).href} />
+      </>
+    )}
+
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale" content={ogLocale[lang]} />
+    {alternates && <meta property="og:locale:alternate" content={ogLocale[otherLang]} />}
     <meta property="og:site_name" content="Traumtheater" />
     <meta property="og:title" content={ogTitle ?? title} />
     <meta property="og:description" content={ogDescription ?? description} />
@@ -83,15 +106,24 @@ const navLinks = [
   <body>
     <div class="tt-root" data-variant="editorial">
       <nav class="tt-nav" data-open="false" id="tt-nav">
-        <a href="/" class="tt-nav-brand">Traumtheater</a>
-        <button class="tt-nav-toggle" aria-label="Menü öffnen" aria-expanded="false" id="tt-nav-toggle">
+        <a href={t.navBrandHref} class="tt-nav-brand">Traumtheater</a>
+        <button
+          class="tt-nav-toggle"
+          aria-label={t.menuOpen}
+          aria-expanded="false"
+          id="tt-nav-toggle"
+          data-label-open={t.menuOpen}
+          data-label-close={t.menuClose}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <path d="M4 7h16" /><path d="M4 12h16" /><path d="M4 17h16" />
           </svg>
         </button>
         <div class="tt-nav-links" id="tt-nav-links">
-          {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
-          <a href="/#kontakt" class="tt-nav-cta">Kontakt ✦</a>
+          {t.nav.map((l) => <a href={l.href}>{l.label}</a>)}
+          <a href={t.navCtaHref} class="tt-nav-cta">{t.navCta}</a>
+          <a href={switchHref} class="tt-nav-lang" hreflang={otherLang} lang={otherLang} aria-label={t.switchToAria}>
+            {t.switchTo}
+          </a>
         </div>
       </nav>
 
@@ -99,27 +131,19 @@ const navLinks = [
 
       <footer class="tt-footer">
         <nav class="tt-footer-links tt-footer-links--service">
-          <a href="/persoenliche-traumdeutung">Persönliche Traumdeutung</a>
-          <a href="/schriftliche-traumdeutung">Schriftliche Traumdeutung</a>
-          <a href="/spirituelle-traumdeutung">Spirituelle Traumdeutung</a>
-          <a href="/beispiel-deutung">Beispiel</a>
-          <a href="/blog">Blog</a>
+          {t.footerService.map((l) => <a href={l.href}>{l.label}</a>)}
         </nav>
         <nav class="tt-footer-links">
-          <a href="/impressum">Impressum</a>
-          <a href="/datenschutz">Datenschutz</a>
-          <a href="/agb">AGB</a>
-          <a href="/widerruf">Widerruf</a>
+          {t.footerLegal.map((l) => <a href={l.href}>{l.label}</a>)}
         </nav>
-        <p>
-          © Traumtheater &nbsp;·&nbsp; Persönliche Traumdeutung nach der Aisling-Methode
-          &nbsp;·&nbsp; Für Deutschland, Österreich und die Schweiz &nbsp;·&nbsp; Alle Inhalte vertraulich
-        </p>
+        {t.footerLegalNote && <p class="tt-footer-note">{t.footerLegalNote}</p>}
+        <p>{t.footerTagline}</p>
       </footer>
     </div>
 
     <script>
       // Progressive enhancement only — all content above is already in the HTML.
+      // Menu labels come from data attributes so this stays language-agnostic.
       const nav = document.getElementById('tt-nav');
       const toggle = document.getElementById('tt-nav-toggle');
       const links = document.getElementById('tt-nav-links');
@@ -128,7 +152,10 @@ const navLinks = [
         const open = nav?.getAttribute('data-open') === 'true';
         nav?.setAttribute('data-open', open ? 'false' : 'true');
         toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
-        toggle.setAttribute('aria-label', open ? 'Menü öffnen' : 'Menü schließen');
+        toggle.setAttribute(
+          'aria-label',
+          (open ? toggle.dataset.labelOpen : toggle.dataset.labelClose) ?? ''
+        );
       });
       links?.addEventListener('click', () => {
         nav?.setAttribute('data-open', 'false');

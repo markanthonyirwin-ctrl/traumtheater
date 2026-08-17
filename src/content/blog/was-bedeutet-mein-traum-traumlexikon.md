@@ -3,6 +3,7 @@ title: 'Was bedeutet mein Traum? Warum das Traumlexikon nicht reicht'
 description: 'Du schlägst ein Symbol nach und denkst: hm. Fünf Gründe, warum ein Traumlexikon deinen Traum nicht auflöst, und was stattdessen funktioniert.'
 pubDate: 2026-08-11
 draft: false
+altSlug: 'what-does-my-dream-mean-dream-dictionary'
 ---
 
 Du wachst auf, und ein Bild bleibt hängen. Eine Treppe. Ein Tier. Ein Haus, das du nicht kennst. Also tippst du es bei Google ein, landest in einem Traumlexikon, liest drei Sätze über „Treppe", und denkst: hm.

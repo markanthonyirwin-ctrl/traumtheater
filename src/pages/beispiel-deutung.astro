@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import CtaButtons from '../components/CtaButtons.astro';
+import { pairs } from '../i18n/ui';
 
 // Mark's own dream, interpreted in the same format a client receives — so
 // there is no client-confidentiality question here. Safe to index.
@@ -82,6 +83,7 @@ const lines: [string, string[]][] = [
   title="Beispiel einer Traumdeutung: eine Deutung im Original"
   description="Eine vollständige Traumdeutung nach der Aisling-Methode, von der Traumschilderung bis zu den Handlungsschritten. Damit du vorher weißt, was du bekommst."
   path="/beispiel-deutung"
+  alternates={pairs.example}
   noindex={noindex}>
   <article class="tt-example">
     <header class="tt-example-header">

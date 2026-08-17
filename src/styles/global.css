@@ -2101,3 +2101,99 @@
   /* Service cards stack rather than squeeze. */
   .tt-root .tt-grid-3 { grid-template-columns: 1fr; }
 }
+/* ══════════════════════════════════════════════
+   LANGUAGE SWITCHER + FOOTER NOTE (August 2026)
+   Added with the English pages under /en/.
+
+   The switcher is an outlined pill so it reads as a mode change rather than
+   another nav destination, and so it never competes with the green Kontakt
+   CTA sitting next to it.
+
+   Specificity: .tt-nav-links a is (0,2,0) and the collapsed-nav block at
+   1150px uses .tt-root .tt-nav-links a (0,3,0). Both are matched here with
+   .tt-root .tt-nav-links .tt-nav-lang so the pill wins on desktop, and the
+   mobile override below restates the same specificity inside its media query
+   rather than relying on source order.
+════════════════════════════════════════════════ */
+.tt-root .tt-nav-links .tt-nav-lang {
+  border: 1px solid rgba(139, 98, 25, 0.55);
+  padding: 0.4rem 0.85rem;
+  color: var(--gold-pale);
+  letter-spacing: 0.16em;
+}
+.tt-root .tt-nav-links .tt-nav-lang:hover {
+  border-color: var(--gold-pale);
+  color: var(--cream);
+}
+
+/* Nav labels must never wrap to a second line. When they do, the whole nav
+   grows and everything below it moves down, which is how the homepage trust
+   block ends up below the fold. */
+.tt-root .tt-nav-links a { white-space: nowrap; }
+
+/* ── Collapse to the hamburger at 1260px, not 1150px ──
+   The switcher is a ninth item in the nav row. Between 1150 and 1260 the row
+   no longer fits: "Kontakt ✦" and two labels wrapped onto second lines, the
+   nav grew from 69px to 97px, and that pushed the homepage trust card from
+   802px to 830px against an 800px fold. Collapsing earlier keeps the
+   horizontal nav to widths where it genuinely fits.
+
+   This repeats the rules from the 1150px block above rather than editing it,
+   following the append-a-block pattern used throughout this file. The older
+   block is now a subset of this one and stays harmlessly. */
+@media (max-width: 1260px) {
+  .tt-root .tt-nav { flex-wrap: wrap; }
+  .tt-root .tt-nav-toggle { display: flex; }
+  .tt-root .tt-nav-links {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 0.8rem;
+    border-top: 1px solid rgba(139, 98, 25, 0.25);
+    margin-top: 0.7rem;
+  }
+  .tt-root .tt-nav[data-open='true'] .tt-nav-links { display: flex; }
+  .tt-root .tt-nav-links a {
+    padding: 0.8rem 0.2rem;
+    border-bottom: 1px solid rgba(139, 98, 25, 0.15);
+  }
+  .tt-root .tt-nav-links a:last-child { border-bottom: none; }
+  .tt-root .tt-nav-cta { text-align: center; margin-top: 0.4rem; }
+
+  /* Nav is a stacked column here, so the pill outline would look like a
+     stray box. Drop back to a plain centred row under the CTA. */
+  .tt-root .tt-nav-links .tt-nav-lang {
+    border: none;
+    padding: 0.75rem 0.2rem 0.35rem;
+    margin-top: 0.2rem;
+    text-align: center;
+  }
+}
+
+/* On the English homepage the testimonials are still in the language each
+   client wrote in, which needs a word of explanation so it does not read as an
+   untranslated page. Sits between the carousel and the call to action. */
+.tt-root .tt-testi-lang-note {
+  max-width: 52ch;
+  margin: 0.9rem auto 0;
+  padding: 0 1.5rem;
+  text-align: center;
+  font-size: var(--size-small);
+  font-style: italic;
+  color: var(--ink-mid);
+}
+
+/* Sits under the legal row in the English footer only, explaining that those
+   four pages are German. .tt-footer p is (0,1,1) and forces uppercase at
+   0.64rem; this is a sentence, so it needs both a higher specificity and the
+   fine-print size rather than the tagline treatment. */
+.tt-root .tt-footer-note {
+  font-size: var(--size-fine);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  color: rgba(212, 168, 75, 0.55);
+  max-width: 46ch;
+  margin: 0 auto 0.9rem;
+}

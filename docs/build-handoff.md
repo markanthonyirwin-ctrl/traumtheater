@@ -51,25 +51,42 @@ a page is the failure mode that matters.
 
 ```
 src/
+  i18n/ui.ts            every UI string in both languages + the hreflang pairs table
+  data/testimonials.ts  client quotes, shared by both homepages
   layouts/
-    Base.astro          shell: head, meta, JSON-LD, nav, footer, all inline JS
-    ServicePage.astro   the three money pages; takes an faq array
+    Base.astro          shell: head, meta, JSON-LD, hreflang, nav, footer, all inline JS
+    ServicePage.astro   the money pages; takes an faq array
+    BlogIndex.astro     blog listing, both languages
+    BlogPost.astro      single post, both languages
     LegalPage.astro     wraps extracted legal HTML
   components/
     CtaButtons.astro          WhatsApp + email buttons
-    TestimonialCarousel.astro used twice on the homepage, light and dark
+    TestimonialCarousel.astro used twice per homepage, light and dark
   pages/
-    index.astro                     homepage, carries the main JSON-LD graph
+    index.astro                     German homepage, carries the main JSON-LD graph
     persoenliche|schriftliche|spirituelle-traumdeutung.astro
     beispiel-deutung.astro          the worked example interpretation
     blog/index.astro, blog/[...slug].astro
-    impressum|datenschutz|agb|widerruf.astro
+    impressum|datenschutz|agb|widerruf.astro     German only, deliberately
+    en/                             the English mirror, 8 pages
+      index.astro
+      personal|written|spiritual-dream-interpretation.astro
+      example-interpretation.astro
+      blog/index.astro, blog/[...slug].astro
   content/
-    blog/*.md           posts
+    blog/*.md           German posts
+    blog-en/*.md        English posts
     legal/*.html        extracted legal text, imported with ?raw
-  styles/global.css     everything, ~1600 lines
-public/assets/          fonts, images, robots.txt
+  styles/global.css     everything, ~2150 lines
+public/assets/          fonts, images
+public/robots.txt
 ```
+
+**Two languages.** German at the root, English under `/en/`. All chrome strings
+come from `src/i18n/ui.ts`; page prose lives in the pages. hreflang comes from
+the `pairs` table in that same file, not from the sitemap integration, so that
+only genuine pairs are claimed and both directions always agree. See the "Two
+languages" section in `CLAUDE.md` before touching any of it.
 
 **All CSS is in one file.** It grew by appended blocks, each with a comment
 explaining why. Keep that pattern: append a commented block rather than editing
@@ -166,6 +183,11 @@ to five · 29 € / 69 € · German and English, not Dutch · `mark@` for clien
 - Full voice pass: em dashes removed from visible copy sitewide
 - Mobile verified clean at 360px and 412px
 - Sitemap resubmitted to Search Console
+- **English mirror at `/en/`, August 2026.** 8 pages: homepage, three service
+  pages, worked example, blog index, two translated posts. 20 pages total.
+  Reciprocal hreflang on all 16 paired pages, `x-default` on German, none on
+  the four legal pages. Verified: 0 failures, 0 third-party requests, no
+  overflow at 360/412/1185/1265/1425
 
 ## 7. State: open
 
@@ -174,20 +196,34 @@ to five · 29 € / 69 € · German and English, not Dutch · `mark@` for clien
 2. **Google Business Profile unclaimed.** Mark must do it himself; Google
    verifies the owner. Service-area, no public pin
 3. **Bing Webmaster Tools** not set up
-4. **No English pages.** The expat niche is near-empty and Mark is a native
-   speaker. `/en/` plus reciprocal hreflang for those pages only
-5. **Cornerstone post not written:** "Traumdeutung ohne Freud", targeting
+4. **Cornerstone post not written:** "Traumdeutung ohne Freud", targeting
    *spirituelle Traumdeutung*
-6. `Herleitung` survives in the JSON-LD business description, inside the
+5. `Herleitung` survives in the JSON-LD business description, inside the
    sentence carrying the protected `ohne esoterische Überfrachtung` phrase.
    Not visible to readers, left deliberately
-7. **Channeling emphasis is an open strategic question.** Mark is certified in
+6. **Channeling emphasis is an open strategic question.** Mark is certified in
    it, but the blog voice deliberately dials it back to protect the grounded
    positioning. Raise it rather than deciding silently
+7. **English testimonials.** Ciara Clarke and Nicky E. originally wrote in
+   English; the site shows Mark's German rendering, and the English page shows
+   that same German text. It is the one place a client's words appear as a
+   translation rather than as what they wrote. If Mark can find the English
+   originals they belong in `src/data/testimonials.ts`
+8. **The `/en/` pages have no inbound links yet** and are brand new, so they
+   will take time to index. Worth submitting the sitemap again and checking
+   coverage in Search Console after a few weeks
+9. **Homepage trust card misses the fold by 2px at 1265x800.** Pre-existing,
+   not caused by the English work: measured at 802px against an 800px fold with
+   the language switcher removed. Only bites at that narrow band of viewport
+   heights. Fixing it means touching hero spacing, which needs re-measuring
+   across widths
+10. `persoenliche-traumdeutung` meta description is 156 characters against a
+    ~155 guideline. One over, pre-existing, left alone
 
 **Deliberately not doing:** hreflang across DE/AT/CH (identical German is
 duplicate content), a symbol dictionary (content-farm territory that would
-undercut the paid positioning), analytics.
+undercut the paid positioning), analytics, translating the legal pages (the
+German text is the binding version).
 
 ---
 
@@ -209,6 +245,38 @@ $body = [regex]::Replace($h.Substring($h.IndexOf('<body')), '<script[\s\S]*?</sc
 # Third-party requests, must all be 0
 'fonts.googleapis','fonts.gstatic','unpkg','cdn.jsdelivr','google-analytics'
 ```
+
+**hreflang reciprocity.** This is the one that fails silently: if `/blog`
+points at `/en/blog` but `/en/blog` does not point back, Google discards the
+pair and says nothing. Expect 16 OK, 0 failures, and the four legal pages
+reporting no hreflang.
+
+```powershell
+$root = (Get-Location).Path + "\dist"; $site = 'https://traum-theater.de'
+$pairs = @{}
+foreach ($f in (Get-ChildItem dist -Recurse -Filter index.html)) {
+  $h = [System.IO.File]::ReadAllText($f.FullName, [System.Text.Encoding]::UTF8)
+  $de = [regex]::Match($h, 'hreflang="de" href="([^"]*)"').Groups[1].Value
+  $en = [regex]::Match($h, 'hreflang="en" href="([^"]*)"').Groups[1].Value
+  $xd = [regex]::Match($h, 'hreflang="x-default" href="([^"]*)"').Groups[1].Value
+  $url = $site + ($f.FullName.Replace($root,"").Replace("\index.html","").Replace("\","/"))
+  if ($url -eq $site) { $url = $site + "/" }
+  if ($de -eq "" -and $en -eq "") { "$url (no hreflang)"; continue }
+  $pairs[$url] = "$de|$en|$xd"
+}
+foreach ($k in ($pairs.Keys | Sort-Object)) {
+  $p = $pairs[$k].Split("|")
+  $ok = (($k -eq $p[0]) -or ($k -eq $p[1])) -and
+        ($pairs[$p[0]] -eq $pairs[$k]) -and ($pairs[$p[1]] -eq $pairs[$k]) -and ($p[2] -eq $p[0])
+  if ($ok) { "OK   $k" } else { "FAIL $k" }
+}
+```
+
+**Nav width.** The nav collapses to the hamburger at 1260px. If you add a nav
+item, re-measure `document.querySelector('.tt-nav').getBoundingClientRect()
+.height` just above that breakpoint: it must stay 69px. A taller nav means a
+label wrapped to two lines, and everything below it moves down, including the
+homepage trust card.
 
 For layout and mobile, use the browser tools against `localhost:4321` and
 measure `document.documentElement.scrollWidth` against `clientWidth`. Mark

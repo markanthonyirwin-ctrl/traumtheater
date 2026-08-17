@@ -1,6 +1,7 @@
 ---
 import Base from './Base.astro';
 import CtaButtons from '../components/CtaButtons.astro';
+import { useTranslations, site, type Lang, type Alternates } from '../i18n/ui';
 
 export interface Props {
   title: string;
@@ -14,22 +15,29 @@ export interface Props {
    *  the two can never drift. Google requires the marked-up answer to be
    *  visible on the page. `a` may contain inline HTML. */
   faq?: { q: string; a: string }[];
+  lang?: Lang;
+  alternates?: Alternates;
 }
 
-const { title, description, path, h1, lead, serviceName, faq = [] } = Astro.props;
+const {
+  title,
+  description,
+  path,
+  h1,
+  lead,
+  serviceName,
+  faq = [],
+  lang = 'de',
+  alternates,
+} = Astro.props;
+
+const t = useTranslations(lang);
 
 const stripTags = (s: string) => s.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 
-const site = 'https://traum-theater.de';
-
-// The three money pages cross-link to each other. Whichever page is rendering
-// drops itself from the list.
-const services = [
-  { href: '/persoenliche-traumdeutung', label: 'Persönliche Traumdeutung', blurb: 'Deine Deutung, auf deine Lebenssituation bezogen.' },
-  { href: '/schriftliche-traumdeutung', label: 'Schriftliche Traumdeutung', blurb: 'Warum ein Dokument mehr trägt als ein Gespräch.' },
-  { href: '/spirituelle-traumdeutung', label: 'Spirituelle Traumdeutung', blurb: 'Fundiert und spirituell, ohne esoterische Überfrachtung.' },
-];
-const others = services.filter((s) => s.href !== path);
+// The money pages cross-link to each other, within their own language.
+// Whichever page is rendering drops itself from the list.
+const others = t.services.filter((s) => s.href !== path);
 
 const jsonLd = [
   {
@@ -37,7 +45,8 @@ const jsonLd = [
     '@type': 'Service',
     name: serviceName,
     description,
-    serviceType: 'Traumdeutung',
+    serviceType: t.serviceType,
+    inLanguage: lang,
     url: `${site}${path}`,
     provider: { '@type': 'Person', '@id': `${site}/#person`, name: 'Mark Anthony Irwin' },
     areaServed: [
@@ -50,7 +59,7 @@ const jsonLd = [
       '@type': 'Offer',
       price: '29.00',
       priceCurrency: 'EUR',
-      description: 'Einführungsangebot, regulärer Preis 69 €. §19 UStG, keine Umsatzsteuer.',
+      description: t.offerDescription,
       availability: 'https://schema.org/InStock',
       url: `${site}${path}`,
     },
@@ -61,6 +70,7 @@ if (faq.length) {
   jsonLd.push({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
+    inLanguage: lang,
     mainEntity: faq.map((item) => ({
       '@type': 'Question',
       name: item.q,
@@ -70,10 +80,16 @@ if (faq.length) {
 }
 ---
 
-<Base title={title} description={description} path={path} jsonLd={jsonLd}>
+<Base
+  title={title}
+  description={description}
+  path={path}
+  jsonLd={jsonLd}
+  lang={lang}
+  alternates={alternates}>
   <article class="tt-service">
     <header class="tt-service-header">
-      <p class="tt-sec-label">Angebot</p>
+      <p class="tt-sec-label">{t.offerLabel}</p>
       <h1 class="tt-sec-heading">{h1}</h1>
       <p class="tt-service-lead">{lead}</p>
     </header>
@@ -83,7 +99,7 @@ if (faq.length) {
 
       {faq.length > 0 && (
         <section class="tt-faq">
-          <h2>Häufige Fragen</h2>
+          <h2>{t.faqHeading}</h2>
           {faq.map((item) => (
             <div class="tt-faq-item">
               <h3>{item.q}</h3>
@@ -95,18 +111,14 @@ if (faq.length) {
     </div>
 
     <aside class="tt-service-cta">
-      <h2>Schick mir deinen Traum</h2>
-      <p>
-        Den Traum, so genau du ihn erinnerst, und ein paar Sätze zu deiner
-        aktuellen Lebenssituation. Mehr brauche ich nicht. Einführungsangebot
-        29 € statt 69 €.
-      </p>
-      <CtaButtons center={true} />
-      <p class="tt-cta-subline">Vertraulich · Persönlich · Schriftlich</p>
+      <h2>{t.ctaHeading}</h2>
+      <p>{t.ctaBody}</p>
+      <CtaButtons center={true} lang={lang} />
+      <p class="tt-cta-subline">{t.ctaSubline}</p>
     </aside>
 
-    <nav class="tt-service-related" aria-label="Weitere Seiten">
-      <p class="tt-sec-label">Auch interessant</p>
+    <nav class="tt-service-related" aria-label={t.relatedAria}>
+      <p class="tt-sec-label">{t.relatedLabel}</p>
       <ul>
         {others.map((s) => (
           <li>
@@ -115,12 +127,14 @@ if (faq.length) {
           </li>
         ))}
         <li>
-          <a href="/beispiel-deutung">Eine Deutung im Original</a>
-          <span>Eine vollständige Deutung, von Anfang bis Ende.</span>
+          <a href={lang === 'de' ? '/beispiel-deutung' : '/en/example-interpretation'}>
+            {t.exampleLink}
+          </a>
+          <span>{t.exampleBlurb}</span>
         </li>
       </ul>
     </nav>
 
-    <p class="tt-legal-back"><a href="/">← Zurück zur Startseite</a></p>
+    <p class="tt-legal-back"><a href={lang === 'de' ? '/' : '/en'}>{t.backHome}</a></p>
   </article>
 </Base>

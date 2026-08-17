@@ -1,12 +1,18 @@
 ---
+import { useTranslations, type Lang } from '../i18n/ui';
+
 export interface Props {
   center?: boolean;
+  lang?: Lang;
 }
-const { center = false } = Astro.props;
+const { center = false, lang = 'de' } = Astro.props;
+const t = useTranslations(lang);
+// Client communication only. kontakt@ is for legal enquiries and lives on the
+// ProfessionalService node instead.
 const address = 'mark@traum-theater.de';
 ---
 
 <div class="tt-dual-cta" style={center ? 'justify-content: center;' : undefined}>
-  <a href="https://wa.me/4915150317725" class="tt-btn-wa">💬 Via WhatsApp</a>
-  <a href={`mailto:${address}`} class="tt-btn-email">✉ Via E-Mail</a>
+  <a href="https://wa.me/4915150317725" class="tt-btn-wa">{t.waButton}</a>
+  <a href={`mailto:${address}`} class="tt-btn-email">{t.emailButton}</a>
 </div>

@@ -1,38 +1,21 @@
 ---
-import Base from '../../layouts/Base.astro';
+import BlogIndex from '../../layouts/BlogIndex.astro';
 import { getCollection } from 'astro:content';
+import { pairs } from '../../i18n/ui';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-
-const fmt = (d: Date) =>
-  d.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 
-<Base
+<BlogIndex
+  lang="de"
   title="Blog — Traumtheater"
   description="Artikel über Traumdeutung nach der Aisling-Methode: was Träume bedeuten, wie du sie erinnerst und was sie über deine Lebenssituation sagen."
-  path="/blog">
-  <div class="tt-blog-wrap">
-    <h1 class="tt-sec-heading">Blog</h1>
-    <p class="tt-blog-intro">
-      Gedanken zur Traumdeutung nach der Aisling-Methode: praktisch, ohne Fachjargon,
-      für alle, die ihre Träume ernst nehmen möchten.
-    </p>
-
-    {posts.length === 0 ? (
-      <p>Noch keine Beiträge.</p>
-    ) : (
-      <ul class="tt-post-list">
-        {posts.map((post) => (
-          <li class="tt-post-item">
-            <p class="tt-post-date">{fmt(post.data.pubDate)}</p>
-            <h2><a href={`/blog/${post.id}`}>{post.data.title}</a></h2>
-            <p class="tt-post-excerpt">{post.data.description}</p>
-          </li>
-        ))}
-      </ul>
-    )}
-  </div>
-</Base>
+  path="/blog"
+  alternates={pairs.blog}
+  heading="Blog"
+  intro="Gedanken zur Traumdeutung nach der Aisling-Methode: praktisch, ohne Fachjargon, für alle, die ihre Träume ernst nehmen möchten."
+  posts={posts}
+  postBase="/blog"
+/>
