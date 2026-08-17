@@ -197,7 +197,7 @@ export const ui: Record<Lang, Strings> = {
       { href: '/en/#symbols', label: 'Symbols' },
       { href: '/en/example-interpretation', label: 'Example' },
       { href: '/en/#offer', label: 'Offer' },
-      { href: '/en/#voices', label: 'Voices' },
+      { href: '/en/#testimonials', label: 'Testimonials' },
       { href: '/en/blog', label: 'Blog' },
       { href: '/en/#about', label: 'About me' },
     ],
@@ -251,7 +251,7 @@ export const ui: Record<Lang, Strings> = {
       {
         href: '/en/spiritual-dream-interpretation',
         label: 'Spiritual dream interpretation',
-        blurb: 'Grounded and spiritual at once, without the esoteric overload.',
+        blurb: 'Spiritual work, kept grounded, without the mystical clutter.',
       },
     ],
     serviceType: 'Dream interpretation',
