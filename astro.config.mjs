@@ -7,7 +7,11 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://traum-theater.de',
   output: 'static',
-  trailingSlash: 'ignore',
+  // 'always' matches what Netlify actually serves with format: 'directory'.
+  // Under 'ignore', canonical and hreflang were emitted without the slash while
+  // the server 301'd to the slash form, so every canonical pointed at a
+  // redirect. See the withSlash helper in Base.astro.
+  trailingSlash: 'always',
   build: {
     // /impressum/index.html rather than /impressum.html, so URLs stay clean
     format: 'directory',

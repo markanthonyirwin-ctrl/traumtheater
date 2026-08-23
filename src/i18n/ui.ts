@@ -24,7 +24,7 @@ export const ogLocale: Record<Lang, string> = { de: 'de_DE', en: 'en_GB' };
 export const dateLocale: Record<Lang, string> = { de: 'de-DE', en: 'en-GB' };
 
 /** Where "home" is in each language. Used by the language switcher fallback. */
-export const homePath: Record<Lang, string> = { de: '/', en: '/en' };
+export const homePath: Record<Lang, string> = { de: '/', en: '/en/' };
 
 /**
  * The German and English versions of one page. Passed to Base, which emits
@@ -52,21 +52,21 @@ export interface Alternates {
  * `altSlug` field in the markdown front matter.
  */
 export const pairs = {
-  home: { de: '/', en: '/en' },
+  home: { de: '/', en: '/en/' },
   personal: {
-    de: '/persoenliche-traumdeutung',
-    en: '/en/personal-dream-interpretation',
+    de: '/persoenliche-traumdeutung/',
+    en: '/en/personal-dream-interpretation/',
   },
   written: {
-    de: '/schriftliche-traumdeutung',
-    en: '/en/written-dream-interpretation',
+    de: '/schriftliche-traumdeutung/',
+    en: '/en/written-dream-interpretation/',
   },
   spiritual: {
-    de: '/spirituelle-traumdeutung',
-    en: '/en/spiritual-dream-interpretation',
+    de: '/spirituelle-traumdeutung/',
+    en: '/en/spiritual-dream-interpretation/',
   },
-  example: { de: '/beispiel-deutung', en: '/en/example-interpretation' },
-  blog: { de: '/blog', en: '/en/blog' },
+  example: { de: '/beispiel-deutung/', en: '/en/example-interpretation/' },
+  blog: { de: '/blog/', en: '/en/blog/' },
 } satisfies Record<string, Alternates>;
 
 interface Strings {
@@ -119,10 +119,10 @@ export const ui: Record<Lang, Strings> = {
     nav: [
       { href: '/#methode', label: 'Die Methode' },
       { href: '/#symbole', label: 'Symbole' },
-      { href: '/beispiel-deutung', label: 'Beispiel' },
+      { href: '/beispiel-deutung/', label: 'Beispiel' },
       { href: '/#angebot', label: 'Angebot' },
       { href: '/#stimmen', label: 'Stimmen' },
-      { href: '/blog', label: 'Blog' },
+      { href: '/blog/', label: 'Blog' },
       { href: '/#about', label: 'Über mich' },
     ],
     navCta: 'Kontakt ✦',
@@ -133,17 +133,17 @@ export const ui: Record<Lang, Strings> = {
     switchTo: 'English',
     switchToAria: 'Switch to English',
     footerService: [
-      { href: '/persoenliche-traumdeutung', label: 'Persönliche Traumdeutung' },
-      { href: '/schriftliche-traumdeutung', label: 'Schriftliche Traumdeutung' },
-      { href: '/spirituelle-traumdeutung', label: 'Spirituelle Traumdeutung' },
-      { href: '/beispiel-deutung', label: 'Beispiel' },
-      { href: '/blog', label: 'Blog' },
+      { href: '/persoenliche-traumdeutung/', label: 'Persönliche Traumdeutung' },
+      { href: '/schriftliche-traumdeutung/', label: 'Schriftliche Traumdeutung' },
+      { href: '/spirituelle-traumdeutung/', label: 'Spirituelle Traumdeutung' },
+      { href: '/beispiel-deutung/', label: 'Beispiel' },
+      { href: '/blog/', label: 'Blog' },
     ],
     footerLegal: [
-      { href: '/impressum', label: 'Impressum' },
-      { href: '/datenschutz', label: 'Datenschutz' },
-      { href: '/agb', label: 'AGB' },
-      { href: '/widerruf', label: 'Widerruf' },
+      { href: '/impressum/', label: 'Impressum' },
+      { href: '/datenschutz/', label: 'Datenschutz' },
+      { href: '/agb/', label: 'AGB' },
+      { href: '/widerruf/', label: 'Widerruf' },
     ],
     footerLegalNote: '',
     footerTagline:
@@ -161,17 +161,17 @@ export const ui: Record<Lang, Strings> = {
     backHome: '← Zurück zur Startseite',
     services: [
       {
-        href: '/persoenliche-traumdeutung',
+        href: '/persoenliche-traumdeutung/',
         label: 'Persönliche Traumdeutung',
         blurb: 'Deine Deutung, auf deine Lebenssituation bezogen.',
       },
       {
-        href: '/schriftliche-traumdeutung',
+        href: '/schriftliche-traumdeutung/',
         label: 'Schriftliche Traumdeutung',
         blurb: 'Warum ein Dokument mehr trägt als ein Gespräch.',
       },
       {
-        href: '/spirituelle-traumdeutung',
+        href: '/spirituelle-traumdeutung/',
         label: 'Spirituelle Traumdeutung',
         blurb: 'Fundiert und spirituell, ohne esoterische Überfrachtung.',
       },
@@ -195,33 +195,33 @@ export const ui: Record<Lang, Strings> = {
     nav: [
       { href: '/en/#method', label: 'The method' },
       { href: '/en/#symbols', label: 'Symbols' },
-      { href: '/en/example-interpretation', label: 'Example' },
+      { href: '/en/example-interpretation/', label: 'Example' },
       { href: '/en/#offer', label: 'Offer' },
       { href: '/en/#testimonials', label: 'Testimonials' },
-      { href: '/en/blog', label: 'Blog' },
+      { href: '/en/blog/', label: 'Blog' },
       { href: '/en/#about', label: 'About me' },
     ],
     navCta: 'Contact ✦',
     navCtaHref: '/en/#contact',
-    navBrandHref: '/en',
+    navBrandHref: '/en/',
     menuOpen: 'Open menu',
     menuClose: 'Close menu',
     switchTo: 'Deutsch',
     switchToAria: 'Auf Deutsch wechseln',
     footerService: [
-      { href: '/en/personal-dream-interpretation', label: 'Personal dream interpretation' },
-      { href: '/en/written-dream-interpretation', label: 'Written dream interpretation' },
-      { href: '/en/spiritual-dream-interpretation', label: 'Spiritual dream interpretation' },
-      { href: '/en/example-interpretation', label: 'Example' },
-      { href: '/en/blog', label: 'Blog' },
+      { href: '/en/personal-dream-interpretation/', label: 'Personal dream interpretation' },
+      { href: '/en/written-dream-interpretation/', label: 'Written dream interpretation' },
+      { href: '/en/spiritual-dream-interpretation/', label: 'Spiritual dream interpretation' },
+      { href: '/en/example-interpretation/', label: 'Example' },
+      { href: '/en/blog/', label: 'Blog' },
     ],
     // These point at the German legal pages on purpose. The German text is the
     // binding version; a translation would be a second legal representation.
     footerLegal: [
-      { href: '/impressum', label: 'Impressum' },
-      { href: '/datenschutz', label: 'Privacy policy' },
-      { href: '/agb', label: 'Terms' },
-      { href: '/widerruf', label: 'Right of withdrawal' },
+      { href: '/impressum/', label: 'Impressum' },
+      { href: '/datenschutz/', label: 'Privacy policy' },
+      { href: '/agb/', label: 'Terms' },
+      { href: '/widerruf/', label: 'Right of withdrawal' },
     ],
     footerLegalNote: 'The legal pages are in German, as required for a business based in Germany.',
     footerTagline:
@@ -239,17 +239,17 @@ export const ui: Record<Lang, Strings> = {
     backHome: '← Back to the homepage',
     services: [
       {
-        href: '/en/personal-dream-interpretation',
+        href: '/en/personal-dream-interpretation/',
         label: 'Personal dream interpretation',
         blurb: 'Your interpretation, tied to your own situation.',
       },
       {
-        href: '/en/written-dream-interpretation',
+        href: '/en/written-dream-interpretation/',
         label: 'Written dream interpretation',
         blurb: 'Why a document carries more than a conversation.',
       },
       {
-        href: '/en/spiritual-dream-interpretation',
+        href: '/en/spiritual-dream-interpretation/',
         label: 'Spiritual dream interpretation',
         blurb: 'Spiritual work, kept grounded, without the mystical clutter.',
       },

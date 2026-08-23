@@ -42,13 +42,28 @@ const {
 } = Astro.props;
 
 const t = useTranslations(lang);
-const canonical = new URL(path, site).href;
+
+/**
+ * Every URL we advertise must be the exact one the server returns 200 for.
+ *
+ * The build uses `format: 'directory'`, so a page lives at `/agb/index.html`
+ * and Netlify 301s `/agb` to `/agb/`. The sitemap already lists the slash form.
+ * Canonical, hreflang and og:url were being built from the slashless path, so
+ * every page pointed its canonical at a URL that redirects. Google reported
+ * "Page with redirect" and "Alternate page with proper canonical tag" against
+ * those URLs and started dropping them, which is what collapsed impressions in
+ * August 2026. Do not remove this.
+ */
+const withSlash = (p: string) => (p.endsWith('/') ? p : `${p}/`);
+const abs = (p: string) => new URL(withSlash(p), site).href;
+
+const canonical = abs(path);
 const ogImage = `${site}/assets/logo.png`;
 
 const otherLang: Lang = lang === 'de' ? 'en' : 'de';
 // With no counterpart, the switcher still works: it lands on the other
 // language's homepage rather than disappearing.
-const switchHref = alternates ? alternates[otherLang] : homePath[otherLang];
+const switchHref = withSlash(alternates ? alternates[otherLang] : homePath[otherLang]);
 ---
 
 <!doctype html>
@@ -66,10 +81,10 @@ const switchHref = alternates ? alternates[otherLang] : homePath[otherLang];
 
     {alternates && (
       <>
-        <link rel="alternate" hreflang="de" href={new URL(alternates.de, site).href} />
-        <link rel="alternate" hreflang="en" href={new URL(alternates.en, site).href} />
+        <link rel="alternate" hreflang="de" href={abs(alternates.de)} />
+        <link rel="alternate" hreflang="en" href={abs(alternates.en)} />
         {/* German is the primary market, so it takes x-default. */}
-        <link rel="alternate" hreflang="x-default" href={new URL(alternates.de, site).href} />
+        <link rel="alternate" hreflang="x-default" href={abs(alternates.de)} />
       </>
     )}
 

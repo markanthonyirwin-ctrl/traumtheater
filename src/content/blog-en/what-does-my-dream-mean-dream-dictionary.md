@@ -84,7 +84,7 @@ Grounded and intuitive at once. Both, without it floating off.
 
 Rather than claim it, you can read it. I have published a full interpretation, my own dream, in the same format a client receives: from the dream itself through the line by line interpretation to the suggested steps.
 
-[Read a full interpretation](/en/example-interpretation)
+[Read a full interpretation](/en/example-interpretation/)
 
 ## Common questions
 
@@ -106,4 +106,4 @@ Your dreams are not random images. They say something fairly precise about where
 
 A dictionary gets you part of the way. It gives you vocabulary. It just stops there, and the part where vocabulary becomes a message is only beginning at that point.
 
-If you are stuck on a dream, especially one that keeps coming back or that would not let you go when you woke, send it to me. You get a [personal dream interpretation](/en/personal-dream-interpretation), detailed and [in writing](/en/written-dream-interpretation), where you can see step by step how I arrive at it.
+If you are stuck on a dream, especially one that keeps coming back or that would not let you go when you woke, send it to me. You get a [personal dream interpretation](/en/personal-dream-interpretation/), detailed and [in writing](/en/written-dream-interpretation/), where you can see step by step how I arrive at it.

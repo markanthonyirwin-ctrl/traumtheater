@@ -6,7 +6,7 @@ draft: false
 altSlug: 'what-does-my-dream-mean-dream-dictionary'
 ---
 
-Du wachst auf, und ein Bild bleibt hängen. Eine Treppe. Ein Tier. Ein Haus, das du nicht kennst. Also tippst du es bei Google ein, landest in einem Traumlexikon, liest drei Sätze über „Treppe", und denkst: hm.
+Du wachst auf, und ein Bild bleibt hängen. Eine Treppe. Ein Tier. Ein Haus, das du nicht kennst. Also tippst du es bei Google ein, landest in einem Traumlexikon, liest drei Sätze über „Treppe“, und denkst: hm.
 
 Vielleicht stimmt sogar etwas davon. Aber der Traum als Ganzes bleibt stumm. Und die Frage, die dich morgens um sechs überhaupt zum Nachschlagen gebracht hat, ist immer noch offen: **Was soll ich jetzt damit anfangen?**
 
@@ -22,7 +22,7 @@ Schlag ein beliebiges Traumlexikon auf, und du findest Substantive: Schlange, Wa
 
 Nur bestehen die wenigsten Träume aus Dingen. Sie bestehen aus **Bewegungen, Richtungen und Entscheidungen**. Du gehst weg. Du steigst hinab. Du versuchst, an etwas vorbeizukommen. Du willst allein sein. Du gehst nicht ins Zentrum.
 
-In der Aisling-Arbeit sind genau das die tragenden Elemente. „Alleine sein wollen" steht zum Beispiel für Vermeidung: Was du im Traum meidest, ist oft genau das, worum es geht. Und wenn du eine Treppe hinabsteigst, kann das heißen, dass du gerade vom Kopf ins Herz gehst.
+In der Aisling-Arbeit sind genau das die tragenden Elemente. „Alleine sein wollen“ steht zum Beispiel für Vermeidung: Was du im Traum meidest, ist oft genau das, worum es geht. Und wenn du eine Treppe hinabsteigst, kann das heißen, dass du gerade vom Kopf ins Herz gehst.
 
 Ein Lexikon, das nur Gegenstände kennt, überspringt die Hälfte deines Traums. Meistens die wichtigere Hälfte.
 
@@ -32,7 +32,7 @@ Ich hatte einmal einen Traum, in dem ich mit Nena auf der Rückbank eines Autos 
 
 Ein Lexikon hätte gesagt: Rückbank heißt, du steuerst dein Leben nicht selbst. Nimm das Steuer in die Hand.
 
-Das klang plausibel. Es war aber nicht die Botschaft. Als ich mir Zeit mit dem Traum genommen habe, wurde deutlich, dass Nena, eine Sängerin, eine Frau, die auftritt und ihre Stimme benutzt, für meine eigene Gabe stand. Die Aussage war nicht „übernimm die Kontrolle über dein Leben". Sie war: **Hör auf, deine Gabe auf die Rückbank zu setzen.**
+Das klang plausibel. Es war aber nicht die Botschaft. Als ich mir Zeit mit dem Traum genommen habe, wurde deutlich, dass Nena, eine Sängerin, eine Frau, die auftritt und ihre Stimme benutzt, für meine eigene Gabe stand. Die Aussage war nicht „übernimm die Kontrolle über dein Leben“. Sie war: **Hör auf, deine Gabe auf die Rückbank zu setzen.**
 
 Das ist ein anderer Satz. Er hat zu einer anderen Handlung geführt.
 
@@ -56,7 +56,7 @@ Drei Bruchstücke. Und den ganzen Rest des Traums, der weiter unerklärt bleibt.
 
 Ein Traum, der bei Sonnenschein spielt, sagt etwas anderes als derselbe Traum im Nebel. Ein Tier, das angreift, sagt etwas anderes als ein Tier, das wartet und erst reagiert, wenn du ausweichst. Die Reihenfolge trägt die Bedeutung, und Reihenfolge lässt sich nicht nachschlagen.
 
-## 5. Die eigentliche Frage ist nicht „was", sondern „warum jetzt"
+## 5. Die eigentliche Frage ist nicht „was“, sondern „warum jetzt“
 
 Das ist der Punkt, an dem Lexika aufhören.
 
@@ -84,7 +84,7 @@ Fundiert und intuitiv zugleich. Beides, ohne dass es abgehoben wird.
 
 Statt das zu behaupten, kannst du es nachlesen. Ich habe eine vollständige Deutung veröffentlicht, meinen eigenen Traum, im selben Format, das du als Klientin oder Klient bekommst: von der Traumschilderung über die Deutung Zeile für Zeile bis zu den Handlungsschritten.
 
-[Eine Deutung im Original ansehen](/beispiel-deutung)
+[Eine Deutung im Original ansehen](/beispiel-deutung/)
 
 ## Häufige Fragen
 
@@ -106,4 +106,4 @@ Deine Träume sind keine Zufallsbilder. Sie sagen ziemlich genau etwas darüber,
 
 Ein Lexikon bringt dich ein Stück weit. Es gibt dir Vokabeln. Nur bleibt es dort stehen, und der Teil, in dem aus Vokabeln eine Botschaft wird, fängt genau da erst an.
 
-Wenn du bei einem Traum nicht weiterkommst, besonders bei einem, der wiederkommt oder der dich beim Aufwachen nicht losgelassen hat, dann schick ihn mir. Du bekommst eine [persönliche Traumdeutung](/persoenliche-traumdeutung), ausführlich und [schriftlich](/schriftliche-traumdeutung), bei der du Schritt für Schritt sehen kannst, wie ich darauf komme.
+Wenn du bei einem Traum nicht weiterkommst, besonders bei einem, der wiederkommt oder der dich beim Aufwachen nicht losgelassen hat, dann schick ihn mir. Du bekommst eine [persönliche Traumdeutung](/persoenliche-traumdeutung/), ausführlich und [schriftlich](/schriftliche-traumdeutung/), bei der du Schritt für Schritt sehen kannst, wie ich darauf komme.
