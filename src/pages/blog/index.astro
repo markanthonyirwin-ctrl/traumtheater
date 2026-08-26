@@ -10,12 +10,12 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 
 <BlogIndex
   lang="de"
-  title="Blog — Traumtheater"
+  title="Blog: Traumdeutung nach der Aisling-Methode"
   description="Artikel über Traumdeutung nach der Aisling-Methode: was Träume bedeuten, wie du sie erinnerst und was sie über deine Lebenssituation sagen."
   path="/blog"
   alternates={pairs.blog}
   heading="Blog"
-  intro="Gedanken zur Traumdeutung nach der Aisling-Methode: praktisch, ohne Fachjargon, für alle, die ihre Träume ernst nehmen möchten."
+  intro="Gedanken zur Traumdeutung nach der Aisling-Methode: praktisch, ohne Fachjargon, für alle, die ihre Träume ernst nehmen möchten. Hier schreibe ich über das, was mir in der Arbeit mit Träumen immer wieder begegnet: wie man sich überhaupt an sie erinnert, warum ein einzelnes Symbol selten eine feste Bedeutung hat, und was ein Traum über die eigene Lebenssituation zeigen kann. Kein Lexikon zum Nachschlagen, sondern Hintergrund dazu, wie ich bei einer Deutung vorgehe. Wenn du beim Lesen einen Traum hast, den du genauer verstehen möchtest, kannst du ihn mir jederzeit schicken."
   posts={posts}
   postBase="/blog"
 />
