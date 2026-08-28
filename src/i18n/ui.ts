@@ -136,6 +136,7 @@ export const ui: Record<Lang, Strings> = {
       { href: '/persoenliche-traumdeutung/', label: 'Persönliche Traumdeutung' },
       { href: '/schriftliche-traumdeutung/', label: 'Schriftliche Traumdeutung' },
       { href: '/spirituelle-traumdeutung/', label: 'Spirituelle Traumdeutung' },
+      { href: '/traeume-von-verstorbenen/', label: 'Träume von Verstorbenen' },
       { href: '/beispiel-deutung/', label: 'Beispiel' },
       { href: '/blog/', label: 'Blog' },
     ],
@@ -174,6 +175,13 @@ export const ui: Record<Lang, Strings> = {
         href: '/spirituelle-traumdeutung/',
         label: 'Spirituelle Traumdeutung',
         blurb: 'Fundiert und spirituell, ohne esoterische Überfrachtung.',
+      },
+      // German only for now. The English mirror is not built yet, so there is
+      // deliberately no counterpart in the `en` list below.
+      {
+        href: '/traeume-von-verstorbenen/',
+        label: 'Im Traum mit Verstorbenen sprechen',
+        blurb: 'Wenn ein Traum von einem verstorbenen Menschen dich nicht loslässt.',
       },
     ],
     serviceType: 'Traumdeutung',

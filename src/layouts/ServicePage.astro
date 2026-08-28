@@ -35,9 +35,16 @@ const t = useTranslations(lang);
 
 const stripTags = (s: string) => s.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
 
+// Pages pass `path` without a trailing slash, the service table carries hrefs
+// with one, so a raw !== comparison never matched and every page listed itself
+// under "Auch interessant". Compare normalised, and use the normalised form for
+// the JSON-LD url too so schema and canonical agree (Base already normalises).
+const withSlash = (p: string) => (p.endsWith('/') ? p : `${p}/`);
+const canonicalPath = withSlash(path);
+
 // The money pages cross-link to each other, within their own language.
 // Whichever page is rendering drops itself from the list.
-const others = t.services.filter((s) => s.href !== path);
+const others = t.services.filter((s) => withSlash(s.href) !== canonicalPath);
 
 const jsonLd = [
   {
@@ -47,7 +54,7 @@ const jsonLd = [
     description,
     serviceType: t.serviceType,
     inLanguage: lang,
-    url: `${site}${path}`,
+    url: `${site}${canonicalPath}`,
     provider: { '@type': 'Person', '@id': `${site}/#person`, name: 'Mark Anthony Irwin' },
     areaServed: [
       { '@type': 'Country', name: 'Germany' },
@@ -61,7 +68,7 @@ const jsonLd = [
       priceCurrency: 'EUR',
       description: t.offerDescription,
       availability: 'https://schema.org/InStock',
-      url: `${site}${path}`,
+      url: `${site}${canonicalPath}`,
     },
   },
 ];
@@ -127,7 +134,7 @@ if (faq.length) {
           </li>
         ))}
         <li>
-          <a href={lang === 'de' ? '/beispiel-deutung' : '/en/example-interpretation'}>
+          <a href={lang === 'de' ? '/beispiel-deutung/' : '/en/example-interpretation/'}>
             {t.exampleLink}
           </a>
           <span>{t.exampleBlurb}</span>
